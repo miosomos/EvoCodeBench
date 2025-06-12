@@ -2,12 +2,12 @@ import json
 from utils import load_json_data
 from argparse import ArgumentParser
 import tiktoken
-
+import subprocess
 
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--prompt_element_file", type=str, default='prompt/prompt_elements.jsonl')
-    parser.add_argument("--setting", type=str, choices=['baseline', 'local_completion', 'local_infilling'])
+    parser.add_argument("--setting", type=str, choices=['baseline', 'local_completion', 'local_infilling', 'kg'])
     parser.add_argument("--output_file", type=str)
     parser.add_argument("--context_window", type=int, default=16384)
     parser.add_argument("--max_tokens", type=int, default=500)
@@ -63,6 +63,23 @@ def produce_prompt(args, d, tokenizer):
                 contexts_below=context_below,
                 input_code=d['input_code']
             )
+    elif args.setting == 'kg':
+        command = [
+            'miosomos', 'build-context',
+            d['function_name'],
+            '/path/to/your/python/project',
+        ]
+        
+        context = subprocess.run(command, capture_output=True, text=True).stdout
+        
+        prompt = template.format(
+            function_name=d['function_name'],
+            context_kg=context,
+            contexts_above=d['contexts_above'],
+            contexts_below=d['contexts_below'],
+            input_code=d['input_code']
+        )
+
     return prompt
 
 
