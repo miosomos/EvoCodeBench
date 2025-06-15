@@ -8,6 +8,7 @@ def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--prompt_element_file", type=str, default='prompt/prompt_elements.jsonl')
     parser.add_argument("--setting", type=str, choices=['baseline', 'local_completion', 'local_infilling', 'kg'])
+    parser.add_argument("--tools", nargs='+', default=['cypher', 'semantic'], choices=['cypher', 'semantic'])
     parser.add_argument("--output_file", type=str)
     parser.add_argument("--context_window", type=int, default=16384)
     parser.add_argument("--max_tokens", type=int, default=500)
@@ -67,9 +68,12 @@ def produce_prompt(args, d, tokenizer):
         command = [
             'miosomos', 'build-context',
             d['function_name'],
-            '/path/to/your/python/project',
+            'Source_Code/' + d['completion_path'],
         ]
-        
+
+        for tool in args.tools:
+            command.extend(['--tools', tool])
+                
         context = subprocess.run(command, capture_output=True, text=True).stdout
         
         prompt = template.format(
