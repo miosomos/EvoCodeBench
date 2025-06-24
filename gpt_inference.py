@@ -4,7 +4,10 @@ from tqdm import tqdm
 import time, json
 import multiprocessing
 import argparse
+import anthropic
 
+with open('system_prompt.txt', 'r') as f:
+    SYSTEM_PROMPT = f.read().strip()
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -41,7 +44,16 @@ def load_file(path):
 def gpt_completion(item):
     # idx, prompt_block, api_key, params, output_path = item 
     idx, args, prompt_block, api_key, output_path = item 
-    client = OpenAI(api_key=api_key)
+    if 'claude-sonnet-4-20250514' in args.model:
+        pass
+    elif 'claude-3.5-sonnet-20240620' in args.model:
+        pass
+    elif 'claude-3.7-sonnet-20250219' in args.model:
+        pass
+    elif 'claude-sonnet-4-20250514' in args.model:
+        client = anthropic.Anthropic(api_key=api_key)
+    else:
+        client = OpenAI(api_key=api_key)
     if os.path.exists(output_path):
         finished_ids = load_file(output_path) 
         output_f = open(output_path, 'a')
@@ -61,28 +73,47 @@ def gpt_completion(item):
             flag = False
             while not flag:
                 try:
-                    if args.T == 0:
-                        response = client.chat.completions.create(
-                                    model=args.model, 
-                                    messages=[{'role': 'user', 'content': prompt}],
-                                    temperature=args.T,
-                                    n = args.N,
-                                )
-                    elif args.T > 0:
-                        response = client.chat.completions.create(
+                    if 'claude-3.5-sonnet-20240620' in args.model or 'claude-3.7-sonnet-20250219' in args.model or 'claude-sonnet-4-20250514' in args.model:
+                        for _ in range(args.N):
+                            response = client.messages.create(
+                                model=args.model,
+                                max_tokens=4096,
+                                system=SYSTEM_PROMPT,
+                                messages=[
+                                    {"role": "user", "content": prompt}
+                                ],
+                                temperature=args.T,
+                            )
+                            sample['completion'].append(response.content[0].text)
+                    else:
+                        if args.T == 0:
+                            response = client.chat.completions.create(
                                         model=args.model, 
-                                        messages=[{'role': 'user', 'content': prompt}],
+                                        messages=[
+                                            {'role': 'system', 'content': SYSTEM_PROMPT},
+                                            {'role': 'user', 'content': prompt}
+                                        ],
                                         temperature=args.T,
                                         n = args.N,
-                                        top_p = args.top_p
-                                )
+                                    )
+                        elif args.T > 0:
+                            response = client.chat.completions.create(
+                                            model=args.model, 
+                                            messages=[
+                                                {'role': 'system', 'content': SYSTEM_PROMPT},
+                                                {'role': 'user', 'content': prompt}
+                                            ],
+                                            temperature=args.T,
+                                            n = args.N,
+                                            top_p = args.top_p
+                                    )
+                        for choice in response.choices:
+                            assert choice.message.role == 'assistant'
+                            sample['completion'].append(choice.message.content)
                     flag = True
                 except Exception as e:
                     print(f'Worker {idx}', e)
                     time.sleep(5)
-            for choice in response.choices:
-                assert choice.message.role == 'assistant'
-                sample['completion'].append(choice.message.content)
             time.sleep(5)
         del sample['prompt']
         output_f.write(json.dumps(sample) + '\n')
@@ -97,6 +128,16 @@ if __name__ == "__main__":
         args.model = 'gpt-3.5-turbo-1106'
     elif args.model == 'gpt-4':
         args.model = 'gpt-4-1106-preview'
+    elif args.model == 'gpt-4o':
+        args.model = 'gpt-4o-2024-08-06'
+    elif args.model == 'gpt-4o-mini':
+        args.model = 'gpt-4o-mini-2024-07-18'
+    elif args.model == 'claude-3.5-sonnet':
+        args.model = 'claude-3.5-sonnet-20240620'
+    elif args.model == 'claude-3.7-sonnet':
+        args.model = 'claude-3.7-sonnet-20250219'
+    elif args.model == 'claude-4-sonnet':
+        args.model = 'claude-sonnet-4-20250514'
     else:
         raise ValueError('Invalid model name')
     api_pool = load_api(args.api_key_file)
