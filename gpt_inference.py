@@ -14,7 +14,7 @@ def parse_args():
     parser.add_argument('--prompt_file', type=str, required=True)
     parser.add_argument('--output_dir', type=str, required=True)
     parser.add_argument('--model', type=str, required=True)
-    parser.add_argument('--moda', type=float, required=True)
+    parser.add_argument('--moda', type=str, required=True)
     parser.add_argument('--api_key_file', type=str, required=True)
 
     parser.add_argument('--T', type=float)
@@ -44,13 +44,7 @@ def load_file(path):
 def gpt_completion(item):
     # idx, prompt_block, api_key, params, output_path = item 
     idx, args, prompt_block, api_key, output_path = item 
-    if 'claude-sonnet-4-20250514' in args.model:
-        pass
-    elif 'claude-3.5-sonnet-20240620' in args.model:
-        pass
-    elif 'claude-3.7-sonnet-20250219' in args.model:
-        pass
-    elif 'claude-sonnet-4-20250514' in args.model:
+    if 'claude-sonnet-4-20250514' in args.model or 'claude-3.5-sonnet-20240620' in args.model or 'claude-3.7-sonnet-20250219' in args.model or 'claude-sonnet-4-20250514' in args.model:
         client = anthropic.Anthropic(api_key=api_key)
     else:
         client = OpenAI(api_key=api_key)
