@@ -33,6 +33,8 @@ def produce_prompt(args, d, tokenizer):
         if len(context_above_ids) > max_context_length:
             context_above_ids = context_above_ids[-max_context_length:]
             context_above = tokenizer.decode(context_above_ids)
+        else:
+            context_above = d['contexts_above']
         prompt = template.format(
             function_name=d['function_name'],
             contexts_above=context_above,
