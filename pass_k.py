@@ -32,7 +32,7 @@ def adjust_indent(code, new_indent):
 
 @func_set_timeout(20)
 def execution_tests(test, project_path):
-    command = "source myenv/bin/activate && pytest " + test
+    command = f"export PYTHONPATH={project_path} && source myenv/bin/activate && pytest " + test
     process = subprocess.Popen(['bash', '-c', command], cwd=project_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     try:
         while True:
@@ -50,7 +50,7 @@ def execution_tests(test, project_path):
                     return False # Execution Error
                 else:
                     break
-    except Exception as e:
+    except Exception:
         process.terminate()
         process.wait()
         return False # Other Error
@@ -100,6 +100,9 @@ def check_correctness(args, data):
     completion = data['completion']
     if completion == "    pass\n":
         return 'Fail'
+    # Convert completion to string if it's a list
+    if isinstance(completion, list):
+        completion = '\n'.join(completion)
     completion = adjust_indent(completion, data['indent'])
     
     SetUp_evaluation(args, data, completion)
@@ -131,6 +134,9 @@ def report_results(args, benchmark_data):
                 namespace, completion = js['namespace'], js['completion']
                 if namespace not in passed_completion:
                     passed_completion[namespace] = set()
+                # Convert list to tuple if it's a list
+                if isinstance(completion, list):
+                    completion = tuple(completion)
                 passed_completion[namespace].add(completion)
 
 
@@ -140,18 +146,19 @@ def report_results(args, benchmark_data):
         for line in f:
             js = json.loads(line)
             namespace, completion = js['namespace'], js['completion']
-            if namespace in benchmark_data:
-                if namespace not in results:
-                    results[namespace] = 0
-                if namespace in passed_completion and completion in passed_completion[namespace]:
-                    results[namespace] += 1
+            if namespace not in results:
+                results[namespace] = 0
+            # Convert list to tuple for comparison if it's a list
+            check_completion = tuple(completion) if isinstance(completion, list) else completion
+            if namespace in passed_completion and check_completion in passed_completion[namespace]:
+                results[namespace] += 1
             
     # Compute Pass@k
     k_list = [int(k) for k in args.k.split(',')]
     for k in k_list:
         if k > args.n:
             continue
-        pass_at_k = np.mean([compute_pass_at_k(args.n, pass_num, k) for namespace, pass_num in results.items()])
+        pass_at_k = np.mean([compute_pass_at_k(args.n, pass_num, k) for _, pass_num in results.items()])
         print(f'pass_at_{k}: {pass_at_k*100}%')
 
 
@@ -164,6 +171,9 @@ def load_finished_data(args):
                 namespace, completion = js['namespace'], js['completion']
                 if namespace not in finished_data:
                     finished_data[namespace] = set()
+                # Convert list to tuple if it's a list
+                if isinstance(completion, list):
+                    completion = tuple(completion)
                 finished_data[namespace].add(completion)
     return finished_data
 
@@ -181,11 +191,15 @@ def main():
             if namespace not in finished_data:
                 todo_output_data.append(js)
                 finished_data[namespace] = set()
+                # Convert list to tuple if it's a list
+                if isinstance(completion, list):
+                    completion = tuple(completion)
                 finished_data[namespace].add(completion)
-            elif completion not in finished_data[namespace]: 
+            elif isinstance(completion, list) and tuple(completion) not in finished_data[namespace] or not isinstance(completion, list) and completion not in finished_data[namespace]: 
                 todo_output_data.append(js)
-                finished_data[namespace].add(completion)         
-    del finished_data
+                # Convert list to tuple if it's a list
+                check_completion = tuple(completion) if isinstance(completion, list) else completion
+                finished_data[namespace].add(check_completion)
     print("TODO Completions: ", len(todo_output_data))
     
     # load benchmark data
