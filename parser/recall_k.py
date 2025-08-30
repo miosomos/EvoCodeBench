@@ -43,30 +43,34 @@ def compute_recall(generated_dependency, reference_dependency):
     
 
 def report_results(args, k_list, output_data, benchmark_data):
-    if not os.path.exists(args.output_file):
-        raise ValueError("Output file not found")
-    
-    parse_results = dict()
-    with open(args.output_file, 'r') as f:
+    # Load parsing results directly
+    parse_results = {}
+    with open(args.log_file, 'r') as f:
         for line in f:
             js = json.loads(line)
-            namespace, completion = js['namespace'], js['completion']
+            namespace = js['namespace']
             if namespace not in parse_results:
-                parse_results[namespace] = dict()
-            parse_results[namespace][completion] = js['generated_dependency']
+                parse_results[namespace] = []
+            parse_results[namespace].append(js)
 
     results = {}
-    for namespace, outputs in output_data.items():
-        for output in outputs:
-            completion = output['completion']
-            if namespace in parse_results:
-                generated_dependency = parse_results[namespace][completion]
-                data = benchmark_data[namespace]
-                reference_dependency = data['dependency']
-                recall = compute_recall(generated_dependency, reference_dependency)
-                if namespace not in results:
-                    results[namespace] = []
-                results[namespace].append(recall)
+    for namespace, completions in parse_results.items():
+        if namespace in benchmark_data:
+            data = benchmark_data[namespace]
+            reference_dependency = data['dependency']
+            
+            # Only process non-standalone functions
+            is_func_standalone = len(reference_dependency['intra_class']) + len(reference_dependency['intra_file']) + len(reference_dependency['cross_file']) == 0
+            
+            if not is_func_standalone:
+                namespace_results = []
+                for completion in completions:
+                    generated_dependency = completion.get('generated_dependency', None)
+                    recall = compute_recall(generated_dependency, reference_dependency)
+                    namespace_results.append(recall)
+                
+                if namespace_results:
+                    results[namespace] = namespace_results
 
     for k in k_list:
         recall = 0
