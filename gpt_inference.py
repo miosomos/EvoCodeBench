@@ -5,6 +5,9 @@ import time, json
 import multiprocessing
 import argparse
 import anthropic
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.inference.models import SystemMessage, UserMessage
+from azure.core.credentials import AzureKeyCredential
 
 with open('system_prompt.txt', 'r') as f:
     SYSTEM_PROMPT = f.read().strip()
@@ -15,6 +18,7 @@ def parse_args():
     parser.add_argument('--output_dir', type=str, required=True)
     parser.add_argument('--model', type=str, required=True)
     parser.add_argument('--moda', type=str, required=True)
+    parser.add_argument('--endpoint', type=str, required=False)
     parser.add_argument('--api_key_file', type=str, required=True)
 
     parser.add_argument('--T', type=float)
@@ -44,10 +48,16 @@ def load_file(path):
 def gpt_completion(item):
     # idx, prompt_block, api_key, params, output_path = item 
     idx, args, prompt_block, api_key, output_path = item 
-    if 'claude-sonnet-4-20250514' in args.model or 'claude-3.5-sonnet-20240620' in args.model or 'claude-3.7-sonnet-20250219' in args.model or 'claude-sonnet-4-20250514' in args.model:
+    if 'claude-sonnet-4-20250514' in args.model or 'claude-3.5-sonnet-20240620' in args.model or 'claude-3-7-sonnet-20250219' in args.model or 'claude-sonnet-4-20250514' in args.model:
         client = anthropic.Anthropic(api_key=api_key)
+    elif 'DeepSeek-V3-0324' in args.model:
+        client = ChatCompletionsClient(
+            endpoint=args.endpoint,
+            credential=AzureKeyCredential(api_key),
+            api_version="2024-05-01-preview"
+        )
     else:
-        client = OpenAI(api_key=api_key)
+        client = OpenAI(base_url=args.endpoint, api_key=api_key)
     if os.path.exists(output_path):
         finished_ids = load_file(output_path) 
         output_f = open(output_path, 'a')
@@ -67,7 +77,7 @@ def gpt_completion(item):
             flag = False
             while not flag:
                 try:
-                    if 'claude-3.5-sonnet-20240620' in args.model or 'claude-3.7-sonnet-20250219' in args.model or 'claude-sonnet-4-20250514' in args.model:
+                    if 'claude-3.5-sonnet-20240620' in args.model or 'claude-3-7-sonnet-20250219' in args.model or 'claude-sonnet-4-20250514' in args.model:
                         for _ in range(args.N):
                             response = client.messages.create(
                                 model=args.model,
@@ -79,6 +89,19 @@ def gpt_completion(item):
                                 temperature=args.T,
                             )
                             sample['completion'].append(response.content[0].text)
+                    elif 'DeepSeek-V3-0324' in args.model:
+                        for _ in range(args.N):
+                            response = client.complete(
+                                messages=[
+                                    SystemMessage(content=SYSTEM_PROMPT),
+                                    UserMessage(content=prompt),
+                                ],
+                                max_tokens=4096,
+                                temperature=args.T if args.T > 0 else 0.0,
+                                top_p=args.top_p if args.top_p else 0.95,
+                                model=args.model
+                            )
+                            sample['completion'].append(response.choices[0].message.content)
                     else:
                         if args.T == 0:
                             response = client.chat.completions.create(
@@ -129,9 +152,13 @@ if __name__ == "__main__":
     elif args.model == 'claude-3.5-sonnet':
         args.model = 'claude-3.5-sonnet-20240620'
     elif args.model == 'claude-3.7-sonnet':
-        args.model = 'claude-3.7-sonnet-20250219'
+        args.model = 'claude-3-7-sonnet-20250219'
     elif args.model == 'claude-4-sonnet':
         args.model = 'claude-sonnet-4-20250514'
+    elif args.model == 'gpt-4.1-mini':
+        args.model = 'gpt-4.1-mini'
+    elif args.model == 'gpt-4.1':
+        args.model = 'DeepSeek-V3-0324'
     else:
         raise ValueError('Invalid model name')
     api_pool = load_api(args.api_key_file)
