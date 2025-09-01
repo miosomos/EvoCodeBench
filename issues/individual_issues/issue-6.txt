@@ -1,0 +1,20 @@
+**Namespace:** `geopoly.compute_sq_dist`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function compute_sq_dist
+
+Input Code:
+```Python
+def compute_sq_dist(mat0, mat1=None):
+
+  """
+  This function computes the squared Euclidean distance between all pairs of columns in one or two matrices. It uses the mathematical property that the squared distance between two points x and y is equal to the sum of the squares of their norms minus twice their dot product. This is used to efficiently calculate distances in a vectorized manner, ensuring compatibility with numerical errors by setting negative distances to zero.
+
+  Input-Output Arguments
+  :param mat0: numpy.ndarray, the first matrix whose columns are considered as individual vectors among which distances are computed.
+  :param mat1: numpy.ndarray [optional], the second matrix whose columns are considered as individual vectors for distance computation. If not provided, `mat0` is used for both sets of vectors, computing all pairwise distances within the same set.
+  :return: numpy.ndarray. A matrix where each element (i, j) represents the squared Euclidean distance between the i-th column of `mat0` and the j-th column of `mat1`. If `mat1` is not provided, it returns the squared distances among columns of `mat0`.
+  """
+```
+

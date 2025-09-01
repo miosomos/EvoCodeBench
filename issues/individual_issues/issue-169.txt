@@ -1,0 +1,19 @@
+**Namespace:** `tanuki.bloom_filter.BloomFilter.add`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function add
+
+Input Code:
+```Python
+    def add(self, string):
+
+        """
+        Adds a string to the Bloom filter by calculating multiple hash values and setting the bits at the calculated indices in the bit array to 1. This is used to efficiently check whether an item might be in a set without storing the actual items.
+        Input-Output Arguments
+        :param self: BloomFilter. An instance of the BloomFilter class.
+        :param string: str, The string to be added to the Bloom filter. It is used to calculate the hash values which determine the indices in the bit array that should be set to 1.
+        :return: No return values.
+        """
+```
+

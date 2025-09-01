@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.dataloader.StreamingDataLoader.state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function state_dict
+
+Input Code:
+```Python
+    def state_dict(self) -> Dict[str, Any]:
+
+        """
+        This function generates and returns a dictionary containing the state of the StreamingDataLoader instance, which includes information about the dataset, current epoch, number of samples yielded, and the index of the latest worker. The structure of the returned state dictionary varies depending on whether the dataset is an instance of StreamingDataset.
+
+        Input-Output Arguments
+        :param self: StreamingDataLoader. An instance of the StreamingDataLoader class. It is used to access the dataset, batch size, number of workers, current epoch, and other attributes to construct the state dictionary.
+        :return: Dict[str, Any]. A dictionary representing the state of the StreamingDataLoader instance. The keys include "dataset", "current_epoch", "num_samples_yielded", and "latest_worker_idx". The structure of the "dataset" part of the dictionary depends on whether the dataset is a StreamingDataset or not.
+        """
+```
+

@@ -1,0 +1,20 @@
+**Namespace:** `autorag.schema.module.Module.from_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function from_dict
+
+Input Code:
+```Python
+    def from_dict(cls, module_dict: Dict) -> 'Module':
+
+        """
+        This function creates an instance of the Module class from a dictionary representation. It extracts the module type from the dictionary, uses the remaining dictionary as module parameters, and returns a new Module instance initialized with these parameters.
+
+        Input-Output Arguments
+        :param cls: The class object that this method is called on. It is used to create a new instance of the Module class.
+        :param module_dict: Dict, The dictionary representation of a module, containing at least a 'module_type' key and possibly other parameters as key-value pairs. The 'module_type' is used to specify the type of the module, and the rest of the dictionary is used as parameters for the module.
+        :return: Module, A new instance of the Module class initialized with the specified module type and parameters.
+        """
+```
+

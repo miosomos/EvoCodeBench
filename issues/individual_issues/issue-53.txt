@@ -1,0 +1,19 @@
+**Namespace:** `stepfun.pdf_to_weight`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function pdf_to_weight
+
+Input Code:
+```Python
+def pdf_to_weight(t, p):
+
+  """
+  Converts a probability density function (PDF) that integrates to 1 into a vector of weights that also sums to 1. This is achieved by multiplying the PDF values by the difference between consecutive elements in the time or position vector.
+  Input-Output Arguments
+  :param t: Array-like. Represents the time or position vector where the PDF is defined. It is used to calculate the differences between consecutive elements.
+  :param p: Array-like. Represents the PDF values corresponding to the elements in 't'. These values are multiplied by the differences calculated from 't' to obtain the weights.
+  :return: Array-like. A vector of weights that sums to 1, obtained from the input PDF.
+  """
+```
+

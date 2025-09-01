@@ -1,0 +1,24 @@
+**Namespace:** `easyvolcap.utils.loss_utils.lossfun_outer`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function lossfun_outer
+
+Input Code:
+```Python
+def lossfun_outer(t: torch.Tensor, w: torch.Tensor, t_env: torch.Tensor, w_env: torch.Tensor, eps=torch.finfo(torch.float32).eps):
+    # accepts t.shape[-1] = w.shape[-1] + 1
+
+    """
+    This function calculates a scaled half-quadratic loss based on the input tensors representing target and environment weights and positions. It ensures that the proposal weight acts as an upper envelope over the nerf weight by penalizing weights outside this envelope.
+
+    Input-Output Arguments
+    :param t: torch.Tensor. The target positions tensor, used along with weights to calculate the loss.
+    :param w: torch.Tensor. The target weights tensor, representing the weights of the target positions.
+    :param t_env: torch.Tensor. The environment positions tensor, used to calculate the upper envelope weights.
+    :param w_env: torch.Tensor. The environment weights tensor, representing the weights of the environment positions.
+    :param eps: torch.Tensor, optional. A small epsilon value to prevent division by zero, defaulting to the smallest positive number representable by torch.float32.
+    :return: torch.Tensor. The calculated loss based on the difference between target weights and the upper envelope, scaled by a half-quadratic loss function.
+    """
+```
+

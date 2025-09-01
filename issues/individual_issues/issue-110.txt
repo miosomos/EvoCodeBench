@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.client.S3Client.client`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function client
+
+Input Code:
+```Python
+    def client(self) -> Any:
+
+        """
+        This function returns an S3 client instance. It creates a new S3 client if one does not already exist or if the credentials have expired based on a predefined interval. This ensures that the client is always up-to-date and valid for use.
+
+        Input-Output Arguments
+        :param self: S3Client. An instance of the S3Client class. It uses the instance's attributes to manage the S3 client and its creation time.
+        :return: Any. The S3 client instance that is either retrieved from the existing instance or newly created if necessary.
+        """
+```
+

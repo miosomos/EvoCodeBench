@@ -1,0 +1,23 @@
+**Namespace:** `render.conical_frustum_to_gaussian`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function conical_frustum_to_gaussian
+
+Input Code:
+```Python
+def conical_frustum_to_gaussian(d, t0, t1, base_radius, diag):
+
+  """
+  This function approximates a 3D conical frustum as a Gaussian distribution by calculating its mean and covariance. It takes into account the axis of the cone, the starting and ending distances of the frustum, the scale of the radius as a function of distance, and whether the Gaussian should have a diagonal or full-covariance.
+
+  Input-Output Arguments
+  :param d: jnp.float32 3-vector. The axis of the cone. It is used to determine the direction of the conical frustum.
+  :param t0: float. The starting distance of the frustum from the origin. It marks the beginning of the conical section being approximated.
+  :param t1: float. The ending distance of the frustum from the origin. It marks the end of the conical section being approximated.
+  :param base_radius: float. The scale of the radius as a function of distance from the origin. It determines how the radius of the frustum changes with distance.
+  :param diag: boolean. Indicates whether the resulting Gaussian distribution will have a diagonal covariance matrix or a full-covariance matrix. This affects the complexity and the information contained in the covariance.
+  :return: A tuple containing the mean (a jnp.float32 3-vector) and the covariance (a matrix) of the approximated Gaussian distribution. These represent the central tendency and the spread of the distribution, respectively.
+  """
+```
+

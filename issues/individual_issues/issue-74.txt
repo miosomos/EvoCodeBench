@@ -1,0 +1,21 @@
+**Namespace:** `iris.io.validators.are_all_shapes_equal`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function are_all_shapes_equal
+
+Input Code:
+```Python
+def are_all_shapes_equal(field1: str, field2: str) -> Callable:
+
+    """
+    This function generates a Pydantic validator that checks if two lists of numpy arrays (specified by field names) have the same length and if each corresponding pair of arrays within these lists has the same shape.
+
+    Input-Output Arguments
+    :param field1: str. The name of the first field to be validated. It represents one of the lists of numpy arrays.
+    :param field2: str. The name of the second field to be validated. It represents the other list of numpy arrays to compare against the first.
+    :return: Callable. A function that acts as a Pydantic model validator. This validator function takes a class type and a dictionary of values, checks for shape equality between arrays in the specified fields, and returns the validated values if the check passes.
+
+    """
+```
+

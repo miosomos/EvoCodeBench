@@ -1,0 +1,25 @@
+**Namespace:** `utils.dummy_rays`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function dummy_rays
+
+Input Code:
+```Python
+def dummy_rays(
+    include_exposure_idx = False,
+    include_exposure_values = False,
+    include_device_idx = False,
+):
+
+  """
+  Generates a set of random rays with specified parameters and options for including exposure index, exposure values, and device index. It utilizes a predefined function `generate_random_rays` to create these rays based on the input conditions.
+
+  Input-Output Arguments
+  :param include_exposure_idx: Bool, optional. Determines whether to include the exposure index in the generated rays.
+  :param include_exposure_values: Bool, optional. Specifies if the exposure values should be included in the generated rays.
+  :param include_device_idx: Bool, optional. Indicates whether to include the device index in the generated rays.
+  :return: The result from `generate_random_rays`. The type and structure of the return value depend on the implementation of `generate_random_rays`, typically a collection of generated rays with specified properties and optional information.
+  """
+```
+

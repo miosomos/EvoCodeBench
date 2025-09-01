@@ -1,0 +1,27 @@
+**Namespace:** `ollama._client.AsyncClient.push`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function push
+
+Input Code:
+```Python
+  async def push(
+    self,
+    model: str,
+    insecure: bool = False,
+    stream: bool = False,
+  ) -> Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]:
+
+    """
+    The function asynchronously sends a POST request to the '/api/push' endpoint with the specified model name, insecurity flag, and stream flag. It handles the response by either returning a single `ProgressResponse` object or a generator yielding `ProgressResponse` objects, based on the value of the `stream` parameter.
+
+    Input-Output Arguments
+    :param self: AsyncClient. An instance of the AsyncClient class.
+    :param model: str, The name of the model to be pushed in the request.
+    :param insecure: bool, Optional. A flag indicating whether the request should be made over an insecure connection. Defaults to False.
+    :param stream: bool, Optional. A flag indicating whether the response should be streamed. If True, the function returns a generator of `ProgressResponse` objects; otherwise, it returns a single `ProgressResponse` object. Defaults to False.
+    :return: Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]], The function returns a `ProgressResponse` object if `stream` is False. If `stream` is True, it returns a generator yielding `ProgressResponse` objects.
+    """
+```
+

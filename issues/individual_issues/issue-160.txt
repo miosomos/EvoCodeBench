@@ -1,0 +1,20 @@
+**Namespace:** `litdata.processing.data_processor._get_item_filesizes`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _get_item_filesizes
+
+Input Code:
+```Python
+        futures = [executor.submit(_get_num_bytes, item, base_path) for item in items]
+
+    """
+    Computes and returns a list of file sizes for each item in the given list by parallelizing the file size retrieval process to improve performance. It uses a ThreadPoolExecutor to execute the file size retrieval in parallel, adjusting the number of workers based on the CPU count.
+
+    Input-Output Arguments
+    :param items: List[Any]. A list of items for which to compute file sizes. The nature of these items is not specified, but they are used to determine file sizes in some way.
+    :param base_path: str, optional. A base path to be prepended to each item's path before computing its file size. Defaults to an empty string, indicating no base path is used.
+    :return: List[int]. A list of file sizes corresponding to each item in the input list. Each size is an integer representing the number of bytes.
+    """
+```
+

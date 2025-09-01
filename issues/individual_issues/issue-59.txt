@@ -1,0 +1,19 @@
+**Namespace:** `agent_response.AgentResponse._parse_agent_info`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _parse_agent_info
+
+Input Code:
+```Python
+    def _parse_agent_info(self, response):
+
+        """
+        Parses the agent information from a given response string, extracting the agent's name and any input text associated with it. The function assumes a specific format of the response string to correctly extract the information.
+
+        Input-Output Arguments
+        :param response: str, the response string from which to parse the agent information. It is expected to contain the agent information in a specific format, delimited by 'Use Agent[' and ']', followed by the agent name and optional input text separated by a colon.
+        :return: A tuple containing the agent's name as the first element and the associated input text as the second element. If no input text is present, the second element in the tuple will be an empty string.
+        """
+```
+

@@ -1,0 +1,27 @@
+**Namespace:** `tanuki.register.Register.load_function_description`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_function_description
+
+Input Code:
+```Python
+    def load_function_description(func_object) -> FunctionDescription:
+
+        """
+        This function creates a description of a given function object, including its name, docstring, input and output type hints, and class definitions for those types. It is designed to facilitate the registration of the function by providing detailed metadata about it. The function also determines the function type based on the output type hint, distinguishing between symbolic functions and those that can be embedded.
+
+        Input-Output Arguments
+        :param func_object: The function object to create a description for. It is used to extract the signature, type hints, and docstring of the function.
+        :return: FunctionDescription. An instance of FunctionDescription containing the function's metadata, including its name, docstring, input and output type hints, class definitions for input and output types, and the function type (symbolic or embeddable).
+
+        Additional details:
+        - The function uses the `inspect.signature` method to get the function's signature and `get_type_hints` to fetch the type hints.
+        - It differentiates between input and output type hints based on the function's signature.
+        - A helper function `get_class_definition` is used to fetch class definitions for the type hints, handling generic types and ensuring that class definitions are fetched for non-built-in types.
+        - The function checks if the output type hint is a class or a subclass of a Union and processes it accordingly to determine the function type and output class definition.
+        - The function type can be either SYMBOLIC or EMBEDDABLE, determined based on whether the output type hint is a subclass of an Embedding class or part of a Union type.
+        - The function's output, `FunctionDescription`, is a structured representation of the function's metadata, designed for use in function registration processes.
+        """
+```
+

@@ -1,0 +1,30 @@
+**Namespace:** `skfolio.utils.equations.equations_to_matrix`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function equations_to_matrix
+
+Input Code:
+```Python
+def equations_to_matrix(
+    groups: npt.ArrayLike,
+    equations: npt.ArrayLike,
+    sum_to_one: bool = False,
+    raise_if_group_missing: bool = False,
+    names: tuple[str, str] = ("groups", "equations"),
+) -> tuple[np.ndarray, np.ndarray]:
+
+    """
+    This function converts a list of linear equations into the left and right matrices of the inequality A <= B, based on the provided groups and equations. It is useful for mathematical and financial modeling, particularly in scenarios where asset groups and their relationships are analyzed through linear inequalities.
+
+    Input-Output Arguments
+    :param groups: array-like of shape (n_groups, n_assets). It represents 2D array of assets groups, where each row can be a different categorization of assets (e.g., by type or region).
+    :param equations: array-like of shape (n_equations,). It is a 1D array of string representations of linear equations that describe the relationships between different groups of assets.
+    :param sum_to_one: bool, default=False. Indicates whether all elements in a group should sum to one. This is a constraint often used in financial models like the Black-Litterman model.
+    :param raise_if_group_missing: bool, default=False. Determines whether to raise an error if a group mentioned in the equations is not found in the groups array. If False, a warning is issued instead.
+    :param names: tuple[str, str], default=('groups', 'equations'). Names for the 'groups' and 'equations' parameters used in error messages, to improve clarity.
+    :return: tuple[np.ndarray, np.ndarray]. The function returns two numpy arrays. The first array (left) is of shape (n_equations, n_assets) representing the left side of the inequality A <= B, and the second array (right) is of shape (n_equations,) representing the right side of the inequality. If none of the groups in the equations are part of the input groups, `None` is returned.
+
+    """
+```
+

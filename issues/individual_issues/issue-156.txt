@@ -1,0 +1,22 @@
+**Namespace:** `litdata.processing.data_processor._upload_fn`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _upload_fn
+
+Input Code:
+```Python
+def _upload_fn(upload_queue: Queue, remove_queue: Queue, cache_dir: str, output_dir: Dir) -> None:
+
+    """
+    This function is responsible for uploading optimized chunks from a local directory to a remote dataset directory. It supports uploading to S3 cloud storage or moving files within the local filesystem based on the output directory's scheme. The function continuously processes items from the upload queue until a termination signal is received.
+
+    Input-Output Arguments
+    :param upload_queue: Queue. The queue containing data chunks to be uploaded. Each item can be a file path or a tuple containing a temporary directory and a file path.
+    :param remove_queue: Queue. The queue to which file paths are sent for removal after successful upload.
+    :param cache_dir: str. The local directory where files are cached before being uploaded. It is prepended to file paths that don't start with it.
+    :param output_dir: Dir. The target directory where files should be uploaded. It can be a local directory or an S3 bucket, determined by its URL scheme.
+    :return: None. This function does not return any value.
+    """
+```
+

@@ -1,0 +1,23 @@
+**Namespace:** `common.rougeL_score`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function rougeL_score
+
+Input Code:
+```Python
+def rougeL_score(
+    continuation: str,
+    reference: str
+) -> float:
+
+    """
+    Calculates the ROUGE-L score between a generated text continuation and a reference text. It tokenizes both texts using a custom tokenizer function based on jieba, then computes the ROUGE-L score to evaluate the quality of the generated text in comparison to the reference.
+
+    Input-Output Arguments
+    :param continuation: str, The generated text whose quality is to be evaluated.
+    :param reference: str, The reference text against which the generated text is compared.
+    :return: float. The ROUGE-L score indicating the quality of the generated text in relation to the reference text.
+    """
+```
+

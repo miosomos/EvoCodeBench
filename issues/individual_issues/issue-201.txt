@@ -1,0 +1,19 @@
+**Namespace:** `xinhua.XinhuaHallucinations.statistics`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function statistics
+
+Input Code:
+```Python
+    def statistics(self) -> dict:
+
+        """
+        Calculates and returns the statistics of different types of objects contained in the XinhuaHallucinations instance's data. It counts the occurrences of each type ('doc', 'gen', 'kno', 'num') and updates the statistics accordingly.
+
+        Input-Output Arguments
+        :param self: XinhuaHallucinations. An instance of the XinhuaHallucinations class. It uses the 'data' attribute of the instance, which is expected to be a list of dictionaries, each with a 'type' key.
+        :return: dict. A dictionary with keys corresponding to the types ('doc', 'gen', 'kno', 'num') and values representing the count of each type found in the 'data' attribute of the instance.
+        """
+```
+

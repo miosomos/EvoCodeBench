@@ -1,0 +1,20 @@
+**Namespace:** `litdata.streaming.serializers.NoHeaderNumpySerializer.serialize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function serialize
+
+Input Code:
+```Python
+    def serialize(self, item: np.ndarray) -> Tuple[bytes, Optional[str]]:
+
+        """
+        Serializes a NumPy array into a bytes object and generates a corresponding dtype identifier string. This method is designed for scenarios where header information is not required or desired in the serialized output.
+
+        Input-Output Arguments
+        :param self: NoHeaderNumpySerializer. An instance of the NoHeaderNumpySerializer class.
+        :param item: np.ndarray, The NumPy array to be serialized. It is used to convert the array into a bytes object and to determine the data type for generating the dtype identifier.
+        :return: Tuple[bytes, Optional[str]], A tuple where the first element is the serialized bytes object of the NumPy array and the second element is a string representing the data type of the array in a custom format ("no_header_numpy:{indice}").
+        """
+```
+

@@ -1,0 +1,37 @@
+**Namespace:** `ollama._client.Client.chat`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function chat
+
+Input Code:
+```Python
+  def chat(
+    self,
+    model: str = '',
+    messages: Optional[Sequence[Message]] = None,
+    stream: bool = False,
+    format: Literal['', 'json'] = '',
+    options: Optional[Options] = None,
+    keep_alive: Optional[Union[float, str]] = None,
+  ) -> Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]:
+
+    """
+    The function initiates a chat response using a specified model. It validates the input parameters, raises errors for invalid inputs, and sends a request to an API endpoint to create a chat response. Depending on the 'stream' parameter, it either returns a single ChatResponse or a generator for ChatResponses.
+
+    Input-Output Arguments
+    :param self: Client. An instance of the Client class.
+    :param model: str, optional. The model identifier used for generating chat responses. It is required and used to specify which model to use for the chat.
+    :param messages: Optional[Sequence[Message]], optional. A sequence of messages (or dict-like objects) to be included in the chat. Each message must contain a 'role' (one of 'system', 'user', 'assistant') and 'content'. If 'images' are included, they are encoded.
+    :param stream: bool, optional, default False. Determines the type of response: if False, a single ChatResponse is returned; if True, a generator of ChatResponses is returned.
+    :param format: Literal['', 'json'], optional, default ''. Specifies the format of the response. Currently supports '' (default) and 'json'.
+    :param options: Optional[Options], optional. Additional options for the chat request.
+    :param keep_alive: Optional[Union[float, str]], optional. Specifies the keep-alive parameter for the chat session.
+    :return: Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]. Returns a single ChatResponse if 'stream' is False, otherwise returns a generator of ChatResponses.
+
+    Raises `RequestError` if a model is not provided or if messages do not meet the required structure.
+    Raises `TypeError` if messages are not a list of Message or dict-like objects.
+    Raises `ResponseError` if the request could not be fulfilled.
+    """
+```
+

@@ -1,0 +1,26 @@
+**Namespace:** `math.learning_rate_decay`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function learning_rate_decay
+
+Input Code:
+```Python
+def learning_rate_decay(
+    step, lr_init, lr_final, max_steps, lr_delay_steps=0, lr_delay_mult=1
+):
+
+  """
+  This function calculates the learning rate at a given optimization step with the option to include a delay at the start. It uses a log-linear interpolation (or exponential decay) between an initial and final learning rate over a specified number of steps. If a delay is specified, the initial learning rate is scaled down by a multiplier and gradually returns to the normal rate after the delay period.
+
+  Input-Output Arguments
+  :param step: int, the current optimization step, used to determine the learning rate based on the progression of steps.
+  :param lr_init: float, the initial learning rate at the start of optimization.
+  :param lr_final: float, the final learning rate to be reached at the end of optimization.
+  :param max_steps: int, the total number of steps in the optimization process, used to calculate the progression and the learning rate decay.
+  :param lr_delay_steps: int, optional, the number of steps to delay before applying the full learning rate, allows for a gradual increase to the initial learning rate.
+  :param lr_delay_mult: float, optional, the multiplier applied to the learning rate during the delay period, affects the starting learning rate when a delay is applied.
+  :return: float, the calculated learning rate for the current step, adjusted for any specified delay.
+  """
+```
+

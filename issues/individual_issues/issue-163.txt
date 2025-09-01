@@ -1,0 +1,20 @@
+**Namespace:** `iris.nodes.geometry_refinement.smoothing.Smoothing._rolling_median`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _rolling_median
+
+Input Code:
+```Python
+    def _rolling_median(self, signal: np.ndarray, kernel_offset: int) -> np.ndarray:
+
+        """
+        This function calculates the rolling median of a 1D signal array. It shifts the signal by a range defined by the kernel offset, computes the median of these shifted signals, and then trims the resulting median array to account for edge effects introduced by the shifting process.
+
+        Input-Output Arguments
+        :param signal: np.ndarray, The input signal array for which the rolling median is to be computed. It is used to generate shifted versions of itself, which are then used to calculate the rolling median.
+        :param kernel_offset: int, The offset for the kernel, determining how far the signal is shifted in both directions to compute the rolling median. It defines the range of shifts applied to the signal for median calculation.
+        :return: np.ndarray, The rolling median of the input signal. This array will be shorter than the input signal by 2 * kernel_offset elements due to the trimming process to remove edge effects.
+        """
+```
+

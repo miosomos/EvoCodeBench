@@ -1,0 +1,27 @@
+**Namespace:** `litdata.streaming.resolver._execute`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _execute
+
+Input Code:
+```Python
+def _execute(
+    name: str,
+    num_nodes: int,
+    machine: Optional[Machine] = None,
+    command: Optional[str] = None,
+) -> None:
+
+    """
+    This function remotely executes the current operator by creating a data preparation machine job through the Studio API. It continuously checks the job status and prints the job URL when it starts. The function raises exceptions if the required SDK is not available or if the job fails.
+
+    Input-Output Arguments
+    :param name: str, The name of the job to be executed.
+    :param num_nodes: int, The number of instances (nodes) required for the job.
+    :param machine: Optional[Machine], The machine configuration for the job. If not provided, a default machine configuration is fetched.
+    :param command: Optional[str], The command to be executed in the job. If not provided, a default command that includes the current working directory and environment variables is used.
+    :return: No return values.
+    """
+```
+

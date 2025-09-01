@@ -1,0 +1,24 @@
+**Namespace:** `challenge.ChallengeManager._type_check_with_pyright`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _type_check_with_pyright
+
+Input Code:
+```Python
+    def _type_check_with_pyright(
+        cls, user_code: str, test_code: str
+    ) -> TypeCheckResult:
+
+        """
+        This function performs a type check on a combination of user-provided code and test code using Pyright, identifies lines with expected type errors, and returns a result indicating whether the type check passed or failed along with relevant error messages.
+
+        Input-Output Arguments
+        :param cls: The class that this method belongs to, used to access class-specific attributes and methods.
+        :param user_code: str, The user-provided code that needs to be type-checked.
+        :param test_code: str, The test code that is combined with the user code for type checking.
+        :return: TypeCheckResult, An object containing the result of the type check, including a message detailing the outcome and a boolean indicating if the type check passed.
+
+        """
+```
+

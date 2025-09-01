@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.resolver._assert_dir_has_index_file`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _assert_dir_has_index_file
+
+Input Code:
+```Python
+def _assert_dir_has_index_file(output_dir: Dir) -> None:
+
+    """
+    This function asserts that a given directory, expected to be an S3 bucket directory, does not contain an index file named "index.json". If the directory is not an S3 bucket or already contains an index file, it raises an error. Additionally, if an index file is not found, it deletes all objects within the specified prefix in the bucket.
+
+    Input-Output Arguments
+    :param output_dir: Dir. The directory object which is expected to be an S3 bucket directory. It is used to check for the presence of an "index.json" file and to perform operations based on its existence.
+    :return: None. There are no return values from this function.
+    """
+```
+

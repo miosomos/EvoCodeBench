@@ -1,0 +1,31 @@
+**Namespace:** `ollama._client.Client.create`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function create
+
+Input Code:
+```Python
+  def create(
+    self,
+    model: str,
+    path: Optional[Union[str, PathLike]] = None,
+    modelfile: Optional[str] = None,
+    stream: bool = False,
+  ) -> Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]:
+
+    """
+    The `create` function in the `Client` class initiates a request to create a model based on the provided model file or path. It handles the request either as a single response or as a stream of responses, depending on the `stream` parameter.
+
+    Input-Output Arguments
+    :param self: Client. An instance of the Client class.
+    :param model: str, The name of the model to be created.
+    :param path: Optional[Union[str, PathLike]], The file system path where the model file is located. Used to read the model file if `modelfile` is not directly provided.
+    :param modelfile: Optional[str], The content of the model file as a string. Used if `path` is not provided.
+    :param stream: bool, Determines the mode of the response. If `False`, a single `ProgressResponse` is returned. If `True`, a generator yielding `ProgressResponse` objects is returned.
+    :return: Union[Mapping[str, Any], Iterator[Mapping[str, Any]]], The function returns a `ProgressResponse` if `stream` is `False`. If `stream` is `True`, it returns a generator of `ProgressResponse` objects. Raises `ResponseError` if the request could not be fulfilled.
+
+    Note: The function raises a `RequestError` if neither `path` nor `modelfile` is provided, indicating that one of them is required for the operation.
+    """
+```
+

@@ -1,0 +1,23 @@
+**Namespace:** `litdata.streaming.writer.BinaryWriter.merge`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function merge
+
+Input Code:
+```Python
+    def merge(self, num_workers: int = 1, node_rank: Optional[int] = None) -> None:
+
+        """
+        The merge function is responsible for combining individual index files created by multiple workers into a single, unified index file. This is particularly useful in distributed environments where each worker generates a part of the index. The function waits until all parts are available, then proceeds with the merge only if it's the master node (rank 0).
+
+        Input-Output Arguments
+        :param self: BinaryWriter. An instance of the BinaryWriter class, which manages the merging process.
+        :param num_workers: int, optional. The number of workers that are expected to contribute to the index. It defaults to 1, assuming a non-distributed environment unless specified otherwise. It's used to determine when all parts of the index are ready for merging.
+        :param node_rank: Optional[int], optional. The rank of the node in the distributed environment. This parameter is used to identify the master node (rank 0) which is responsible for the actual merging process. If None, the function assumes a non-distributed environment or that the rank determination is handled externally.
+        :return: No return values. The function's purpose is to perform the merge operation, and it does not return any value.
+
+        Note: The function includes a mechanism to wait for all index parts to be available by periodically checking the presence of index files in a cache directory. It also includes a special condition for non-master nodes (rank != 0) to wait until the merged index file is available.
+        """
+```
+

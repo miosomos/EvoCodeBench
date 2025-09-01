@@ -1,0 +1,19 @@
+**Namespace:** `coord.contract`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function contract
+
+Input Code:
+```Python
+def contract(x):
+
+  """
+  Contracts points towards the origin based on a specific mathematical formula (Equation 10 from the paper available at arxiv.org/abs/2111.12077). This involves scaling the magnitude of the input vector(s) in a way that points within a unit distance from the origin are scaled correctly.
+
+  Input-Output Arguments
+  :param x: Array. The input array of points to be contracted towards the origin. It is used to calculate the magnitude squared of the points and then scale them accordingly.
+  :return: Array. The array of points after being scaled towards the origin.
+  """
+```
+

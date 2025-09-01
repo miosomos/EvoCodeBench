@@ -1,0 +1,23 @@
+**Namespace:** `autorag.nodes.retrieval.hybrid_cc.cc_pure`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function cc_pure
+
+Input Code:
+```Python
+def cc_pure(ids: Tuple, scores: Tuple, weights: Tuple, top_k: int) -> Tuple[
+    List[str], List[float]]:
+
+    """
+    This function calculates the weighted sum of scores for each ID, normalizes these scores, and then returns the top K IDs and their corresponding scores based on the weighted sum. It is designed to work with data in the form of tuples for IDs, scores, and weights.
+
+    Input-Output Arguments
+    :param ids: Tuple of Lists of Strings. Each list within the tuple represents a set of IDs for a particular category or group.
+    :param scores: Tuple of Lists of Floats. Each list within the tuple corresponds to the scores of the IDs in the same position in the 'ids' tuple. These scores are to be weighted and aggregated.
+    :param weights: Tuple of Floats. Weights to be applied to the scores in each corresponding position across all categories or groups.
+    :param top_k: Int. The number of top-scoring IDs to return based on the weighted sum of their scores.
+    :return: Tuple containing a list of strings and a list of floats. The first list contains the top K IDs sorted by their weighted sum in descending order, and the second list contains the corresponding weighted sums of these top K IDs.
+    """
+```
+

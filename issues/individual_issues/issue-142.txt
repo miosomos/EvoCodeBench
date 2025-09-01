@@ -1,0 +1,18 @@
+**Namespace:** `litdata.streaming.reader.BinaryReader._try_load_config`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _try_load_config
+
+Input Code:
+```Python
+    def _try_load_config(self) -> Optional[ChunksConfig]:
+
+        """
+        This function attempts to load the chunks configuration for a BinaryReader instance if the index files are available. It updates the instance's configuration with the loaded ChunksConfig object.
+        Input-Output Arguments
+        :param self: BinaryReader. An instance of the BinaryReader class. It uses its attributes such as _cache_dir, _serializers, _remote_input_dir, and _item_loader to attempt to load the configuration.
+        :return: Optional[ChunksConfig]. The loaded ChunksConfig object if the configuration could be successfully loaded, otherwise None.
+        """
+```
+

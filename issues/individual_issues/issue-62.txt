@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.utils.stats.cov_to_corr`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function cov_to_corr
+
+Input Code:
+```Python
+def cov_to_corr(cov: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+
+    """
+    Converts a given covariance matrix into a correlation matrix and calculates the standard deviation for each variable. It ensures the input is a 2D array and performs the conversion using numpy operations.
+
+    Input-Output Arguments
+    :param cov: np.ndarray. A 2D numpy array representing the covariance matrix of variables.
+    :return: tuple[np.ndarray, np.ndarray]. A tuple containing two numpy arrays: the first is the correlation matrix derived from the covariance matrix, and the second is a 1D array of standard deviations for each variable.
+    """
+```
+

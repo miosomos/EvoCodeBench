@@ -1,0 +1,22 @@
+**Namespace:** `iris.io.validators.is_binary`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function is_binary
+
+Input Code:
+```Python
+def is_binary(cls: type, v: np.ndarray, field: fields.ModelField) -> np.ndarray:
+
+    """
+    Checks if the given numpy array contains only boolean values, and raises an exception if it does not. It ensures that the array is binary (i.e., contains only True or False values) before it is sent for further processing.
+
+    Input-Output Arguments
+    :param cls: type. The class type that is calling this function. It is used for error messaging to specify which class encountered the non-binary array.
+    :param v: np.ndarray. The numpy array to be checked for binary values. It is the main subject of the function's validation process.
+    :param field: fields.ModelField. A field descriptor that provides context about the field being checked, used in error messaging to specify which field failed the binary check.
+    :raises ValueError: If the array `v` does not contain boolean data types, a ValueError is raised with a message indicating the class and field name, along with the incorrect data type found.
+    :return: np.ndarray. The input numpy array `v` is returned unchanged if it passes the binary check, allowing for further processing elsewhere.
+    """
+```
+

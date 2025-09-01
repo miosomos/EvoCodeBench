@@ -1,0 +1,31 @@
+**Namespace:** `ollama._client.AsyncClient.create`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function create
+
+Input Code:
+```Python
+  async def create(
+    self,
+    model: str,
+    path: Optional[Union[str, PathLike]] = None,
+    modelfile: Optional[str] = None,
+    stream: bool = False,
+  ) -> Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]:
+
+    """
+    The `create` method in the `AsyncClient` class asynchronously handles the creation of a model by sending a POST request to the server. It supports reading model data from a file path or directly from a string. If `stream` is set to `True`, it returns an asynchronous iterator for streaming responses; otherwise, it returns a single mapping object representing the response.
+
+    Input-Output Arguments
+    :param self: AsyncClient. An instance of the AsyncClient class.
+    :param model: str, The name of the model to be created.
+    :param path: Optional[Union[str, PathLike]], The file system path to a file containing model data. If provided, the content of the file is read as the model data. Defaults to None.
+    :param modelfile: Optional[str], A string containing the model data. Used if `path` is not provided. Defaults to None.
+    :param stream: bool, Indicates whether the response should be streamed. If `True`, the method returns an asynchronous iterator; otherwise, it returns a single response object. Defaults to False.
+    :return: Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]], The response from the server. The type of the response depends on the value of the `stream` parameter.
+
+    Raises `ResponseError` if the request could not be fulfilled. It also raises `RequestError` if neither `path` nor `modelfile` is provided, indicating that one of them must be specified for the request.
+    """
+```
+

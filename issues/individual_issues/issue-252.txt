@@ -1,0 +1,22 @@
+**Namespace:** `rigid_body.exp_so3`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function exp_so3
+
+Input Code:
+```Python
+def exp_so3(
+    axis_angle, eps=jnp.finfo(jnp.float32).eps
+):
+
+  """
+  This function computes the exponential map from the Lie algebra so3 to the Lie group SO3, using Rodrigues' formula. It translates a 3D axis-angle representation of a rotation into a 3x3 rotation matrix. The function includes a numerical stability mechanism for small angles of rotation.
+
+  Input-Output Arguments
+  :param axis_angle: A 3-vector (numpy array). Represents the axis of rotation and the magnitude of rotation. It is used to compute the rotation matrix.
+  :param eps: Float. A small epsilon value for numerical stability, used to avoid division by zero or very small values that could lead to numerical instability. Defaults to the machine epsilon for float32.
+  :return: A (3, 3) numpy array. An orthonormal rotation matrix representing the same rotation as the input axis-angle representation.
+  """
+```
+

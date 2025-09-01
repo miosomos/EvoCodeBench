@@ -1,0 +1,19 @@
+**Namespace:** `detectron2.utils.testing.reload_script_model`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function reload_script_model
+
+Input Code:
+```Python
+def reload_script_model(module):
+
+    """
+    This function saves a PyTorch JIT module to an in-memory buffer and then loads it back from this buffer. This process is useful for testing or ensuring that a module can be successfully serialized and deserialized without loss of information or functionality.
+
+    Input-Output Arguments
+    :param module: torch.jit.ScriptModule. The JIT module that needs to be reloaded. It is used to first save the module into a buffer and then load it back from that buffer.
+    :return: torch.jit.ScriptModule. The reloaded JIT module after it has been saved to and loaded from an in-memory buffer.
+    """
+```
+

@@ -1,0 +1,28 @@
+**Namespace:** `grid_utils.trilerp`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function trilerp
+
+Input Code:
+```Python
+def trilerp(
+    values,
+    coordinates,
+    datastructure,
+):
+
+  """
+  Performs trilinear interpolation on a given set of values using specified coordinates. It supports sampling from either a 3D voxel grid or a hash data structure based on the provided parameters. The function adjusts the coordinates and chooses the appropriate sampling method based on the type of data structure specified.
+
+  Input-Output Arguments
+  :param values: A numpy array. If datastructure is 'grid', it expects a 4D array with shape (D,H,W,C) representing a 3D voxel grid with channels. If 'hash', it expects a 2D array with shape (N,C) representing hashed values with channels.
+  :param coordinates: A numpy array. A 2D or higher array with shape (..., 3) containing the coordinates for sampling. Coordinates should be within the bounds of the dimensions they refer to.
+  :param datastructure: String. Specifies the type of data structure from which to sample. Can be either 'grid' for a 3D voxel grid or 'hash' for a hashed data structure.
+  :return: A numpy array. A 2D or higher array with shape (..., C) containing the interpolated values at the specified coordinates. The shape of the output array matches the input coordinates array, with an additional dimension for channels.
+
+  Raises:
+      ValueError: If an invalid datastructure is passed, indicating that the function only supports 'grid' or 'hash' as valid data structures.
+  """
+```
+

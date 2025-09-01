@@ -1,0 +1,19 @@
+**Namespace:** `autorag.evaluate.util.cast_metrics`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function cast_metrics
+
+Input Code:
+```Python
+def cast_metrics(metrics: Union[List[str], List[Dict]]) -> Tuple[List[str], List[Dict[str, Any]]]:
+
+    """
+    This function processes a list of metrics, which can either be strings or dictionaries, and returns a tuple containing a list of metric names and a list of dictionaries with metric parameters. It ensures that the input is correctly formatted and transforms it into a standardized format for further processing.
+
+    Input-Output Arguments
+    :param metrics: Union[List[str], List[Dict]]. A list that can either contain strings representing metric names or dictionaries with metric details. It is used to extract metric names and parameters for further processing.
+    :return: Tuple[List[str], List[Dict[str, Any]]]. A tuple where the first element is a list of metric names and the second element is a list of dictionaries containing metric parameters. This standardized format allows for consistent handling of metric information.
+    """
+```
+

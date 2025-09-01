@@ -1,0 +1,23 @@
+**Namespace:** `detectron2.utils.testing.assert_instances_allclose`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function assert_instances_allclose
+
+Input Code:
+```Python
+def assert_instances_allclose(input, other, *, rtol=1e-5, msg="", size_as_tensor=False):
+
+    """
+    This function asserts that two instances of a custom class (presumably named 'Instances') are close or equal to each other in terms of their properties and values. It checks if the image sizes are the same (either as tuples or tensors, based on the input parameter) and verifies that all fields within the instances are equal or close to each other, with special handling for fields that are of type Boxes, ROIMasks, or torch.Tensor.
+
+    Input-Output Arguments
+    :param input: Instances. The first instance to compare.
+    :param other: Instances. The second instance to compare against the first.
+    :param rtol: float, optional. The relative tolerance parameter for comparison of tensor fields.
+    :param msg: str, optional. A custom message prefix to append to the default error messages.
+    :param size_as_tensor: bool, optional. A flag indicating whether to compare the image_size of the Instances as tensors instead of tuples. This is useful for comparing outputs of tracing.
+    :return: No return values. However, it raises an AssertionError if the instances do not match according to the specified criteria or a ValueError if it encounters a field type it does not know how to compare.
+    """
+```
+

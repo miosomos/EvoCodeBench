@@ -1,0 +1,21 @@
+**Namespace:** `nlm_ingestor.ingestor.formatter.fix_mixedcase_words`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function fix_mixedcase_words
+
+Input Code:
+```Python
+def fix_mixedcase_words(word):
+    # if lower no uppers after
+    # if upper no
+
+    """
+    This function checks a given word and corrects its casing based on specific rules. If the word is entirely in uppercase or lowercase, it returns the word as is. If the word is mixed case, it applies different rules to correct its casing, such as converting it to lowercase, uppercase, or capitalizing it based on the casing of the first two letters.
+
+    Input-Output Arguments
+    :param word: String. The word to be checked and potentially corrected for mixed casing.
+    :return: String. The word after applying casing corrections based on the function's logic.
+    """
+```
+

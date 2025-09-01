@@ -1,0 +1,20 @@
+**Namespace:** `litdata.streaming.dataset.StreamingDataset.load_state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_state_dict
+
+Input Code:
+```Python
+    def load_state_dict(self, state_dict: Dict[str, Any]) -> None:
+
+        """
+        This function loads a given state dictionary into the StreamingDataset instance, effectively restoring its state based on the provided dictionary. This is particularly useful for resuming data streaming processes from a saved state.
+
+        Input-Output Arguments
+        :param self: StreamingDataset. An instance of the StreamingDataset class.
+        :param state_dict: Dict[str, Any]. A dictionary containing the state to be loaded into the StreamingDataset instance. It maps state keys to their corresponding values.
+        :return: No return values.
+        """
+```
+

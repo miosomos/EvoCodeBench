@@ -1,0 +1,33 @@
+**Namespace:** `stepfun.sample`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function sample
+
+Input Code:
+```Python
+def sample(
+    rng,
+    t,
+    w_logits,
+    num_samples,
+    single_jitter=False,
+    deterministic_center=False,
+    eps=jnp.finfo(jnp.float32).eps,
+):
+
+  """
+  This function samples from a piecewise-constant probability density function (PDF) defined by bin endpoints and corresponding weights. It supports both deterministic and random sampling methods, with options for jittering samples and focusing on the center of the distribution.
+
+  Input-Output Arguments
+  :param rng: A random number generator or None. Used for generating random samples. If None, deterministic sampling is used based on linspace.
+  :param t: jnp.ndarray. The bin endpoint coordinates, which must be sorted. It defines the intervals of the step function.
+  :param w_logits: jnp.ndarray. The logits corresponding to the weights of each bin in the step function.
+  :param num_samples: int. The number of samples to generate.
+  :param single_jitter: bool. Determines if each sample should be jittered by the same amount (True) or independently (False) when using random sampling.
+  :param deterministic_center: bool. Controls the behavior of deterministic sampling. If False, samples span the entire PDF. If True, samples are centered in each interval of the PDF.
+  :param eps: float. A small value added for numerical stability and to adjust the range of uniform sampling.
+  :return: jnp.ndarray(float32). An array of sampled values from the step function, with shape [batch_size, num_samples].
+  """
+```
+

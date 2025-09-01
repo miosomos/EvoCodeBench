@@ -1,0 +1,21 @@
+**Namespace:** `searcharray.postings.SearchArray.positions`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function positions
+
+Input Code:
+```Python
+    def positions(self, token: str, key=None) -> List[np.ndarray]:
+
+        """
+        This function retrieves and returns a list of numpy arrays representing the positions of a given term within documents. If a specific document key is provided, it returns the positions for that document only; otherwise, it returns positions across all documents.
+
+        Input-Output Arguments
+        :param self: SearchArray. An instance of the SearchArray class.
+        :param token: str, The term for which positions are to be found.
+        :param key: The specific document key to search within. If None, positions are searched across all documents. Defaults to None.
+        :return: List[np.ndarray], A list of numpy arrays where each array contains the positions of the given term. The positions are specific to a document if a key is provided, or across all documents if no key is provided.
+        """
+```
+

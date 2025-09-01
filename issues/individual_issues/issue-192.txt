@@ -1,0 +1,19 @@
+**Namespace:** `detectron2.structures.rotated_boxes.RotatedBoxes.area`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function area
+
+Input Code:
+```Python
+    def area(self) -> torch.Tensor:
+
+        """
+        Computes and returns the area of all the rotated boxes represented by the class instance. The area is calculated by multiplying the width and height of each box.
+
+        Input-Output Arguments
+        :param self: RotatedBoxes. An instance of the RotatedBoxes class, which contains the boxes' data in a tensor.
+        :return: torch.Tensor. A tensor that contains the computed area of each box.
+        """
+```
+

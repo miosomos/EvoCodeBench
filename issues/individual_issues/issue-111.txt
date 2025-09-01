@@ -1,0 +1,21 @@
+**Namespace:** `litdata.streaming.dataset.StreamingDataset.state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function state_dict
+
+Input Code:
+```Python
+    def state_dict(self, num_samples_yielded: int, num_workers: int, batch_size: int) -> Dict[str, Any]:
+
+        """
+        The `state_dict` method generates and returns a dictionary representing the current state of the StreamingDataset instance, including information about the number of samples yielded, the number of workers, batch size, and other relevant dataset parameters. It raises an error if called from a DataLoader worker process.
+
+        Input-Output Arguments
+        :param num_samples_yielded: int, the number of samples that have been yielded by the dataset.
+        :param num_workers: int, the number of worker processes used for loading the data.
+        :param batch_size: int, the size of the batches that data is divided into for processing.
+        :return: Dict[str, Any], a dictionary containing the current state of the StreamingDataset instance, including details such as the number of samples yielded, number of workers, batch size, current epoch, input directory path and URL, item loader state (if applicable), whether the last batch is dropped, seed, world size of the distributed environment, and shuffle status.
+        """
+```
+

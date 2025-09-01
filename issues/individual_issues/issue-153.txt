@@ -1,0 +1,51 @@
+**Namespace:** `litdata.processing.functions.optimize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function optimize
+
+Input Code:
+```Python
+def optimize(
+    fn: Callable[[Any], Any],
+    inputs: Sequence[Any],
+    output_dir: str,
+    weights: Optional[List[int]] = None,
+    chunk_size: Optional[int] = None,
+    chunk_bytes: Optional[Union[int, str]] = None,
+    compression: Optional[str] = None,
+    num_workers: Optional[int] = None,
+    fast_dev_run: bool = False,
+    num_nodes: Optional[int] = None,
+    machine: Optional[str] = None,
+    num_downloaders: Optional[int] = None,
+    num_uploaders: Optional[int] = None,
+    reorder_files: bool = True,
+    reader: Optional[BaseReader] = None,
+    batch_size: Optional[int] = None,
+) -> None:
+
+    """
+    This function is designed to optimize a dataset by converting it into chunks, which can be processed in a distributed manner if required. It applies a given function to each element of the input sequence, supports various configurations for chunking, compression, and parallel processing, and handles both local and remote execution environments.
+
+    Input-Output Arguments
+    :param fn: Callable[[Any], Any]. A function that will be executed over each element of the inputs.
+    :param inputs: Sequence[Any]. A sequence of inputs that the `fn` function will process. Each input should contain at least a valid filepath.
+    :param output_dir: str. The directory where the processed data will be stored.
+    :param weights: Optional[List[int]]. Weights associated with each input, used for balancing work among workers. Default is None.
+    :param chunk_size: Optional[int]. The maximum number of elements each chunk should contain. Default is None.
+    :param chunk_bytes: Optional[Union[int, str]]. The maximum size in bytes that each chunk should be. Default is None.
+    :param compression: Optional[str]. The compression algorithm to use for the chunks. Default is None.
+    :param num_workers: Optional[int]. The number of workers to use for processing. Default is None.
+    :param fast_dev_run: bool. If True, processes only a subset of the inputs for quick development testing. Default is False.
+    :param num_nodes: Optional[int]. The number of nodes to use for remote execution, supported only on https://lightning.ai/. Default is None.
+    :param machine: Optional[str]. Specifies the machine type for remote execution, supported only on https://lightning.ai/. Default is None.
+    :param num_downloaders: Optional[int]. The number of downloaders per worker. Default is None.
+    :param num_uploaders: Optional[int]. The number of uploaders per worker. Default is None.
+    :param reorder_files: bool. If True, reorders files by size to distribute work equally among workers; otherwise, preserves the order of processing. Default is True.
+    :param reader: Optional[BaseReader]. The reader to use for reading inputs. Default is None.
+    :param batch_size: Optional[int]. Groups the inputs into batches of this size. Default is None.
+    :return: None. This function does not return any value.
+    """
+```
+

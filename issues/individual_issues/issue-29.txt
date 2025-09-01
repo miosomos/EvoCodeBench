@@ -1,0 +1,24 @@
+**Namespace:** `spin_math.safe_sqrt`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function safe_sqrt
+
+Input Code:
+```Python
+def safe_sqrt(x,
+              *,
+              eps = jnp.finfo(jnp.float32).eps,
+              value_at_zero = 0.0):
+
+  """
+  This function calculates the square root of a given number in a safe manner, avoiding the evaluation at zero by using a small epsilon value. If the input is less than this epsilon, it uses a predefined value near zero instead to prevent NaN results.
+
+  Input-Output Arguments
+  :param x: The operand for which the square root is to be calculated.
+  :param eps: A small number to prevent NaN results by avoiding division by zero or square root of zero. It defaults to the machine epsilon for float32 data type.
+  :param value_at_zero: The value to use instead of zero to prevent NaN results. The function will return the square root of this value if x is less than eps.
+  :return: The safe square root of x, or the square root of value_at_zero if x is less than eps.
+  """
+```
+

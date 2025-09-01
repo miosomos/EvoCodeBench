@@ -1,0 +1,20 @@
+**Namespace:** `iris.utils.math.polygon_length`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function polygon_length
+
+Input Code:
+```Python
+def polygon_length(polygon: np.ndarray, max_point_distance: int = 20) -> float:
+
+    """
+    Computes the total length of a polygon by summing the distances between consecutive points, excluding distances that exceed a specified maximum, to avoid counting large gaps between disjoint arcs as part of the polygon's length.
+
+    Input-Output Arguments
+    :param polygon: np.ndarray. A 2-dimensional numpy array representing a polygon, where each row corresponds to a point in 2D space.
+    :param max_point_distance: int, optional. The maximum distance between two consecutive points that can be considered part of the same arc. Points further apart than this threshold are not counted in the total length. Defaults to 20.
+    :return: float. The total length of the polygon, considering only the distances between consecutive points that are below the specified maximum distance.
+    """
+```
+

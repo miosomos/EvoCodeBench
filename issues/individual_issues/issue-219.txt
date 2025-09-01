@@ -1,0 +1,20 @@
+**Namespace:** `ollama._client.AsyncClient._create_blob`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _create_blob
+
+Input Code:
+```Python
+  async def _create_blob(self, path: Union[str, Path]) -> str:
+
+    """
+    This function calculates the SHA256 checksum of a file specified by the path, checks if a blob with that checksum already exists on the server by making a HEAD request, and if not found (404 status code), uploads the file in chunks to the server using a POST request. Finally, it returns the digest of the file.
+
+    Input-Output Arguments
+    :param self: AsyncClient. An instance of the AsyncClient class.
+    :param path: Union[str, Path]. The file path of the file to create a blob for. It is used to read the file in binary mode and calculate its SHA256 checksum, and if necessary, to upload the file to the server.
+    :return: str. The digest of the file in the format 'sha256:<checksum>'.
+    """
+```
+

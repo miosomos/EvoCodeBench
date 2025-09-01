@@ -1,0 +1,27 @@
+**Namespace:** `render.compute_alpha_weights`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function compute_alpha_weights
+
+Input Code:
+```Python
+def compute_alpha_weights(
+    density,
+    tdist,
+    dirs,
+    **kwargs,
+):
+
+  """
+  This function calculates the alpha compositing weights based on the given density, distance between points (tdist), and direction vectors (dirs). It computes the product of density and the adjusted distance between points to use as input for another helper function that computes the alpha weights.
+
+  Input-Output Arguments
+  :param density: Array-like. The density values for each point in the space, used to compute the weights.
+  :param tdist: Array-like. The distances between consecutive points along a path or direction, used to adjust the density values.
+  :param dirs: Array-like. The direction vectors for each point or segment, used to calculate the norm-adjusted distances between points.
+  :param **kwargs: Arbitrary keyword arguments. These are passed directly to the helper function for computing alpha weights.
+  :return: The return value from the helper function that computes the alpha weights. The data type and specifics depend on the implementation of the helper function.
+  """
+```
+

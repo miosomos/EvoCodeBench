@@ -1,0 +1,18 @@
+**Namespace:** `searcharray.utils.bitcount.bit_count64`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function bit_count64
+
+Input Code:
+```Python
+def bit_count64(arr):
+
+    """
+    Counts the number of bits set to 1 (also known as the Hamming weight or the population count) in each element of a 64-bit integer array using bitwise operations. This is a step in the process of efficiently calculating the bit count for each element in the array.
+    Input-Output Arguments
+    :param arr: Array of 64-bit integers. The array whose elements' bit counts are to be calculated. It is modified in-place to contain the bit counts as its elements.
+    :return: Array of integers. The same array passed as input, but now each element has been replaced with its corresponding bit count.
+    """
+```
+

@@ -1,0 +1,19 @@
+**Namespace:** `detectron2.export.flatten.flatten_to_tuple`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function flatten_to_tuple
+
+Input Code:
+```Python
+def flatten_to_tuple(obj):
+
+    """
+    Flattens an object into a tuple format suitable for PyTorch tracing and provides a schema to rebuild the original object. This is useful for serialization and deserialization of complex objects in a format that PyTorch can work with.
+
+    Input-Output Arguments
+    :param obj: The object to be flattened. It can be of various types including str, bytes, list, tuple, mapping collections, Instances, Boxes, or ROIMasks. The type of the object determines how it will be flattened.
+    :return: A tuple containing two elements. The first element is the flattened result (res) which can be used as tracing outputs in PyTorch. The second element is a schema object which has a `__call__` method. This method can reconstruct the original object from the flattened result. The schema is essentially a dataclass that can be serialized.
+    """
+```
+

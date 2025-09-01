@@ -1,0 +1,19 @@
+**Namespace:** `contrastors.models.encoder.bert.bert_config_to_nomic_config`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function bert_config_to_nomic_config
+
+Input Code:
+```Python
+def bert_config_to_nomic_config(bert_config: BertConfig) -> NomicBertConfig:
+
+    """
+    Converts a BertConfig object to a NomicBertConfig object with specific mappings and additional configurations. It adapts the configuration from a BERT model to be compatible with a Nomic model architecture, including some new arguments not present in the original configuration.
+
+    Input-Output Arguments
+    :param bert_config: BertConfig. The configuration object for a BERT model. It contains various settings that define the model's architecture.
+    :return: NomicBertConfig. A new configuration object tailored for a Nomic model, which includes both inherited settings from the BertConfig and new attributes specific to the Nomic model's requirements.
+    """
+```
+

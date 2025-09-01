@@ -1,0 +1,30 @@
+**Namespace:** `easyvolcap.utils.fcds_utils.get_pulsar_camera_params`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_pulsar_camera_params
+
+Input Code:
+```Python
+def get_pulsar_camera_params(
+    R: torch.Tensor,
+    tvec: torch.Tensor,
+    camera_matrix: torch.Tensor,
+    image_size: torch.Tensor,
+    znear: float = 0.1,
+) -> torch.Tensor:
+
+    """
+    This function calculates and returns the camera parameters for Pulsar, including camera position, rotation, and intrinsic parameters such as focal length and sensor width, based on the input rotation matrix, translation vector, camera intrinsic matrix, and image size. It ensures that all inputs are batched and validates their shapes and values before computing the parameters.
+
+    Input-Output Arguments
+    :param R: torch.Tensor. A batch of rotation matrices of the camera, used to compute the camera's rotation in a different representation.
+    :param tvec: torch.Tensor. A batch of translation vectors of the camera, used to compute the camera's position.
+    :param camera_matrix: torch.Tensor. A batch of camera intrinsic matrices, used to derive focal lengths, principal points, and sensor width.
+    :param image_size: torch.Tensor. A batch of image sizes, used to adjust the principal point offsets and normalize the focal length.
+    :param znear: float, optional (default=0.1). The near clipping plane distance, used to adjust the focal length calculation.
+    :return: torch.Tensor. A tensor containing the computed camera parameters for each instance in the batch, including camera position, rotation, and intrinsic parameters.
+
+    """
+```
+

@@ -1,0 +1,20 @@
+**Namespace:** `agent_persistence_manager.AgentPersistenceManager.save_agent`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function save_agent
+
+Input Code:
+```Python
+    def save_agent(self, agent):
+
+        """
+        Serialize and save the agent state if it is a working agent and not a prime agent. This involves converting the agent's state into a dictionary format and then saving it using the persistence mechanism provided by the AgentPersistenceManager.
+
+        Input-Output Arguments
+        :param self: AgentPersistenceManager. An instance of the AgentPersistenceManager class, which is responsible for managing the persistence of agent states.
+        :param agent: The agent object whose state is to be serialized and saved. This object should have attributes or methods to determine if it is a working agent and whether it is a prime agent.
+        :return: No return values.
+        """
+```
+

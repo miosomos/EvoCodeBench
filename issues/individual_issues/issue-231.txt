@@ -1,0 +1,19 @@
+**Namespace:** `gfpgan_model.gfpgan_fix_faces`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function gfpgan_fix_faces
+
+Input Code:
+```Python
+def gfpgan_fix_faces(np_image):
+
+    """
+    This function attempts to restore faces in an image using the GFPGAN face restorer. If the GFPGAN face restorer is not set up, it logs a warning and returns the original image.
+
+    Input-Output Arguments
+    :param np_image: The image as a NumPy array on which face restoration is attempted.
+    :return: The image as a NumPy array. It is either the original image or the restored image if the GFPGAN face restorer is set up and used successfully.
+    """
+```
+

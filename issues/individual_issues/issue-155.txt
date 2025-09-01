@@ -1,0 +1,22 @@
+**Namespace:** `litdata.processing.data_processor._download_data_target`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _download_data_target
+
+Input Code:
+```Python
+def _download_data_target(input_dir: Dir, cache_dir: str, queue_in: Queue, queue_out: Queue) -> None:
+
+    """
+    This function downloads data from a remote directory to a local cache directory to optimize reading. It continuously fetches download tasks from an input queue, checks if the files are already downloaded, downloads missing files, and then signals completion by putting the task index into an output queue.
+
+    Input-Output Arguments
+    :param input_dir: Dir. The directory object representing the source directory from which files are to be downloaded. It is used to determine the source path or URL for the files.
+    :param cache_dir: str. The path to the local cache directory where files are to be downloaded. It is used as the destination for the downloaded files.
+    :param queue_in: Queue. The input queue from which download tasks are fetched. Each task includes an index and a list of file paths to download.
+    :param queue_out: Queue. The output queue where the index of a completed download task is put to signal that the files for that index are available.
+    :return: None. There are no return values as the function's purpose is to perform side effects (downloading files and communicating via queues).
+    """
+```
+

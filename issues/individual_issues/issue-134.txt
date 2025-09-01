@@ -1,0 +1,24 @@
+**Namespace:** `litdata.streaming.combined.CombinedStreamingDataset.state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function state_dict
+
+Input Code:
+```Python
+    def state_dict(
+        self, num_workers: int, batch_size: int, num_samples_yielded: Optional[List[int]] = None
+    ) -> Dict[str, Any]:
+
+        """
+        The function `state_dict` generates a state dictionary for the CombinedStreamingDataset instance. It returns an empty dictionary if the internal iterator is None and `num_samples_yielded` is not provided. Otherwise, it either returns a state dictionary created from the internal datasets or directly from the internal iterator's state dictionary, depending on whether the iterator is None.
+
+        Input-Output Arguments
+        :param self: CombinedStreamingDataset. An instance of the CombinedStreamingDataset class.
+        :param num_workers: int, The number of workers used in the dataset streaming process.
+        :param batch_size: int, The size of the batch used in the dataset streaming process.
+        :param num_samples_yielded: Optional[List[int]], A list of integers representing the number of samples yielded. This parameter is optional and defaults to None.
+        :return: Dict[str, Any], A dictionary representing the state of the CombinedStreamingDataset instance. The dictionary is empty if the internal iterator is None and `num_samples_yielded` is not provided. Otherwise, it contains the state information relevant to the dataset streaming process.
+        """
+```
+

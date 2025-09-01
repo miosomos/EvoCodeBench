@@ -1,0 +1,20 @@
+**Namespace:** `easyvolcap.utils.gl_utils.Mesh.offscreen_render`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function offscreen_render
+
+Input Code:
+```Python
+    def offscreen_render(self, eglctx: "eglContextManager", camera: Camera):
+
+        """
+        The function performs an offscreen rendering of the Mesh instance using a specified camera configuration. It first resizes the rendering context to match the camera's width and height, then renders the Mesh instance using the camera's settings.
+
+        Input-Output Arguments
+        :param eglctx: eglContextManager, the rendering context manager used for offscreen rendering. It is resized to match the camera's dimensions before rendering.
+        :param camera: Camera, the camera configuration used for rendering. Its width and height are used to resize the rendering context, and its settings are used during the rendering process.
+        :return: No return values.
+        """
+```
+

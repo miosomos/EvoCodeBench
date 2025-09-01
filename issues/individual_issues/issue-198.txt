@@ -1,0 +1,20 @@
+**Namespace:** `microsearch.engine.SearchEngine.search`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function search
+
+Input Code:
+```Python
+    def search(self, query: str) -> dict[str, float]:
+
+        """
+        The function performs a search based on the input query. It normalizes the query string, splits it into keywords, and then calculates the BM25 score for each keyword across URLs. The scores for URLs are aggregated and returned as a dictionary where each URL is a key and its aggregated score is the value.
+
+        Input-Output Arguments
+        :param self: SearchEngine. An instance of the SearchEngine class.
+        :param query: str, The search query input by the user. It is normalized and split into keywords for scoring.
+        :return: dict[str, float], A dictionary where each key is a URL and its value is the aggregated BM25 score based on the input query's keywords.
+        """
+```
+

@@ -1,0 +1,27 @@
+**Namespace:** `litdata.processing.data_processor._map_items_to_workers_sequentially`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _map_items_to_workers_sequentially
+
+Input Code:
+```Python
+def _map_items_to_workers_sequentially(num_workers: int, user_items: List[Any]) -> List[List[Any]]:
+
+    """
+    This function distributes a list of items among workers in a distributed computing environment sequentially. It calculates the number of items each worker should process based on the total number of workers across all nodes and the total number of items. It ensures an even distribution of items and handles any remainder by distributing extra items to the last workers in the list.
+
+    Input-Output Arguments
+    :param num_workers: Int. The number of workers per node. It is used to calculate the total number of workers across all nodes.
+    :param user_items: List[Any]. A list of items that need to be distributed among the workers. 
+    :return: List[List[Any]]. A list of lists, where each sublist contains the items assigned to a worker. This ensures each worker knows which items they are responsible for processing.
+
+    Internal workings and additional notes:
+    - The function first calculates the total number of workers across all nodes and then determines how many items each worker should process.
+    - It adjusts for any remainder by adding extra items to the workers starting from the end of the list, ensuring an even distribution as much as possible.
+    - It uses cumulative sum to efficiently calculate the start and end indices for each worker's items.
+    - The function ensures that the output list has a length equal to the number of workers; otherwise, it raises a RuntimeError indicating improper assignment.
+    - This function relies on two other functions: `_get_num_nodes()` to get the total number of nodes in the environment, and `_get_node_rank()` to identify the current node's rank within the environment.
+    """
+```
+

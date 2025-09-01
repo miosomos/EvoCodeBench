@@ -1,0 +1,21 @@
+**Namespace:** `litdata.streaming.combined.CombinedStreamingDataset.load_state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_state_dict
+
+Input Code:
+```Python
+    def load_state_dict(self, state_dict: Dict[str, Any]) -> None:
+
+        """
+        This function loads the state of a CombinedStreamingDataset instance from a given state dictionary. It updates the state of each dataset within the CombinedStreamingDataset and, if applicable, updates the number of samples yielded by the streaming dataloader to avoid repeating samples.
+
+        Input-Output Arguments
+        :param self: CombinedStreamingDataset. An instance of the CombinedStreamingDataset class.
+        :param state_dict: Dict[str, Any]. A dictionary containing the state information for the CombinedStreamingDataset and its constituent datasets. It is used to restore the state of the CombinedStreamingDataset and its datasets.
+        :return: None. There are no return values.
+
+        """
+```
+

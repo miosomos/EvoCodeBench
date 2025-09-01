@@ -1,0 +1,20 @@
+**Namespace:** `geometry.are_lines_parallel`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function are_lines_parallel
+
+Input Code:
+```Python
+def are_lines_parallel(dir1, dir2):
+
+  """
+  Determines if two lines are parallel by comparing the dot product of their normalized direction vectors, considering a small epsilon to account for numerical precision issues.
+
+  Input-Output Arguments
+  :param dir1: Array-like. The direction vector of the first line, which is normalized within the function.
+  :param dir2: Array-like. The direction vector of the second line, which is also normalized within the function.
+  :return: Bool. True if the lines are parallel (considering numerical precision), otherwise False.
+  """
+```
+

@@ -1,0 +1,43 @@
+**Namespace:** `ollama._client.Client.generate`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function generate
+
+Input Code:
+```Python
+  def generate(
+    self,
+    model: str = '',
+    prompt: str = '',
+    system: str = '',
+    template: str = '',
+    context: Optional[Sequence[int]] = None,
+    stream: bool = False,
+    raw: bool = False,
+    format: Literal['', 'json'] = '',
+    images: Optional[Sequence[AnyStr]] = None,
+    options: Optional[Options] = None,
+    keep_alive: Optional[Union[float, str]] = None,
+  ) -> Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]:
+
+    """
+    The function generates a response based on the specified model and parameters. It raises exceptions if the model is not provided or if the request cannot be fulfilled. Depending on the 'stream' parameter, it either returns a single response or a generator for streaming responses.
+
+    Input-Output Arguments
+    :param self: Client. An instance of the Client class.
+    :param model: str, optional, default is an empty string. The model to use for generating a response. It is required, and an exception is raised if not provided.
+    :param prompt: str, optional, default is an empty string. The prompt to pass to the model for generating a response.
+    :param system: str, optional, default is an empty string. The system identifier to use for the request.
+    :param template: str, optional, default is an empty string. The template identifier to use for formatting the response.
+    :param context: Optional[Sequence[int]], optional. A sequence of integers representing the context for the request. Defaults to None, which is treated as an empty list.
+    :param stream: bool, optional, default is False. Determines whether the response should be streamed. If True, the function returns a generator.
+    :param raw: bool, optional, default is False. Determines whether the response should include raw data.
+    :param format: Literal['', 'json'], optional, default is an empty string. Specifies the format of the response. Can be either an empty string or 'json'.
+    :param images: Optional[Sequence[AnyStr]], optional. A sequence of images to include in the request. Defaults to None.
+    :param options: Optional[Options], optional. Additional options for the request. Defaults to None.
+    :param keep_alive: Optional[Union[float, str]], optional. Specifies the keep-alive parameter for the request. Can be either a float, a string, or None.
+    :return: Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]. Returns a single response or a generator for streaming responses, depending on the 'stream' parameter.
+    """
+```
+

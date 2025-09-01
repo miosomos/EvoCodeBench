@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.utils.stats.is_cholesky_dec`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function is_cholesky_dec
+
+Input Code:
+```Python
+def is_cholesky_dec(x: np.ndarray) -> bool:
+
+    """
+    Determines if a Cholesky decomposition can be performed on a given matrix. It checks if the matrix is suitable for Cholesky decomposition without verifying its Hermitian property but relies on the operation's success or failure.
+
+    Input-Output Arguments
+    :param x: np.ndarray. The matrix to be checked for Cholesky decomposition suitability. It should have a shape of (n, m).
+    :return: bool. Indicates whether the Cholesky decomposition can be applied to the matrix (True) or not (False).
+    """
+```
+

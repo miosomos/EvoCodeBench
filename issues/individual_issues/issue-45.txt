@@ -1,0 +1,25 @@
+**Namespace:** `iris.io.validators.is_array_n_dimensions`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function is_array_n_dimensions
+
+Input Code:
+```Python
+def is_array_n_dimensions(nb_dimensions: int) -> Callable:
+
+    """
+    This function creates a Pydantic validator that checks if a given array has a specific number of dimensions. It is designed to be used within Pydantic models to validate the dimensions of array fields.
+
+    Input-Output Arguments
+    :param nb_dimensions: Int. The number of dimensions the array must have for the validation to pass.
+    :return: Callable. A validator function that can be used in Pydantic models to validate the dimensionality of array fields.
+
+    The validator function itself has the following parameters and return type:
+    :param cls: Type. The class of the model being validated.
+    :param v: np.ndarray. The array being validated.
+    :param field: fields.ModelField. The field of the model that is being validated.
+    :return: np.ndarray. The validated array if it meets the specified number of dimensions.
+    """
+```
+

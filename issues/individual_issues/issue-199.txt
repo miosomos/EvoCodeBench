@@ -1,0 +1,20 @@
+**Namespace:** `microsearch.engine.SearchEngine.bulk_index`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function bulk_index
+
+Input Code:
+```Python
+    def bulk_index(self, documents: list[tuple[str, str]]):
+
+        """
+        The bulk_index function takes a list of documents, where each document is represented as a tuple containing a URL and its corresponding content. It then indexes each document by calling the 'index' method with the URL and content of each document.
+
+        Input-Output Arguments
+        :param self: SearchEngine. An instance of the SearchEngine class.
+        :param documents: list[tuple[str, str]]. A list of tuples, where each tuple contains a URL (as a string) and its corresponding content (as a string). These documents are to be indexed.
+        :return: No return values.
+        """
+```
+

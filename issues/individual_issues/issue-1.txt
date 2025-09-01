@@ -1,0 +1,18 @@
+**Namespace:** `chat.utils.run_cmd`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function run_cmd
+
+Input Code:
+```Python
+def run_cmd(cmd: str):
+
+    """
+    Executes a given bash command by printing it first and then using the system's command line interface to run it.
+    Input-Output Arguments
+    :param cmd: str, The bash command to be executed.
+    :return: int, The exit status of the executed command. A value of 0 typically indicates that the command was executed successfully, while any other value indicates an error.
+    """
+```
+

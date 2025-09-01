@@ -1,0 +1,21 @@
+**Namespace:** `detectron2.data.transforms.transform.RotationTransform.apply_image`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function apply_image
+
+Input Code:
+```Python
+    def apply_image(self, img, interp=None):
+
+        """
+        Applies a rotation transformation to an image represented as a numpy array. The transformation is based on a predefined angle stored in the instance. If the image is empty or the angle results in no change (multiples of 360 degrees), the original image is returned unchanged. Otherwise, the image is rotated using OpenCV's warpAffine function.
+
+        Input-Output Arguments
+        :param self: RotationTransform. An instance of the RotationTransform class, which contains the rotation matrix (rm_image), the original image dimensions (h, w), the bounding dimensions after rotation (bound_w, bound_h), and the default interpolation method (interp).
+        :param img: numpy array, The input image to be transformed, expected to be in the format Height * Width * Nchannels.
+        :param interp: [optional] The interpolation method to be used for the rotation. If not provided, the instance's default interpolation method is used.
+        :return: numpy array. The rotated image, which may have different dimensions from the input image depending on the rotation angle and the bounding dimensions.
+        """
+```
+

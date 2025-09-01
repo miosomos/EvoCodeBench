@@ -1,0 +1,22 @@
+**Namespace:** `detectron2.data.detection_utils.annotations_to_instances`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function annotations_to_instances
+
+Input Code:
+```Python
+def annotations_to_instances(annos, image_size, mask_format="polygon"):
+
+    """
+    This function converts instance annotations from a dataset dictionary into an Instances object that is compatible with the models. It processes annotations related to bounding boxes, classes, segmentation masks, and keypoints, and organizes them into a structured format that the models can directly use.
+
+    Input-Output Arguments
+    :param annos: list[dict]. A list of dictionaries where each dictionary contains information about one instance in an image, including bounding boxes, classes, segmentation, and keypoints.
+    :param image_size: tuple. The size of the image as a tuple (height, width), used to scale and format the annotations correctly.
+    :param mask_format: str, optional. The format of the segmentation masks in the annotations. It defaults to "polygon" and can also be "bitmask". This parameter determines how segmentation annotations are processed and converted.
+    :return: Instances. An object containing structured fields like "gt_boxes", "gt_classes", "gt_masks", and "gt_keypoints", which are derived from the input annotations. This object is ready to be used by the models.
+
+    """
+```
+

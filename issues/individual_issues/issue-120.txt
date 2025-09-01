@@ -1,0 +1,22 @@
+**Namespace:** `litdata.streaming.serializers.PILSerializer.deserialize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function deserialize
+
+Input Code:
+```Python
+    def deserialize(cls, data: bytes) -> Any:
+
+        """
+        The function deserializes a byte stream into an image object. It extracts the width, height, and mode of the image from the beginning of the byte stream, then uses these to reconstruct the image from the remaining bytes.
+
+        Input-Output Arguments
+        :param cls: The class that is calling this method. It is used as a decorator to indicate that this method is intended to be a class method.
+        :param data: bytes, The byte stream that contains the serialized image data. This data includes the image's width, height, mode, and the raw image bytes.
+        :return: An image object reconstructed from the byte stream.
+
+        Note: This function assumes the first 12 bytes (3 integers) of the data represent the width, height, and size of the mode string in that order, all as unsigned 32-bit integers. The mode string follows these integers and is of the length specified by the third integer. The rest of the data is the raw image data.
+        """
+```
+

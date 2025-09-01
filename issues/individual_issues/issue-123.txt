@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.serializers.JPEGSerializer.deserialize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function deserialize
+
+Input Code:
+```Python
+    def deserialize(self, data: bytes) -> Union[JpegImageFile, torch.Tensor]:
+
+        """
+        The function attempts to deserialize the given byte data into a JPEG image. If PyTorch's torchvision is available and the data can be decoded as a JPEG, it returns a decoded JPEG image. If the decoding fails due to a runtime error (e.g., the data is actually a PNG with a JPEG extension), it falls back to using PIL to deserialize the data. If torchvision is available, it further converts the PIL image to a PyTorch tensor before returning.
+
+        Input-Output Arguments
+        :param data: bytes, the byte data of the image to be deserialized.
+        :return: Union[JpegImageFile, torch.Tensor], the deserialized image, which can be either a JpegImageFile object or a torch.Tensor, depending on whether torchvision is available and the type of image data.
+        """
+```
+

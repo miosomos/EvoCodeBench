@@ -1,0 +1,31 @@
+**Namespace:** `skfolio.utils.tools.input_to_array`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function input_to_array
+
+Input Code:
+```Python
+def input_to_array(
+    items: dict | npt.ArrayLike,
+    n_assets: int,
+    fill_value: any,
+    dim: int,
+    assets_names: np.ndarray | None,
+    name: str,
+) -> np.ndarray:
+
+    """
+    Converts a collection of items, which can be array-like or a dictionary, into a numpy array while ensuring it matches the specified dimensions and shape. It also fills missing values in the dictionary case and verifies the final array's dimensions and shape against expected values.
+
+    Input-Output Arguments
+    :param items: dict | npt.ArrayLike. The items to be verified and converted into an array. It can be a dictionary, numpy array, or any array-like structure.
+    :param n_assets: int. The expected number of assets, used to verify the shape of the converted array.
+    :param fill_value: any. The value used to fill in for missing elements when 'items' is a dictionary and some assets are not present.
+    :param dim: int. The dimension of the final array, which can be either 1 or 2.
+    :param assets_names: np.ndarray | None. Optional. The names of the assets, used when 'items' is a dictionary to match keys and fill missing values.
+    :param name: str. The name of the items, used in error messages for clarity.
+    :return: np.ndarray. The converted array with shape (n_assets,) for dim=1 or (n_groups, n_assets) for dim=2, after verifying and converting the input items.
+    """
+```
+

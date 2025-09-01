@@ -1,0 +1,19 @@
+**Namespace:** `detectron2.utils.visualizer.VisImage.get_image`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_image
+
+Input Code:
+```Python
+    def get_image(self):
+
+        """
+        This function retrieves the visualized image from the VisImage instance, converting it from RGBA to RGB format, and returns it as a numpy ndarray of uint8 type. The image dimensions are determined by the current state of the canvas associated with the VisImage instance.
+
+        Input-Output Arguments
+        :param self: VisImage. An instance of the VisImage class, which contains the canvas attribute used to generate the visualized image.
+        :return: ndarray. The visualized image in RGB format as a numpy ndarray of uint8 type. The shape of the returned image is (H, W, 3), where H and W are the height and width of the image, respectively.
+        """
+```
+

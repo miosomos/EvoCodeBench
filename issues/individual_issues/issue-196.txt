@@ -1,0 +1,21 @@
+**Namespace:** `detectron2.modeling.box_regression.Box2BoxTransform.apply_deltas`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function apply_deltas
+
+Input Code:
+```Python
+    def apply_deltas(self, deltas, boxes):
+
+        """
+        This function applies transformation deltas (dx, dy, dw, dh) to a set of bounding boxes. It adjusts the position and size of each box based on the provided deltas, effectively decoding the predicted bounding box transformations.
+
+        Input-Output Arguments
+        :param self: Box2BoxTransform. An instance of the Box2BoxTransform class.
+        :param deltas: Tensor, the transformation deltas of shape (N, k*4), where k >= 1. Each delta[i] represents k potentially different class-specific box transformations for the single box boxes[i]. It is used to calculate the new positions and sizes of the boxes.
+        :param boxes: Tensor, the original boxes to transform, of shape (N, 4). It provides the starting point for each box before applying the deltas.
+        :return: Tensor, the transformed boxes with the same shape as the input deltas. This tensor represents the new positions and sizes of the boxes after applying the deltas.
+        """
+```
+

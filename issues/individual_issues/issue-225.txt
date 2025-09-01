@@ -1,0 +1,20 @@
+**Namespace:** `autorag.deploy.Runner.from_trial_folder`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function from_trial_folder
+
+Input Code:
+```Python
+    def from_trial_folder(cls, trial_path: str):
+
+        """
+        This function loads a Runner instance from a specified trial folder that has already been evaluated using the Evaluator class. It initializes the Runner with the best configuration found in the trial folder and sets the project directory to the parent directory of the trial folder.
+
+        Input-Output Arguments
+        :param cls: The class method is called on. It is used to instantiate the Runner with the extracted configuration and project directory.
+        :param trial_path: str, The path of the trial folder from which the Runner is to be loaded. It is used to locate the trial folder and extract the best configuration for initializing the Runner.
+        :return: Initialized Runner. An instance of the Runner class initialized with the best configuration from the trial folder and the project directory set to the parent directory of the trial folder.
+        """
+```
+

@@ -1,0 +1,27 @@
+**Namespace:** `detectron2.structures.rotated_boxes.RotatedBoxes.clip`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function clip
+
+Input Code:
+```Python
+    def clip(self, box_size: Tuple[int, int], clip_angle_threshold: float = 1.0) -> None:
+
+        """
+        The function clips rotated boxes in place by limiting their x and y coordinates to ensure they fit within a specified box size. It specifically targets boxes that are almost horizontal, determined by a given angle threshold, to maintain backward compatibility. This is done to avoid the complexities and ambiguities involved in clipping highly rotated boxes.
+
+        Input-Output Arguments
+        :param box_size: Tuple[int, int], The size of the box within which the rotated boxes are to be clipped, specified as (height, width).
+        :param clip_angle_threshold: float, optional, The maximum absolute angle (in degrees) for which the clipping operation is performed on nearly horizontal boxes. Defaults to 1.0.
+        :return: No return values. The function modifies the tensor attribute of the RotatedBoxes instance in place.
+
+        Additional Notes:
+        - The function first normalizes the angles of the boxes to be within the range (-180, 180] degrees.
+        - It then identifies the indices of the boxes that are nearly horizontal based on the clip_angle_threshold.
+        - For these identified boxes, it converts their representation from (center x, center y, width, height, angle) to (x1, y1, x2, y2), where (x1, y1) and (x2, y2) are the coordinates of the top-left and bottom-right corners, respectively.
+        - The x and y coordinates are then clamped to ensure they do not exceed the specified box_size limits.
+        - Finally, the boxes are converted back to their original representation, ensuring that any numerical errors do not increase their sizes.
+        """
+```
+

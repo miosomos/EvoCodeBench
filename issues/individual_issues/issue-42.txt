@@ -1,0 +1,29 @@
+**Namespace:** `camera_utils.intrinsic_matrix`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function intrinsic_matrix
+
+Input Code:
+```Python
+def intrinsic_matrix(
+    fx,
+    fy,
+    cx,
+    cy,
+    xnp = np,
+):
+
+  """
+  Generates the intrinsic matrix for a pinhole camera model using the OpenCV coordinate system. This matrix is crucial for camera calibration and 3D reconstruction tasks.
+
+  Input-Output Arguments
+  :param fx: Numeric. The focal length of the camera along the x-axis. It influences how wide or narrow the view is captured.
+  :param fy: Numeric. The focal length of the camera along the y-axis. Similar to fx, it affects the vertical field of view.
+  :param cx: Numeric. The x-coordinate of the optical center of the camera. It's used to align the center of the image with the principal point.
+  :param cy: Numeric. The y-coordinate of the optical center of the camera. Works alongside cx for proper image centering.
+  :param xnp: Module, optional. The numerical Python module used for matrix operations, defaulting to numpy. It allows for flexibility in case a different module or a mock object is needed for testing.
+  :return: Array. The 3x3 intrinsic matrix representing the camera's internal parameters.
+  """
+```
+

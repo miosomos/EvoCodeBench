@@ -1,0 +1,21 @@
+**Namespace:** `sqlite_agent_persistence.SQLiteAgentPersistence.load_all_purposes`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_all_purposes
+
+Input Code:
+```Python
+    def load_all_purposes(self):
+
+        """
+        Loads all agent purposes from the SQLite database and returns them as a list. This function is used to retrieve a list of purposes for all agents stored in the database, which can be useful for various operations such as filtering or analysis.
+
+        Input-Output Arguments
+        :param self: SQLiteAgentPersistence. An instance of the SQLiteAgentPersistence class, which contains the filename of the SQLite database as an attribute.
+        :return: list. A list of purposes for all agents. Each element in the list is a string representing the purpose of an agent.
+
+        No additional input parameters are required for this function.
+        """
+```
+

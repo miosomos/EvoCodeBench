@@ -1,0 +1,23 @@
+**Namespace:** `autorag.strategy.filter_by_threshold`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function filter_by_threshold
+
+Input Code:
+```Python
+def filter_by_threshold(results, value, threshold, metadatas=None) -> Tuple[List, List]:
+
+    """
+    Filters the given lists of results and values by a specified threshold, returning the filtered results and their corresponding metadata. It ensures that only those results (and their metadata) where the associated value is less than or equal to the threshold are returned.
+
+    Input-Output Arguments
+    :param results: List. The list of results that need to be filtered based on the threshold.
+    :param value: List. The list of values corresponding to each result. This list is used to determine whether a result should be filtered based on the threshold. It must have the same length as the results list.
+    :param threshold: Numeric. The threshold value used to filter the results and values. Only items with a value less than or equal to this threshold will be included in the output.
+    :param metadatas: List, optional. A list containing metadata for each result. If not provided, a list of None values will be used instead. This list should have the same length as the results list.
+    :return: A tuple containing two lists: the filtered list of results and the filtered list of metadatas. If no results meet the threshold criteria, empty lists are returned.
+    :rtype: Tuple[List, List]. The first list in the tuple contains the filtered results, and the second list contains the corresponding filtered metadata.
+    """
+```
+

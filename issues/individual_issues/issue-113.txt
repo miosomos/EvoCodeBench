@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.dataset.StreamingDataset._validate_state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _validate_state_dict
+
+Input Code:
+```Python
+    def _validate_state_dict(self) -> None:
+
+        """
+        This function validates the state dictionary of a StreamingDataset instance against its current state. It checks for consistency across various parameters such as shuffle, num_workers, input directory path and URL, seed, item_loader state, and drop_last flag. If any of the parameters in the state dictionary do not match the current state of the StreamingDataset instance, a ValueError is raised indicating the mismatch.
+
+        Input-Output Arguments
+        :param self: StreamingDataset. An instance of the StreamingDataset class. It uses various attributes of the instance such as _state_dict, worker_env, cache, shuffle, etc., to validate the state dictionary against the current state of the instance.
+        :return: No return values. This function raises a ValueError if there is a mismatch between the state dictionary and the current state of the StreamingDataset instance.
+        """
+```
+

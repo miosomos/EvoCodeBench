@@ -1,0 +1,20 @@
+**Namespace:** `easyvolcap.utils.prop_utils.searchsorted`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function searchsorted
+
+Input Code:
+```Python
+def searchsorted(a: torch.Tensor, v: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+
+    """
+    This function finds the indices where elements of the tensor v should be inserted into the tensor a to maintain order. It is designed to be faster than similar functions by using additional memory. It returns two tensors, idx_lo and idx_hi, indicating the lower and upper bounds where each element of v could be inserted into a.
+
+    Input-Output Arguments
+    :param a: torch.Tensor. A sorted tensor that serves as the reference points for insertion.
+    :param v: torch.Tensor. A tensor containing the query points to be inserted into a. The query points do not need to be sorted, and their shape should be compatible with that of a, except for the last dimension which can differ.
+    :return: Tuple[torch.Tensor, torch.Tensor]. A tuple containing two tensors, idx_lo and idx_hi. For each element in v, idx_lo and idx_hi represent the indices in a where the element could be inserted while maintaining the sorted order. If an element in v is out of the range of a, both idx_lo and idx_hi will point to either the first or last index of a.
+    """
+```
+

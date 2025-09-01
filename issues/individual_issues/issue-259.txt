@@ -1,0 +1,21 @@
+**Namespace:** `stepfun.weighted_percentile`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function weighted_percentile
+
+Input Code:
+```Python
+def weighted_percentile(t, w, ps):
+
+  """
+  Computes the weighted percentiles of a step function by interpolating into the integrated weights based on the given percentiles. It ensures that the weights sum to 1 and uses these weights to calculate the weighted percentiles.
+
+  Input-Output Arguments
+  :param t: Array-like. The values at which the step function changes. It is used as the x-coordinates for interpolation.
+  :param w: Array-like. The weights associated with the values in 't', which must sum to 1. These weights are integrated and used in the interpolation process.
+  :param ps: Array-like. The percentiles to compute, given as values between 0 and 100. These are the target y-values for which the corresponding x-values are found through interpolation.
+  :return: Array-like. The computed weighted percentiles corresponding to the input percentiles 'ps'.
+  """
+```
+

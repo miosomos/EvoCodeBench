@@ -1,0 +1,19 @@
+**Namespace:** `iris.io.validators.is_valid_bbox`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function is_valid_bbox
+
+Input Code:
+```Python
+def is_valid_bbox(cls: type, values: Dict[str, float]) -> Dict[str, float]:
+
+    """
+    Checks if the provided bounding box values are valid by ensuring that the minimum x and y values are less than the maximum x and y values, respectively. If the bounding box is invalid, it raises a ValueError.
+    Input-Output Arguments
+    :param cls: type. The class type that is calling this function, used for error messaging.
+    :param values: Dict[str, float]. A dictionary containing the bounding box values with keys "x_min", "x_max", "y_min", and "y_max".
+    :return: Dict[str, float]. The same dictionary of bounding box values if they are found to be valid.
+    """
+```
+

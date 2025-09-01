@@ -1,0 +1,27 @@
+**Namespace:** `litdata.utilities.shuffle._associate_chunks_and_internals_to_ranks`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _associate_chunks_and_internals_to_ranks
+
+Input Code:
+```Python
+def _associate_chunks_and_internals_to_ranks(
+    distributed_env: _DistributedEnv,
+    indexes: Any,
+    chunk_intervals: Any,
+    drop_last: bool,
+) -> Tuple[List[List[int]], List[Any]]:
+
+    """
+    This function distributes chunks and their corresponding intervals across different ranks in a distributed environment. It calculates the number of items each rank should process based on the total items and the world size of the distributed environment, taking into account whether to drop the last items or not. Then, it assigns chunks and their intervals to each rank accordingly.
+
+    Input-Output Arguments
+    :param distributed_env: _DistributedEnv. The distributed environment configuration, including the world size.
+    :param indexes: Any. A list or array of chunk indexes that need to be distributed among the ranks.
+    :param chunk_intervals: Any. A list or array of tuples, where each tuple represents the start and end of a chunk interval.
+    :param drop_last: Bool. A flag indicating whether to drop the last items to make the distribution even across all ranks.
+    :return: Tuple[List[List[int]], List[Any]]. A tuple containing two elements. The first element is a list of lists, where each sublist contains the chunk indexes assigned to each rank. The second element is a list of lists of lists, where each sublist contains the intervals of chunks assigned to each rank.
+    """
+```
+

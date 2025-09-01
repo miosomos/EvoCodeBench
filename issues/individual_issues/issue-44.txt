@@ -1,0 +1,18 @@
+**Namespace:** `litdata.utilities.format._human_readable_bytes`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _human_readable_bytes
+
+Input Code:
+```Python
+def _human_readable_bytes(num_bytes: float) -> str:
+
+    """
+    Converts a number representing bytes into a human-readable format with appropriate units (B, KB, MB, GB, TB, PB). It scales the number down by 1000 and changes units from bytes to petabytes as necessary until a human-friendly format is achieved.
+    Input-Output Arguments
+    :param num_bytes: Float. The number of bytes to be converted into a human-readable format.
+    :return: String. The number of bytes converted into a human-readable format with the appropriate unit.
+    """
+```
+

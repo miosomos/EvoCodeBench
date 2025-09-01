@@ -1,0 +1,22 @@
+**Namespace:** `litdata.streaming.dataset._replay_chunks_sampling`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _replay_chunks_sampling
+
+Input Code:
+```Python
+def _replay_chunks_sampling(
+    workers_intervals: Dict[int, List[Any]], indexes: Dict[int, int]
+) -> Tuple[Dict[int, int], Dict[int, int]]:
+
+    """
+    This function calculates and updates the indexes for replaying chunks of data based on the intervals provided for each worker. It iterates through each worker's intervals, updating the current index and the chunk index based on the size of each interval.
+
+    Input-Output Arguments
+    :param workers_intervals: Dict[int, List[Any]]. A dictionary where keys are worker indices and values are lists of intervals (each interval is represented as a list or tuple with at least two elements, where the difference between the last and first elements indicates the size of the interval). It is used to determine the chunk sizes for each worker.
+    :param indexes: Dict[int, int]. A dictionary where keys are worker indices and values are the current indexes within those workers' data chunks. It is updated based on the intervals' sizes.
+    :return: Tuple[Dict[int, int], Dict[int, int]]. The first dictionary in the tuple represents the updated chunk index for each worker, indicating which chunk should be replayed next. The second dictionary represents the updated indexes within those chunks for each worker.
+    """
+```
+

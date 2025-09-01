@@ -1,0 +1,20 @@
+**Namespace:** `litdata.utilities.broadcast.broadcast_object`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function broadcast_object
+
+Input Code:
+```Python
+def broadcast_object(key: str, obj: Any) -> Any:
+
+    """
+    This function broadcasts an object across machines in a distributed environment. It checks if the application is running in an environment with an external URL (indicating a distributed setting) and uses an immutable distributed map to share the object. If not in such an environment, it simply returns the object as is.
+
+    Input-Output Arguments
+    :param key: String, the key associated with the object to be broadcasted. It is used to identify the object in the distributed map.
+    :param obj: Any, the object to be broadcasted. This can be of any type and is the object that is either shared across machines or returned directly.
+    :return: Any. The object that was either broadcasted and retrieved from the distributed map or the original object if not in a distributed environment.
+    """
+```
+

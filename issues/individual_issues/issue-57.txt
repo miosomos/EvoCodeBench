@@ -1,0 +1,21 @@
+**Namespace:** `detectron2.data.detection_utils.gen_crop_transform_with_instance`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function gen_crop_transform_with_instance
+
+Input Code:
+```Python
+def gen_crop_transform_with_instance(crop_size, image_size, instance):
+
+    """
+    Generates a CropTransform object that defines a cropping region in an image, ensuring that the region contains the center of a specified instance. The cropping region is determined based on the instance's bounding box and the desired crop size, with adjustments to ensure it fits within the image boundaries.
+
+    Input-Output Arguments
+    :param crop_size: Tuple of int. The desired height and width of the crop in pixels.
+    :param image_size: Tuple of int. The height and width of the image.
+    :param instance: Dict. An annotation dictionary for a single instance, following Detectron2's dataset format. It includes the bounding box and its mode among other possible keys.
+    :return: CropTransform. An object that specifies the parameters for the cropping operation, including the top-left corner and dimensions of the crop.
+    """
+```
+

@@ -1,0 +1,19 @@
+**Namespace:** `math.minus_eps`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function minus_eps
+
+Input Code:
+```Python
+def minus_eps(x):
+
+  """
+  This function adjusts the input value `x` by returning a slightly smaller value than `x` if `x` is not smaller than a very small value (`tiny_val`). If `x` is smaller than `tiny_val`, it returns `-tiny_val` instead. This is useful for numerical computations where a value slightly less than `x` is needed, but avoiding values too close to zero.
+
+  Input-Output Arguments
+  :param x: The input value to be adjusted. It is used to check against `tiny_val` and to compute the next smaller floating-point number towards negative infinity.
+  :return: A floating-point number that is slightly smaller than `x` if `x` is not smaller than `tiny_val`, otherwise `-tiny_val`. This ensures the returned value is always slightly less than the input, avoiding values too close to zero.
+  """
+```
+

@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.utils.stats.assert_is_square`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function assert_is_square
+
+Input Code:
+```Python
+def assert_is_square(x: np.ndarray) -> None:
+
+    """
+    This function checks if the given numpy array is a square matrix. It raises a ValueError if the matrix is not square, ensuring that further operations requiring a square matrix can proceed safely.
+
+    Input-Output Arguments
+    :param x: np.ndarray. The matrix to be checked. It is used to verify if the matrix is square by comparing its dimensions.
+    :return: No return values. However, it raises a ValueError if the matrix is not square.
+    """
+```
+

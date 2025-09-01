@@ -1,0 +1,20 @@
+**Namespace:** `quaternion.rotate`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function rotate
+
+Input Code:
+```Python
+def rotate(q, v):
+
+  """
+  Rotates a vector in 3D space using a quaternion to represent the rotation. The function performs the rotation by converting the vector into a quaternion format, applying the rotation, and then converting it back.
+
+  Input-Output Arguments
+  :param q: Array-like. The quaternion representing the rotation, used to rotate the vector.
+  :param v: Array-like. The vector to be rotated, represented as an array or similar data structure.
+  :return: Array-like. The rotated vector, after applying the quaternion rotation.
+  """
+```
+

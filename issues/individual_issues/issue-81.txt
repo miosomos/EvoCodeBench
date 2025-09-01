@@ -1,0 +1,23 @@
+**Namespace:** `easyvolcap.utils.fcds_utils.get_pytorch3d_camera_params`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_pytorch3d_camera_params
+
+Input Code:
+```Python
+def get_pytorch3d_camera_params(batch: dotdict):
+    # Extract pytorc3d camera parameters from batch input
+    # R and T are applied on the right (requires a transposed R from OpenCV camera format)
+    # Coordinate system is different from that of OpenCV (cv: right down front, 3d: left up front)
+    # However, the correction has to be down on both T and R... (instead of just R)
+
+    """
+    Extracts and adjusts PyTorch3D camera parameters from a given batch input to align with PyTorch3D's coordinate system and conventions. It performs necessary transformations on rotation and translation matrices and computes the camera intrinsic matrix for normalized device coordinates (NDC).
+
+    Input-Output Arguments
+    :param batch: dotdict. A batch of data containing camera parameters (R, T, K) and metadata (H, W) in a specific format. The rotation (R) and translation (T) matrices are adjusted to match PyTorch3D's requirements, and the intrinsic matrix (K) is recalculated for NDC.
+    :return: Tuple containing the height (H) and width (W) of the images, the intrinsic matrix (K) for NDC, the adjusted rotation matrix (R), the adjusted translation vector (T), and the camera center (C) in the camera's coordinate system.
+    """
+```
+

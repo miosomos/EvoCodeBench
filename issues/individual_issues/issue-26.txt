@@ -1,0 +1,31 @@
+**Namespace:** `camera_utils.convert_to_ndc`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function convert_to_ndc
+
+Input Code:
+```Python
+def convert_to_ndc(
+    origins,
+    directions,
+    pixtocam,
+    near = 1.0,
+    xnp = np,
+):
+
+  """
+  Converts a set of rays from world space to normalized device coordinates (NDC) using a perspective projection model. This is useful for rendering or processing 3D scenes in a standardized coordinate system.
+
+  Input-Output Arguments
+  :param origins: ndarray(float32), The origins of the rays in world space, used to determine their starting points in NDC.
+  :param directions: ndarray(float32), The directions of the rays in world space, used to calculate their orientation in NDC.
+  :param pixtocam: ndarray(float32), The inverse intrinsic matrix of the camera, used for the perspective projection calculation.
+  :param near: float, The distance to the near plane along the negative z-axis, used to define the depth range of the projection.
+  :param xnp: module, Either numpy or jax.numpy, specifies the numerical library to use for calculations.
+  :return: Tuple of ndarray(float32), The origins and directions of the rays in normalized device coordinates.
+
+  This function performs a perspective projection of rays defined in world space into a normalized device coordinate system, assuming an identity extrinsic matrix (camera pose) and intrinsic parameters defined by the pixtocam matrix. The function adjusts ray origins to the near plane and calculates the corresponding directions in NDC, facilitating the rendering or analysis of 3D scenes from a standardized viewpoint.
+  """
+```
+

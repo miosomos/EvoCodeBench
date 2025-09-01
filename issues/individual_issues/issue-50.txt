@@ -1,0 +1,26 @@
+**Namespace:** `autorag.nodes.retrieval.hybrid_cc.hybrid_cc`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function hybrid_cc
+
+Input Code:
+```Python
+def hybrid_cc(
+        ids: Tuple,
+        scores: Tuple,
+        top_k: int,
+        weights: Tuple = (0.5, 0.5)) -> Tuple[List[List[str]], List[List[float]]]:
+
+    """
+    The hybrid_cc function fuses multiple retrieval results into a single set of results using a convex combination method. It normalizes and combines the scores of each retrieval result based on the provided weights, and selects the top_k results. This function is unique because it does not perform retrieval itself but fuses results from other retrieval functions.
+
+    Input-Output Arguments
+    :param ids: Tuple of Lists. Each list within the tuple contains the ids from a different retrieval result. The length of this tuple must match the length of the scores tuple.
+    :param scores: Tuple of Lists. Each list within the tuple contains the scores from a different retrieval result. The length of this tuple must match the length of the ids tuple.
+    :param top_k: Int. The number of top results to retrieve after fusing the scores.
+    :param weights: Tuple of floats. Weights for each retrieval result indicating their importance in the fusion process. The default is (0.5, 0.5), and the sum of the weights must equal 1. The length of this tuple must match the length of the ids and scores tuples.
+    :return: Tuple containing two lists. The first list contains the fused ids, and the second list contains the fused scores, both selected based on the top_k parameter.
+    """
+```
+

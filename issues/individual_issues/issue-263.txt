@@ -1,0 +1,22 @@
+**Namespace:** `coord.integrated_pos_enc`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function integrated_pos_enc
+
+Input Code:
+```Python
+def integrated_pos_enc(mean, var, min_deg, max_deg):
+
+  """
+  This function encodes input coordinates using sinusoidal functions scaled by powers of 2 within a specified range of degrees. It scales the mean and variance of the coordinates, concatenates them, and then applies a sinusoidal encoding.
+
+  Input-Output Arguments
+  :param mean: tensor, the mean coordinates to be encoded. It is used as the base for scaling before encoding.
+  :param var: tensor, the variance of the coordinates to be encoded. It is scaled and used in the encoding to adjust the spread of the encoded values.
+  :param min_deg: int, the minimum degree (inclusive) of the encoding scale. It determines the lower bound of the scaling factor for the encoding.
+  :param max_deg: int, the maximum degree (exclusive) of the encoding scale. It sets the upper limit for the scaling factor in the encoding process.
+  :return: jnp.ndarray, the encoded variables resulting from the sinusoidal encoding of the scaled mean and variance.
+  """
+```
+

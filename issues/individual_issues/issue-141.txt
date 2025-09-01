@@ -1,0 +1,20 @@
+**Namespace:** `litdata.streaming.reader.PrepareChunksThread.delete`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function delete
+
+Input Code:
+```Python
+    def delete(self, chunk_indexes: List[int]) -> None:
+
+        """
+        Deletes the specified chunks by adding their indices to a deletion queue. This is typically used to manage chunks of data that are no longer needed for the current epoch in a threaded environment.
+
+        Input-Output Arguments
+        :param self: PrepareChunksThread. An instance of the PrepareChunksThread class.
+        :param chunk_indexes: List[int], The indices of the chunks to be deleted. These indices are added to a queue for deletion.
+        :return: No return values.
+        """
+```
+

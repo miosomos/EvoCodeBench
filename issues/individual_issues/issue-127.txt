@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.serializers.NoHeaderNumpySerializer.deserialize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function deserialize
+
+Input Code:
+```Python
+    def deserialize(self, data: bytes) -> np.ndarray:
+
+        """
+        Deserialize the given bytes data into a NumPy array using the predefined data type of the serializer instance.
+        Input-Output Arguments
+        :param self: NoHeaderNumpySerializer. An instance of the NoHeaderNumpySerializer class. It uses the _dtype attribute of the instance to determine the data type for the NumPy array.
+        :param data: bytes, The bytes data to be deserialized into a NumPy array.
+        :return: np.ndarray, The deserialized data as a NumPy array.
+        """
+```
+

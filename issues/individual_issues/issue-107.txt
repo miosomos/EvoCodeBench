@@ -1,0 +1,21 @@
+**Namespace:** `memoize.SQLiteMemoization._cache_result`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _cache_result
+
+Input Code:
+```Python
+    def _cache_result(self, arg_hash, result):
+
+        """
+        This function caches the result of a computation in an SQLite database. It inserts a new row into the 'cache' table with the hash of the arguments as the key and the JSON-serialized result as the value.
+
+        Input-Output Arguments
+        :param self: SQLiteMemoization. An instance of the SQLiteMemoization class, which manages caching of function results in an SQLite database.
+        :param arg_hash: str, The hash of the arguments to the function whose result is being cached. It uniquely identifies the function call.
+        :param result: Any, The result of the function call that is being cached. This result is serialized to JSON format before being stored in the database.
+        :return: No return values.
+        """
+```
+

@@ -1,0 +1,24 @@
+**Namespace:** `geopoly.generate_basis`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function generate_basis
+
+Input Code:
+```Python
+def generate_basis(
+    base_shape, angular_tesselation, remove_symmetries=True, eps=1e-4
+):
+
+  """
+  Generates a 3D basis by tessellating a geometric polyhedron, optionally removing symmetric basis columns to avoid redundant projections. The function supports tessellation of tetrahedron, icosahedron, or octahedron shapes and returns a matrix representing the 3D basis.
+
+  Input-Output Arguments
+  :param base_shape: string, the name of the starting polyhedron. It must be either 'tetrahedron', 'icosahedron', or 'octahedron'. This parameter determines the initial shape to be tessellated.
+  :param angular_tesselation: int, the number of times the polyhedron is tessellated. A value of 1 means no tessellation is applied. This parameter controls the complexity of the resulting basis.
+  :param remove_symmetries: bool, optional (default=True). If True, symmetric basis columns are removed to prevent redundant negative copies in projections. This parameter affects the uniqueness of the basis vectors.
+  :param eps: float, optional (default=1e-4). A small number used to determine when two vertices are considered symmetric. This parameter helps in identifying and removing symmetries with a tolerance defined by eps.
+  :return: A matrix with shape [3, n], where n is the number of vertices after tessellation (and symmetry removal, if applicable). This matrix represents the 3D basis generated from the specified polyhedron.
+  """
+```
+

@@ -1,0 +1,32 @@
+**Namespace:** `run.parse_args`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function parse_args
+
+Input Code:
+```Python
+def parse_args() -> argparse.Namespace:
+
+    """
+    Parses command line arguments provided by the user and returns them encapsulated in an argparse.Namespace object for easy access to each argument's value.
+
+    Input-Output Arguments
+    :param --task: str, required. The task description, specifying what task should be performed.
+    :param --upload-files: list of str, optional. List of files to upload, allowing multiple files to be specified.
+    :param --model: str, optional. Model identifier for the task, specifying which model to use.
+    :param --record-dir: str, optional. Directory to record task execution logs, specifying where to save the logs.
+    :param --mode: str, optional, defaults to "auto". Operational mode, which can be 'auto' or 'manual', specifying how the task should be executed.
+    :param --quiet: bool, optional, defaults to False. If set, the program runs in quiet mode with minimal output.
+    :param --max-subtask-chain-length: int, optional. Maximum length of subtask chain, specifying how long a subtask chain can be.
+    :param --enable-ask-human-for-help: bool, optional. Flag to enable asking for human assistance during task execution.
+    :param --max-plan-refine-chain-length: int, optional. Maximum length of plan refinement chain, specifying the limit for refining plans.
+    :param --max-plan-tree-depth: int, optional. Maximum depth of the plan tree, specifying how deep the plan tree can be.
+    :param --max-plan-tree-width: int, optional. Maximum width of the plan tree, specifying the maximum number of branches at any level of the tree.
+    :param --max-retry-times: int, optional. Maximum number of retry attempts, specifying how many times a task can be retried upon failure.
+    :param --config-file: str, optional, defaults to the value of the 'CONFIG_FILE' environment variable or 'assets/config.yml'. Path to the configuration file, specifying where to find the configuration settings.
+
+    :return: argparse.Namespace. An object containing the parsed command line arguments and their values.
+    """
+```
+

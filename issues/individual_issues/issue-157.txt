@@ -1,0 +1,28 @@
+**Namespace:** `litdata.processing.data_processor._map_items_to_workers_weighted`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _map_items_to_workers_weighted
+
+Input Code:
+```Python
+    num_nodes = _get_num_nodes()
+    node_rank = _get_node_rank()
+    world_size = num_nodes * num_workers
+
+    worker_items, worker_weights = _pack_greedily(items=user_items, weights=weights, num_bins=world_size)
+    worker_ids_this_node = range(node_rank * num_workers, (node_rank + 1) * num_workers)
+
+
+    """
+    This function distributes a list of items among workers in a weighted manner, optionally considering file sizes. It first calculates the total number of workers across all nodes, then distributes items to these workers based on provided weights. It prints the distribution details for workers on the current node and returns a list of items for each worker, with the items shuffled.
+
+    Input-Output Arguments
+    :param num_workers: Int. The number of workers per node.
+    :param user_items: List[Any]. The items to be distributed among the workers.
+    :param weights: Optional[List[int]]. The weights for each item, used for distribution. If not provided, all items are considered to have equal weight.
+    :param file_size: Bool. A flag indicating whether to consider the items as files with sizes for printing purposes. If True, sizes are printed in megabytes; otherwise, the total weight of items is printed.
+    :return: List[List[Any]]. A list of lists, where each sublist contains the items assigned to a worker, shuffled randomly.
+    """
+```
+

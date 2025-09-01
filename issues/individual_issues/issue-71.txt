@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.utils.tools.bisection`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function bisection
+
+Input Code:
+```Python
+def bisection(x: list[np.ndarray]) -> Iterator[list[np.ndarray, np.ndarray]]:
+
+    """
+    This function is a generator that iterates through a list of numpy arrays, bisecting each array into two halves, and yields these halves as a list of two arrays. It only bisects arrays that have more than one element.
+
+    Input-Output Arguments
+    :param x: list of numpy.ndarray. A list containing numpy arrays to be bisected.
+    :return: Iterator[list[numpy.ndarray, numpy.ndarray]]. Yields a list containing two bisected halves of the original array for each array in the input list that has more than one element.
+    """
+```
+

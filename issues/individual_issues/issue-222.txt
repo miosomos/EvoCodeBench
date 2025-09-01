@@ -1,0 +1,19 @@
+**Namespace:** `sfast.utils.aot_printer.aot_printer`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function aot_printer
+
+Input Code:
+```Python
+def aot_printer(fn):
+
+    """
+    The function checks if the input argument is an instance of a PyTorch neural network module. If it is, it compiles the module using a forward and backward compiler specific for modules. If the input is not a module, it assumes it's a function and compiles it using a forward and backward compiler specific for functions.
+
+    Input-Output Arguments
+    :param fn: torch.nn.Module or function. The neural network module or function to be compiled.
+    :return: The compiled module or function using the specified forward and backward compilers.
+    """
+```
+

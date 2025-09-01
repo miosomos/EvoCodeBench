@@ -1,0 +1,21 @@
+**Namespace:** `coord.track_linearize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function track_linearize
+
+Input Code:
+```Python
+def track_linearize(fn, mean, cov):
+
+  """
+  This function applies a given function to a set of Gaussian means and covariances, using a linearization technique similar to that used in a Kalman filter. It linearizes the given function around the mean and then transforms the covariances accordingly.
+
+  Input-Output Arguments
+  :param fn: Function. A function that can be applied to the mean. It is used to transform the Gaussian means and covariances.
+  :param mean: Tensor. A tensor of Gaussian means, where the last axis represents the dimension of the means. It is used as the point around which the function is linearized.
+  :param cov: Tensor. A tensor of covariances, where the last two axes represent the dimensions of the covariances. It is used along with the linearized function to transform the covariances.
+  :return: Tuple (Tensor, Tensor). The first tensor is the transformed means (fn_mean), and the second tensor is the transformed covariances (fn_cov).
+  """
+```
+

@@ -1,0 +1,35 @@
+**Namespace:** `internal.utils.network_factory.NetworkFactory.get_network`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_network
+
+Input Code:
+```Python
+    def get_network(
+            self,
+            n_input_dims: int,
+            n_output_dims: int,
+            n_layers: int,
+            n_neurons: int,
+            activation: Literal["ReLU", "None"],
+            output_activation: Literal["ReLU", "Sigmoid", "None"],
+    ):
+
+        """
+        This function generates and returns a neural network model based on the specified parameters. It supports creating networks using either the tinycudann library (if `self.tcnn` is True) or PyTorch. The network configuration includes the number of input and output dimensions, the number of layers and neurons per layer, and the activation functions for the hidden and output layers.
+
+        Input-Output Arguments
+        :param self: NetworkFactory. An instance of the NetworkFactory class.
+        :param n_input_dims: int, The number of input dimensions for the network.
+        :param n_output_dims: int, The number of output dimensions for the network.
+        :param n_layers: int, The total number of layers in the network, including the output layer. Must be greater than 0.
+        :param n_neurons: int, The number of neurons in each hidden layer. Must be greater than 0.
+        :param activation: Literal["ReLU", "None"], The activation function to use for the hidden layers.
+        :param output_activation: Literal["ReLU", "Sigmoid", "None"], The activation function to use for the output layer.
+        :return: A neural network model. The type of the model depends on whether tinycudann or PyTorch is used for its creation.
+
+        Note: The function asserts that both `n_layers` and `n_neurons` are greater than 0 to ensure a valid network configuration. It dynamically selects the network type in tinycudann based on the number of neurons. For PyTorch, it constructs the network sequentially, layer by layer, using the specified number of input/output dimensions, neurons, and activation functions.
+        """
+```
+

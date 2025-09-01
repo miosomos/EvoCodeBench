@@ -1,0 +1,24 @@
+**Namespace:** `tanuki.language_models.language_model_manager.LanguageModelManager.get_generation_case`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_generation_case
+
+Input Code:
+```Python
+    def get_generation_case(self, args, kwargs, function_description, llm_parameters, func_hash):
+
+        """
+        This function determines the appropriate language model and prompt for a given function description and its arguments. It decides whether to use a distilled model for zero-shot prompting or a teacher model for fine-tuning based on the suitability for distillation and token count requirements. It initializes function-specific data if not already done, updates examples for fine-tuning if necessary, and constructs the prompt to be used for generation.
+
+        Input-Output Arguments
+        :param self: LanguageModelManager. An instance of the LanguageModelManager class.
+        :param args: Tuple. The arguments passed to the function for which the generation case is being determined.
+        :param kwargs: Dictionary. The keyword arguments passed to the function for which the generation case is being determined.
+        :param function_description: Object. An object containing the description of the function for which the generation case is being determined. It is used to identify the model and construct the prompt.
+        :param llm_parameters: Dictionary. Parameters for the language model generation, such as the maximum number of new tokens to generate.
+        :param func_hash: Hashable. A unique identifier for the function, used to track initialization and examples for fine-tuning.
+        :return: A tuple containing the constructed prompt, the selected model, a boolean indicating if the model is suitable for distillation, and a boolean indicating if the function is already initialized and does not require saving examples for fine-tuning.
+        """
+```
+

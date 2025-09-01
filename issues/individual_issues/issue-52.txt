@@ -1,0 +1,21 @@
+**Namespace:** `litdata.processing.data_processor._wait_for_disk_usage_higher_than_threshold`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _wait_for_disk_usage_higher_than_threshold
+
+Input Code:
+```Python
+def _wait_for_disk_usage_higher_than_threshold(input_dir: str, threshold_in_gb: int = 25, sleep_time: int = 3) -> None:
+
+    """
+    This function continuously checks the disk usage of a specified directory and waits until the free space is lower than a specified threshold in gigabytes. It periodically sleeps for a given amount of time before checking the disk usage again.
+
+    Input-Output Arguments
+    :param input_dir: str, The directory whose disk usage is to be monitored.
+    :param threshold_in_gb: int, The threshold for free disk space in gigabytes. The function waits until the free space is lower than this value. Defaults to 25 GB.
+    :param sleep_time: int, The time in seconds that the function waits before checking the disk usage again. Defaults to 3 seconds.
+    :return: No return values.
+    """
+```
+

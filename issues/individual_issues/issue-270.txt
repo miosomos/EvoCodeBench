@@ -1,0 +1,25 @@
+**Namespace:** `searcharray.postings.SearchArray.index`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function index
+
+Input Code:
+```Python
+    def index(cls, array: Iterable, tokenizer=ws_tokenizer,
+              truncate=False, batch_size=100000, avoid_copies=True) -> 'SearchArray':
+
+        """
+        Indexes an array of strings using a specified tokenizer and returns an instance of SearchArray containing the indexed data. It builds an index from the given array and tokenizer, handling large arrays by processing them in batches if necessary.
+
+        Input-Output Arguments
+        :param cls: The class SearchArray itself. It is used to create a new instance of SearchArray that will hold the indexed data.
+        :param array: Iterable, the array of strings to be indexed. It is the input data that needs to be processed and indexed.
+        :param tokenizer: A function used for tokenizing the strings in the array. It defaults to ws_tokenizer if not specified. This tokenizer is applied to each string in the array to generate tokens for indexing.
+        :param truncate: bool, indicates whether to truncate the data to fit within memory constraints. It defaults to False, meaning the data will not be truncated unless specified.
+        :param batch_size: int, the size of batches to process the array in. This is useful for processing large arrays without loading everything into memory at once. Defaults to 100000.
+        :param avoid_copies: bool, indicates whether to avoid making copies of the data to save memory. Defaults to True, optimizing memory usage during the indexing process.
+        :return: An instance of SearchArray, which contains the indexed data including term matrix, positions, term dictionary, average document length, and document lengths.
+        """
+```
+

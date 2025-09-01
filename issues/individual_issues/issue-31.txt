@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.reader._get_folder_size`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _get_folder_size
+
+Input Code:
+```Python
+def _get_folder_size(path: str) -> int:
+
+    """
+    Calculates the total size of all files within a specified folder, including files in its subdirectories. It is designed to handle situations where files may be deleted during the size calculation process by ignoring FileNotFoundError exceptions.
+
+    Input-Output Arguments
+    :param path: str, The path to the folder whose total file size is to be calculated. 
+    :return: int, The total size of all files within the specified folder in bytes.
+    """
+```
+

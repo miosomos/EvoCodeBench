@@ -1,0 +1,20 @@
+**Namespace:** `litdata.streaming.dataset._try_create_cache_dir`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _try_create_cache_dir
+
+Input Code:
+```Python
+def _try_create_cache_dir(input_dir: Optional[str]) -> Optional[str]:
+
+    """
+    Attempts to create a cache directory based on the input directory provided. It generates a unique directory name by hashing the input directory. If certain environment variables are not set, it creates the cache directory in a default location; otherwise, it creates it in a specified location.
+
+    Input-Output Arguments
+    :param input_dir: Optional[str]. The directory path to be hashed and used for creating a unique cache directory. If None, an empty string is used for hashing.
+    :return: Optional[str]. The path of the created cache directory. Returns None if the directory cannot be created, although this behavior is not explicitly handled in the function.
+
+    """
+```
+

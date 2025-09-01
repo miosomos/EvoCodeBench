@@ -1,0 +1,24 @@
+**Namespace:** `iris.utils.math.area`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function area
+
+Input Code:
+```Python
+def area(array: np.ndarray) -> float:
+
+    """
+    Calculates the area of a simple polygon using the Shoelace formula. The function takes an array of points that define the polygon and returns the calculated area. It raises an error if the input does not meet the expected shape.
+
+    Input-Output Arguments
+    :param array: np.ndarray. An array representing a polygon as a list of points, where each point is a pair of coordinates (x, y). The shape of the array must be (_, 2), where _ can be any number of points.
+    :raises ValueError: If the input array does not have the shape (_, 2), indicating it does not represent a valid list of polygon points.
+    :return: float. The calculated area of the polygon.
+
+    References:
+    [1] https://en.wikipedia.org/wiki/Shoelace_formula
+    [2] https://stackoverflow.com/questions/24467972/calculate-area-of-polygon-given-x-y-coordinates
+    """
+```
+

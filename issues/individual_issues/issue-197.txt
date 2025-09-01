@@ -1,0 +1,21 @@
+**Namespace:** `scepter.scepter.modules.annotator.utils.AnnotatorProcessor.run`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function run
+
+Input Code:
+```Python
+    def run(self, image, anno_type=None):
+
+        """
+        The function processes an image with a general annotation instruction and optionally filters the output based on the annotation type(s) specified. If a specific annotation type is requested and found in the output, only that annotation is returned. If multiple annotation types are requested, it returns a dictionary of those types found in the output. If no specific annotation type is requested, it returns the entire processed output.
+
+        Input-Output Arguments
+        :param self: AnnotatorProcessor. An instance of the AnnotatorProcessor class.
+        :param image: The image to be processed.
+        :param anno_type: str or list of str, optional. The type(s) of annotations to filter the output by. If None, all annotations in the output are returned.
+        :return: Depending on the anno_type parameter, this function can return a single annotation, a dictionary of annotations, or the entire processed output.
+        """
+```
+

@@ -1,0 +1,23 @@
+**Namespace:** `iris.nodes.vectorization.contouring.filter_polygon_areas`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function filter_polygon_areas
+
+Input Code:
+```Python
+def filter_polygon_areas(
+    polygons: List[np.ndarray], rel_tr: NonNegativeFloat = 0.03, abs_tr: NonNegativeFloat = 0.0
+) -> List[np.ndarray]:
+
+    """
+    The function filters out polygons based on their area. It removes polygons whose area is below either an absolute threshold or a relative threshold compared to the largest polygon's area in the list.
+
+    Input-Output Arguments
+    :param polygons: List of numpy.ndarray. The list of polygons (each represented as a numpy array) to be filtered.
+    :param rel_tr: NonNegativeFloat, optional. The relative threshold as a fraction of the largest polygon's area. Polygons with an area smaller than this fraction are filtered out. Defaults to 0.03.
+    :param abs_tr: NonNegativeFloat, optional. The absolute threshold for the area. Polygons with an area smaller than this threshold are filtered out. Defaults to 0.0.
+    :return: List of numpy.ndarray. The list of polygons that meet the area criteria and are not filtered out.
+    """
+```
+

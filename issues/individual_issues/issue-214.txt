@@ -1,0 +1,20 @@
+**Namespace:** `ollama._client.Client._create_blob`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _create_blob
+
+Input Code:
+```Python
+  def _create_blob(self, path: Union[str, Path]) -> str:
+
+    """
+    This function calculates the SHA-256 checksum of a file specified by the path, checks if a blob with that checksum already exists on the server by making a HEAD request, and if not found (404 status code), uploads the file as a new blob using a POST request. Finally, it returns the digest of the file.
+
+    Input-Output Arguments
+    :param self: Client. An instance of the Client class.
+    :param path: Union[str, Path]. The file path of the blob to be created. It is used to open the file, calculate its SHA-256 checksum, and upload the file if it does not already exist on the server.
+    :return: str. The SHA-256 digest of the file in the format 'sha256:<hexdigest>'.
+    """
+```
+

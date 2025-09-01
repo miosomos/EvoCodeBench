@@ -1,0 +1,22 @@
+**Namespace:** `math.inv_power_ladder`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function inv_power_ladder
+
+Input Code:
+```Python
+def inv_power_ladder(y, p, premult=None, postmult=None):
+
+  """
+  Performs the inverse operation of a power ladder transformation on the input `y` using a specified power `p`, with optional pre-multiplication and post-multiplication adjustments. It applies various mathematical operations based on the value of `p` to compute the inverse transformation.
+
+  Input-Output Arguments
+  :param y: The input value(s) to be transformed. It is used as the base for the inverse power ladder operation.
+  :param p: The power value used in the transformation. It determines the specific operation to be applied to `y`.
+  :param premult: Optional. A scalar value to pre-multiply the result after the inverse transformation is applied. It is used to adjust the scale of the output before the transformation.
+  :param postmult: Optional. A scalar value to post-multiply the input `y` before the inverse transformation is applied. It is used to adjust the scale of the input before the transformation.
+  :return: The result of the inverse power ladder transformation applied to `y`, adjusted by optional pre-multiplication and post-multiplication factors.
+  """
+```
+

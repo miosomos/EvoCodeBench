@@ -1,0 +1,21 @@
+**Namespace:** `searcharray.postings.SearchArray.phrase_freq`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function phrase_freq
+
+Input Code:
+```Python
+    def phrase_freq(self, tokens: List[str], slop=1) -> np.ndarray:
+
+        """
+        This function calculates the frequency of a phrase within a SearchArray instance based on the provided tokens and slop. If the slop is 1 and all tokens are unique, it attempts to directly calculate the phrase frequencies using the positions of terms. If the slop is not 1 or tokens are not unique, it delegates the calculation to another method that handles different slops or non-unique tokens.
+
+        Input-Output Arguments
+        :param self: SearchArray. An instance of the SearchArray class.
+        :param tokens: List[str]. A list of tokens (words) for which the phrase frequency is to be calculated.
+        :param slop: int, optional. The maximum distance between tokens in the phrase. Defaults to 1, meaning tokens must be adjacent.
+        :return: np.ndarray. An array of phrase frequencies corresponding to the tokens in the SearchArray instance.
+        """
+```
+

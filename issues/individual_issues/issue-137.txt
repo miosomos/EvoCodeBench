@@ -1,0 +1,21 @@
+**Namespace:** `litdata.streaming.resolver._assert_dir_is_empty`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _assert_dir_is_empty
+
+Input Code:
+```Python
+def _assert_dir_is_empty(output_dir: Dir, append: bool = False, overwrite: bool = False) -> None:
+
+    """
+    This function checks if a specified directory, particularly in an S3 bucket, is empty. It raises errors if the directory is not a Dir object, does not start with "s3://", or already contains data. Currently, it does not support appending or overwriting data in the directory.
+
+    Input-Output Arguments
+    :param output_dir: Dir. The directory to be checked. It must be an instance of the Dir class.
+    :param append: Bool, optional. Indicates if appending data to the directory is allowed. Currently not implemented.
+    :param overwrite: Bool, optional. Indicates if overwriting data in the directory is allowed. Currently not implemented.
+    :return: No return values. This function either completes successfully or raises an error.
+    """
+```
+

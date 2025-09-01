@@ -1,0 +1,21 @@
+**Namespace:** `autorag.evaluate.metric.generation.sem_score`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function sem_score
+
+Input Code:
+```Python
+def sem_score(generation_gt: List[str], pred: str, embedding_model: Optional[BaseEmbedding] = None) -> float:
+
+    """
+    Computes the semantic similarity score between a list of ground truth strings and a predicted string using cosine similarity. It uses an embedding model to convert strings into embeddings and then calculates the maximum cosine similarity between the predicted string and each ground truth string.
+
+    Input-Output Arguments
+    :param generation_gt: List[str]. A list of ground truth strings. These strings are compared against the prediction to find the maximum cosine similarity.
+    :param pred: str. The model's prediction string. Its semantic similarity is calculated against each string in the ground truth list.
+    :param embedding_model: Optional[BaseEmbedding]. The embedding model used to compute the cosine similarity. If not provided, a default model ('all-mpnet-base-v2') is used. This model converts the input strings into embeddings for similarity calculation.
+    :return: float. The maximum semantic similarity score between the predicted string and the ground truth strings.
+    """
+```
+

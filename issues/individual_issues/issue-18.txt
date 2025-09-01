@@ -1,0 +1,22 @@
+**Namespace:** `iris.io.validators.is_list_of_points`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function is_list_of_points
+
+Input Code:
+```Python
+def is_list_of_points(cls: type, v: np.ndarray, field: fields.ModelField) -> np.ndarray:
+
+    """
+    This function checks if the given numpy array has a shape that corresponds to a list of 2D points, specifically having a shape of (_, 2). If the array does not meet this criteria, it raises a ValueError.
+
+    Input-Output Arguments
+    :param cls: type. The class type, used for error messaging to indicate the source of the error.
+    :param v: np.ndarray. The numpy array to be checked. It is expected to represent a list of 2D points.
+    :param field: fields.ModelField. A field descriptor, used in the error message to specify which field failed the validation.
+    :raises ValueError: If the numpy array `v` does not have a shape of (_, 2), indicating it does not represent a list of 2D points.
+    :return: np.ndarray. The original numpy array `v` is returned for further processing if it passes the shape check.
+    """
+```
+

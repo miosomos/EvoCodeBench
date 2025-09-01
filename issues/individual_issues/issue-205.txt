@@ -1,0 +1,21 @@
+**Namespace:** `mmdet3d.models.builder.build_segmentor`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function build_segmentor
+
+Input Code:
+```Python
+def build_segmentor(cfg, train_cfg=None, test_cfg=None):
+
+    """
+    Builds a segmentor model based on the given configuration. It warns the user if the training or testing configurations are specified both in the function arguments and the model configuration, and ensures that these configurations are not duplicated.
+
+    Input-Output Arguments
+    :param cfg: Dict. The configuration dictionary for the segmentor model. It is used to configure the model.
+    :param train_cfg: Dict, optional. The training configuration. If specified, it should not be duplicated in the cfg dictionary.
+    :param test_cfg: Dict, optional. The testing configuration. If specified, it should not be duplicated in the cfg dictionary.
+    :return: A segmentor model instance. The segmentor model built based on the provided configurations.
+    """
+```
+

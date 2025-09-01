@@ -1,0 +1,23 @@
+**Namespace:** `tanuki.language_models.openai_api.OpenAI_API.generate`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function generate
+
+Input Code:
+```Python
+    def generate(self, model, system_message, prompt, **kwargs):
+
+        """
+        This function generates a response from the OpenAI API based on the provided model, system message, prompt, and additional parameters. It handles API key verification, parameter validation, and retries on failure up to 5 times with exponential backoff. It also processes the response to remove any parsing helper tokens before returning the final text.
+
+        Input-Output Arguments
+        :param self: OpenAI_API. An instance of the OpenAI_API class.
+        :param model: OpenAIConfig, The model configuration to use for generation, including the model name and any parsing helper tokens.
+        :param system_message: str, The system message to include in the generation request.
+        :param prompt: str, The user prompt to include in the generation request.
+        :param **kwargs: dict, Additional optional parameters for generation such as temperature, top_p, frequency_penalty, presence_penalty, and max_new_tokens.
+        :return: str, The generated text response from the OpenAI API after removing any parsing helper tokens.
+        """
+```
+

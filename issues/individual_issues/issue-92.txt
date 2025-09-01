@@ -1,0 +1,22 @@
+**Namespace:** `easyvolcap.utils.chunk_utils.multi_gather_tris`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function multi_gather_tris
+
+Input Code:
+```Python
+def multi_gather_tris(v: torch.Tensor, f: torch.Tensor, dim=-2) -> torch.Tensor:
+    # compute faces normals w.r.t the vertices (considering batch dimension)
+
+    """
+    This function gathers triangles from a batch of vertices and faces tensors, computing the faces normals with respect to the vertices. It adjusts the dimensions of the faces tensor to match the batch dimension of the vertices tensor if necessary, and then reshapes the result to maintain the original faces tensor structure with additional dimensions for batch processing.
+
+    Input-Output Arguments
+    :param v: torch.Tensor. The vertices tensor, potentially containing multiple batches of vertices. It is used to compute the normals of the faces.
+    :param f: torch.Tensor. The faces tensor, indicating the indices of vertices forming each face. It may be expanded to match the batch dimension of the vertices tensor.
+    :param dim: int, optional. The dimension along which the gathering of vertices is performed. Defaults to -2, indicating the second last dimension.
+    :return: torch.Tensor. The tensor containing the gathered triangles, reshaped to maintain the structure of the original faces tensor with additional dimensions for batch processing.
+    """
+```
+

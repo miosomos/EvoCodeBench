@@ -1,0 +1,21 @@
+**Namespace:** `mmdet3d.core.bbox.structures.utils.limit_period`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function limit_period
+
+Input Code:
+```Python
+def limit_period(val, offset=0.5, period=np.pi):
+
+    """
+    Limits the input value within a specific period range for periodic functions, adjusting it based on the given offset and period parameters.
+
+    Input-Output Arguments
+    :param val: torch.Tensor or np.ndarray, the value to be adjusted to fit within the specified period range.
+    :param offset: float, optional, the offset used to define the value range, with a default of 0.5. It determines the starting point of the period range.
+    :param period: the period of the value, with a default of np.pi. It defines the length of the period in which the value should be limited.
+    :return: torch.Tensor or np.ndarray, the adjusted value that fits within the range of [-offset * period, (1-offset) * period].
+    """
+```
+

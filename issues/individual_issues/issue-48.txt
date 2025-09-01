@@ -1,0 +1,19 @@
+**Namespace:** `detectron2.utils.registry.locate`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function locate
+
+Input Code:
+```Python
+def locate(name: str) -> Any:
+
+    """
+    Locates and returns a Python object based on its fully qualified name given as a string. If the object cannot be found using the standard method, it attempts to locate the object using a fallback method. An exception is raised if the object cannot be located by either method.
+
+    Input-Output Arguments
+    :param name: str, The fully qualified name of the object to locate, in the format "module.submodule.class_name".
+    :return: Any. The located Python object.
+    """
+```
+

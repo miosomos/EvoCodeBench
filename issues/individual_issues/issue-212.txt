@@ -1,0 +1,27 @@
+**Namespace:** `ollama._client.Client.push`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function push
+
+Input Code:
+```Python
+  def push(
+    self,
+    model: str,
+    insecure: bool = False,
+    stream: bool = False,
+  ) -> Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]:
+
+    """
+    The function sends a POST request to the '/api/push' endpoint with the specified parameters. It handles the request differently based on the 'stream' parameter: if 'stream' is False, it returns a single 'ProgressResponse'; if 'stream' is True, it returns a generator yielding 'ProgressResponse' objects. It raises a 'ResponseError' if the request cannot be fulfilled.
+
+    Input-Output Arguments
+    :param self: Client. An instance of the Client class.
+    :param model: str, The name of the model to be pushed.
+    :param insecure: bool, Optional. Specifies whether the request should be made over an insecure connection. Defaults to False.
+    :param stream: bool, Optional. Determines the type of response: a single 'ProgressResponse' object if False, or a generator of 'ProgressResponse' objects if True. Defaults to False.
+    :return: Union[Mapping[str, Any], Iterator[Mapping[str, Any]]], The function returns a 'ProgressResponse' if 'stream' is False, or a generator yielding 'ProgressResponse' objects if 'stream' is True.
+    """
+```
+

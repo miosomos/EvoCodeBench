@@ -1,0 +1,20 @@
+**Namespace:** `detectron2.data.detection_utils.read_image`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function read_image
+
+Input Code:
+```Python
+def read_image(file_name, format=None):
+
+    """
+    Reads an image from a file, applies any necessary orientation corrections based on the image's EXIF data, and converts it to a specified format.
+
+    Input-Output Arguments
+    :param file_name: str, the path to the image file that needs to be read.
+    :param format: str, optional, specifies the desired format for the output image. It can be one of the supported image modes in PIL (Python Imaging Library), "BGR", or "YUV-BT.601". If not provided, the image's original format is used.
+    :return: np.ndarray, the image after being read, possibly oriented correctly, and converted to the specified format. The data type of the array is uint8 for 0-255 ranges in supported PIL modes or "BGR", and float for "YUV-BT.601" with a range of 0-1 for Y.
+    """
+```
+

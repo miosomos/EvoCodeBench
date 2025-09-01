@@ -1,0 +1,28 @@
+**Namespace:** `autorag.nodes.retrieval.run.run_retrieval_node`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function run_retrieval_node
+
+Input Code:
+```Python
+def run_retrieval_node(modules: List[Callable],
+                       module_params: List[Dict],
+                       previous_result: pd.DataFrame,
+                       node_line_dir: str,
+                       strategies: Dict,
+                       ) -> pd.DataFrame:
+
+    """
+    This function evaluates and selects the best module among retrieval node results by running each module with given parameters, measuring their execution times, and applying specified strategies. It saves the results and a summary of the execution times and evaluation metrics to disk.
+
+    Input-Output Arguments
+    :param modules: List of Callable. These are the retrieval modules to be executed.
+    :param module_params: List of Dict. Parameters for each retrieval module in the 'modules' list.
+    :param previous_result: DataFrame. The result from a previous step, which could be from query expansion or QA data. This is used as part of the evaluation context.
+    :param node_line_dir: String. The directory path for this node line, where results and summaries will be saved.
+    :param strategies: Dict. Strategies for evaluating and selecting the best retrieval node result, including metrics and possibly speed thresholds.
+    :return: DataFrame. The best result dataframe, which combines the previous result columns with the selected retrieval node's result columns.
+    """
+```
+

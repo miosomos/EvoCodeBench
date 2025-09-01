@@ -1,0 +1,21 @@
+**Namespace:** `easyvolcap.utils.loss_utils.lossfun_distortion`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function lossfun_distortion
+
+Input Code:
+```Python
+def lossfun_distortion(t: torch.Tensor, w: torch.Tensor):
+    # accepts t.shape[-1] = w.shape[-1] + 1
+
+    """
+    Computes the distortion loss function for a given tensor of targets and weights. The function calculates both the inter-interval and intra-interval losses based on the provided tensors and combines them to produce the total distortion loss.
+
+    Input-Output Arguments
+    :param t: torch.Tensor. The target tensor for which the distortion loss is to be calculated. It is expected that the last dimension of 't' is one more than that of 'w'.
+    :param w: torch.Tensor. The weights tensor, used to weight the distortion loss calculation. The last dimension of 'w' should be one less than that of 't'.
+    :return: torch.Tensor. The calculated distortion loss as a tensor. This combines both inter-interval and intra-interval losses.
+    """
+```
+

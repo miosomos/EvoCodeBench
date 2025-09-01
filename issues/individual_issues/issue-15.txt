@@ -1,0 +1,21 @@
+**Namespace:** `autorag.utils.util.load_summary_file`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_summary_file
+
+Input Code:
+```Python
+def load_summary_file(summary_path: str,
+                      dict_columns: Optional[List[str]] = None) -> pd.DataFrame:
+
+    """
+    Loads a summary file from a specified path into a pandas DataFrame, converting specified columns that contain dictionary-like strings into actual dictionary objects.
+
+    Input-Output Arguments
+    :param summary_path: str, The path of the summary file to be loaded. It is used to locate and read the file.
+    :param dict_columns: Optional[List[str]], The names of the columns within the summary file that contain dictionary-like strings. These columns will be converted into actual dictionaries. Defaults to ['module_params'] if not provided.
+    :return: pd.DataFrame, The loaded summary DataFrame with specified columns converted to dictionary objects.
+    """
+```
+

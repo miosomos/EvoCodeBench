@@ -1,0 +1,31 @@
+**Namespace:** `stepfun.sample_intervals`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function sample_intervals
+
+Input Code:
+```Python
+def sample_intervals(
+    rng,
+    t,
+    w_logits,
+    num_samples,
+    single_jitter=False,
+    domain=(-jnp.inf, jnp.inf),
+):
+
+  """
+  This function samples intervals from a step function based on provided bin endpoint coordinates, bin weights (logits), and other parameters. It generates a set of interval samples by first sampling points from the step function, then calculating midpoints between adjacent samples, and finally adjusting the first and last intervals to ensure they are within the specified domain.
+
+  Input-Output Arguments
+  :param rng: Random number generator or None. Used for generating random samples. If None, 'linspace' sampling is implied.
+  :param t: jnp.ndarray. An array of bin endpoint coordinates, which must be sorted. It represents the edges of the bins in the step function.
+  :param w_logits: jnp.ndarray. An array of logits corresponding to the weights of each bin in the step function.
+  :param num_samples: int. The number of intervals to sample from the step function.
+  :param single_jitter: bool, optional. Determines whether to jitter every sample by the same amount or each sample independently in the inverse CDF. Defaults to False.
+  :param domain: tuple of two floats (minval, maxval). Specifies the valid range of values for 't', ensuring sampled intervals are within this domain.
+  :return: jnp.ndarray(float32). An array of sampled intervals from the step function, adjusted to fit within the specified domain.
+  """
+```
+

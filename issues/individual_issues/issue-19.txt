@@ -1,0 +1,20 @@
+**Namespace:** `tanuki.utils.encode_int`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function encode_int
+
+Input Code:
+```Python
+def encode_int(n):
+    # Define the character set for encoding
+
+    """
+    Encodes an integer into a single character based on a predefined character set. The character set consists of lowercase letters, digits, and an underscore.
+
+    Input-Output Arguments
+    :param n: Integer. The integer to be encoded. It is used as an index to select a character from the character set.
+    :return: String. The encoded character corresponding to the input integer.
+    """
+```
+

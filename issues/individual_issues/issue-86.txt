@@ -1,0 +1,21 @@
+**Namespace:** `easyvolcap.utils.prop_utils.weighted_percentile`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function weighted_percentile
+
+Input Code:
+```Python
+def weighted_percentile(t: torch.Tensor, w: torch.Tensor, ps: List[float]):
+
+    """
+    Computes the weighted percentiles of a step function using tensors. It matches up the channels of the tensors, integrates the weights, and then interpolates the integrated weights to find the weighted percentiles based on the provided percentile values.
+
+    Input-Output Arguments
+    :param t: torch.Tensor. The tensor representing the values at which the step function changes.
+    :param w: torch.Tensor. The tensor representing the weights associated with each value in 't'. The weights must sum to 1.
+    :param ps: List[float]. A list of floats representing the percentile values for which the weighted percentiles are to be computed.
+    :return: torch.Tensor. A tensor of the same shape as 't' and 'w', containing the computed weighted percentiles for the given percentile values.
+    """
+```
+

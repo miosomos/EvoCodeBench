@@ -1,0 +1,34 @@
+**Namespace:** `resample.resample_3d`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function resample_3d
+
+Input Code:
+```Python
+def resample_3d(
+    data,
+    locations,
+    edge_behavior='CONSTANT_OUTSIDE',
+    constant_values=0.0,
+    coordinate_order='xyz',
+    method='TRILINEAR',
+    half_pixel_center=False,
+):
+
+  """
+  This function resamples input 3D data at specified locations using either trilinear interpolation or nearest neighbor interpolation. It supports edge behavior handling and can adjust for half-pixel centering.
+
+  Input-Output Arguments
+  :param data: A tensor with shape [D, H, W, C], representing the volume from which to sample. It is the input volume data.
+  :param locations: A tensor with shape [D, ..., 3], containing floating point locations at which to sample the data. These locations assume voxel centers at integer coordinates.
+  :param edge_behavior: String, specifying how to handle sample points outside the input volume. Options are 'CONSTANT_OUTSIDE' (pads the volume and interpolates towards a constant value outside the tensor) and 'CLAMP' (clamps sample points to the volume). Default is 'CONSTANT_OUTSIDE'.
+  :param constant_values: Float, the constant value to use when 'edge_behavior' is set to 'CONSTANT_OUTSIDE'. Default is 0.0.
+  :param coordinate_order: String, indicating whether the sample locations are in 'xyz' or 'zyx' order. Default is 'xyz'.
+  :param method: String, specifying the interpolation method to use. Must be either 'TRILINEAR' for trilinear interpolation or 'NEAREST' for nearest neighbor interpolation. Default is 'TRILINEAR'.
+  :param half_pixel_center: Bool, determines if half-pixel centering is used, which affects the calculation of sample locations. Default is False.
+  :return: A tensor of shape [D, ..., C] containing the resampled values. This tensor contains the output volume data after resampling at the specified locations.
+
+  """
+```
+

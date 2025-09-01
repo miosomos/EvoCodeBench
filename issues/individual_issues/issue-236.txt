@@ -1,0 +1,24 @@
+**Namespace:** `openlogprobs.extract.topk_search`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function topk_search
+
+Input Code:
+```Python
+def topk_search(model: Model, prefix: str, idx: int, k=1, high=40):
+    # get raw topk, could be done outside and passed in
+
+    """
+    Performs a top-k search on a given model with a specific prefix and index, adjusting the search bias until the desired index is the most probable. It calculates the log probability of the index being the top result under the adjusted conditions.
+
+    Input-Output Arguments
+    :param model: Model. The model on which the top-k search is performed. It is used to get top-k words, their indices, and to adjust search biases.
+    :param prefix: str. The prefix string used for the search in the model. It guides the search process.
+    :param idx: int. The target index for which the function tries to maximize its probability in the top-k results.
+    :param k: int, optional. The number of top results to consider. Defaults to 1.
+    :param high: int, optional. The initial high bias value for the target index. Defaults to 40.
+    :return: Tuple. A tuple containing the log probability of the target index being the top result and the number of calls made to the model.
+    """
+```
+

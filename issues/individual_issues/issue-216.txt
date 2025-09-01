@@ -1,0 +1,27 @@
+**Namespace:** `ollama._client.AsyncClient.pull`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function pull
+
+Input Code:
+```Python
+  async def pull(
+    self,
+    model: str,
+    insecure: bool = False,
+    stream: bool = False,
+  ) -> Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]:
+
+    """
+    The function asynchronously requests to pull data for a specified model from an API endpoint. It can operate in either a secure or insecure mode and has the option to stream the response. If the request cannot be fulfilled, it raises a `ResponseError`. Depending on the `stream` parameter, it either returns a single `ProgressResponse` or a generator yielding `ProgressResponse` objects.
+
+    Input-Output Arguments
+    :param self: AsyncClient. An instance of the AsyncClient class.
+    :param model: str, The name of the model to pull data for.
+    :param insecure: bool, Optional. Determines whether the request should be made in an insecure manner. Defaults to False.
+    :param stream: bool, Optional. Determines whether the response should be streamed. Defaults to False.
+    :return: Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]], A single `ProgressResponse` if `stream` is False, or a generator yielding `ProgressResponse` objects if `stream` is True.
+    """
+```
+

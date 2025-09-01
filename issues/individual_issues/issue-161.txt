@@ -1,0 +1,20 @@
+**Namespace:** `litdata.processing.data_processor._is_path`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _is_path
+
+Input Code:
+```Python
+        element = str(Path(element).absolute())
+
+    """
+    Determines if a given element is a path that exists or starts with a specified input directory. It specifically checks if the element is a string that represents a path within the input directory or if it exists in the file system. This function also handles absolute path conversion when necessary.
+
+    Input-Output Arguments
+    :param input_dir: Optional[str]. The base directory against which the element is checked. It is used to determine if the element is a subpath of this directory.
+    :param element: Any. The element to be checked if it's a path. It is converted to a string and checked against the input directory or the file system for existence.
+    :return: Bool. Indicates whether the element is a valid path that exists or starts with the specified input directory.
+    """
+```
+

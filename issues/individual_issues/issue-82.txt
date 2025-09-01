@@ -1,0 +1,25 @@
+**Namespace:** `easyvolcap.utils.gl_utils.Quad.blit`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function blit
+
+Input Code:
+```Python
+    def blit(self, x: int = 0, y: int = 0, w: int = 0, h: int = 0):
+
+        """
+        The function blit copies a block of pixels from the source framebuffer to the destination framebuffer. It respects the OpenGL convention of using the lower left corner as the origin. This is typically used for operations like copying a texture, rendering to a texture, or performing a fast pixel transfer operation.
+
+        Input-Output Arguments
+        :param self: Quad. An instance of the Quad class, which presumably holds information about a framebuffer object (FBO) and its dimensions.
+        :param x: int, optional. The x-coordinate of the lower left corner where the copy starts. Defaults to 0.
+        :param y: int, optional. The y-coordinate of the lower left corner where the copy starts. Defaults to 0.
+        :param w: int, optional. The width of the pixel block to be copied. If 0, the width of the Quad instance (self.W) is used. Defaults to 0.
+        :param h: int, optional. The height of the pixel block to be copied. If 0, the height of the Quad instance (self.H) is used. Defaults to 0.
+        :return: No return values. This function performs operations directly on the framebuffer objects and does not return any value.
+
+        Note: This function temporarily binds the Quad instance's framebuffer object (FBO) as the read framebuffer, performs the pixel copy operation, and then restores the previously bound read framebuffer. This ensures that the function's operations do not interfere with the current OpenGL state beyond the scope of the function.
+        """
+```
+

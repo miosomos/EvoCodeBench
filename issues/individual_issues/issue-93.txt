@@ -1,0 +1,19 @@
+**Namespace:** `easyvolcap.utils.data_utils.add_batch`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function add_batch
+
+Input Code:
+```Python
+def add_batch(batch) -> Union[torch.Tensor, np.ndarray]:
+
+    """
+    This function recursively adds a new dimension to the input data structure (which can be a batch of data in various formats such as tuple, list, dictionary, torch.Tensor, or numpy.ndarray) at the zeroth position. It is designed to handle nested data structures by applying the same operation to each element.
+
+    Input-Output Arguments
+    :param batch: Union[tuple, list, dict, torch.Tensor, np.ndarray]. The input data which can be a single item or a batch of items in various formats. The function processes this data by adding a new dimension to it or its elements.
+    :return: Union[torch.Tensor, np.ndarray]. The modified batch with an added dimension at the zeroth position. This return type ensures compatibility with PyTorch and NumPy data structures.
+    """
+```
+

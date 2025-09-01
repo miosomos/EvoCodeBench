@@ -1,0 +1,20 @@
+**Namespace:** `coord.isotropize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function isotropize
+
+Input Code:
+```Python
+def isotropize(cov, mode='accurate'):
+
+  """
+  This function converts covariance matrices into isotropic covariance matrices with the same determinant. It supports two modes of operation, 'fast' and 'accurate', to compute the isotropic covariances, and includes a check to handle invalid determinants or logarithms of determinants.
+
+  Input-Output Arguments
+  :param cov: ndarray. The covariance matrix or matrices to be isotropized. It is used to compute the isotropic covariance matrices.
+  :param mode: String. The mode of computation, either 'fast' or 'accurate'. The 'fast' mode uses the determinant directly, while the 'accurate' mode uses the logarithm of the determinant for stability. Defaults to 'accurate'.
+  :return: ndarray. The isotropic covariance matrix or matrices with the same determinant as the input covariance matrix or matrices.
+  """
+```
+

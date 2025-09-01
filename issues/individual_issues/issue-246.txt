@@ -1,0 +1,22 @@
+**Namespace:** `math.power_ladder`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function power_ladder
+
+Input Code:
+```Python
+def power_ladder(x, p, premult=None, postmult=None):
+
+  """
+  Implements Tukey's power ladder transformation on the input x, with optional pre-multiplication and post-multiplication adjustments. This transformation is used for data normalization and handling special cases for the power parameter p.
+
+  Input-Output Arguments
+  :param x: Numeric or array-like. The input data to be transformed.
+  :param p: Numeric. The power parameter of the transformation. Special cases are handled for p values of 1, 0, -inf, and inf.
+  :param premult: Numeric or None. An optional pre-multiplication factor applied to x before the transformation. If None, no pre-multiplication is applied.
+  :param postmult: Numeric or None. An optional post-multiplication factor applied to the transformed data. If None, no post-multiplication is applied.
+  :return: The transformed data after applying Tukey's power ladder and any specified pre- and post-multiplications.
+  """
+```
+

@@ -1,0 +1,21 @@
+**Namespace:** `spin_math.apply_homogeneous_transform`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function apply_homogeneous_transform
+
+Input Code:
+```Python
+def apply_homogeneous_transform(transform,
+                                vectors):
+
+  """
+  Applies a homogeneous transformation to a collection of vectors, effectively transforming the given 3D points according to the specified transformation matrix.
+
+  Input-Output Arguments
+  :param transform: (C+1,C+1) A homogeneous transformation matrix that defines how each point in the collection should be transformed.
+  :param vectors: (*,C) An array containing 3D points that are to be transformed. The array can have an arbitrary shape, but the last dimension must be the dimensionality of the points (C).
+  :return: (*,C) An array of the same shape as the input 'vectors', containing the transformed points.
+  """
+```
+

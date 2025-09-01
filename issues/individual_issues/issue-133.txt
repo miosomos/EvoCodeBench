@@ -1,0 +1,22 @@
+**Namespace:** `litdata.streaming.dataloader.StreamingDataLoader.load_state_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_state_dict
+
+Input Code:
+```Python
+    def load_state_dict(self, obj: Dict[str, Any]) -> None:
+
+        """
+        This function loads a dictionary containing the training state into the StreamingDataLoader instance. It is designed to be called from a non-worker process when resuming training. It updates the current epoch, the number of samples yielded, and the latest worker index based on the provided state. Additionally, it prepares the DataLoader for resuming by adjusting internal iterators and flags.
+
+        Input-Output Arguments
+        :param self: StreamingDataLoader. An instance of the StreamingDataLoader class.
+        :param obj: Dict[str, Any]. A dictionary containing the training state, including the current epoch, the number of samples yielded, and the latest worker index. It is used to update the state of the StreamingDataLoader and its dataset if applicable.
+        :return: No return values. This method updates the state of the StreamingDataLoader instance in place.
+
+        This method also handles specific logic based on the type of dataset associated with the StreamingDataLoader, updating the dataset's state if it is a StreamingDataset or a CombinedStreamingDataset. It raises a RuntimeError if the dataset is neither.
+        """
+```
+

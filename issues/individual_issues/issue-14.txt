@@ -1,0 +1,18 @@
+**Namespace:** `coord.contract3_isoscale`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function contract3_isoscale
+
+Input Code:
+```Python
+def contract3_isoscale(x):
+
+  """
+  Performs a specific isotropic scaling operation on 3D inputs. It calculates a scaled version of the input based on its norm, designed for fast execution in the context of isotropic contraction operations.
+  Input-Output Arguments
+  :param x: ndarray. The input array which is expected to be 3-dimensional. It is used to compute the norm and then apply the scaling operation.
+  :return: ndarray. The scaled version of the input array after applying the isotropic scaling operation.
+  """
+```
+

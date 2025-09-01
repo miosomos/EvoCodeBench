@@ -1,0 +1,32 @@
+**Namespace:** `mmdet3d.core.evaluation.indoor_eval.indoor_eval`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function indoor_eval
+
+Input Code:
+```Python
+def indoor_eval(gt_annos,
+                dt_annos,
+                metric,
+                label2cat,
+                logger=None,
+                box_type_3d=None,
+                box_mode_3d=None):
+
+    """
+    This function evaluates the detection results by comparing the detection annotations with the ground truth annotations. It calculates the mean Average Precision (mAP) and mean Average Recall (mAR) for different IoU thresholds and organizes the evaluation results into a dictionary and a formatted table for logging.
+
+    Input-Output Arguments
+    :param gt_annos: list[dict]. Ground truth annotations containing information about the true bounding boxes and their labels.
+    :param dt_annos: list[dict]. Detection annotations containing detected bounding boxes, their labels, and scores.
+    :param metric: list[float]. A list of IoU thresholds used for computing average precisions and recalls.
+    :param label2cat: dict. A mapping from numerical labels to category names.
+    :param logger: logging.Logger or str, optional. Specifies how the mAP summary is printed. If None, the default logging method is used.
+    :param box_type_3d: class, optional. The type of 3D bounding box used, which determines how the boxes are converted and processed.
+    :param box_mode_3d: str, optional. The mode or format in which the 3D bounding boxes are represented.
+    :return: dict[str, float]. A dictionary containing the evaluation results, including class-wise AP and AR for each IoU threshold, as well as overall mAP and mAR.
+
+    """
+```
+

@@ -1,0 +1,19 @@
+**Namespace:** `mmdet3d.models.builder.build_neck`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function build_neck
+
+Input Code:
+```Python
+def build_neck(cfg):
+
+    """
+    Builds and returns a neck model component based on the configuration provided. It checks if the specified neck type is available in the NECKS module dictionary; if so, it builds the neck using NECKS. Otherwise, it builds the neck using MMDET_NECKS.
+
+    Input-Output Arguments
+    :param cfg: Dict. The configuration dictionary for the neck model, which must include a 'type' key that specifies the type of neck to be built.
+    :return: Object. The built neck model instance.
+    """
+```
+

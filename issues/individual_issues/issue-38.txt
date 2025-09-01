@@ -1,0 +1,22 @@
+**Namespace:** `litdata.streaming.dataset._replay_sampling`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _replay_sampling
+
+Input Code:
+```Python
+def _replay_sampling(num_samples_yielded: int, batch_size: int, num_workers: int) -> Dict[int, int]:
+
+    """
+    This function calculates and returns the number of samples each worker has processed, given the total number of samples yielded, the batch size, and the number of workers. It ensures that the distribution of samples among workers is as even as possible, taking into account the division of the total samples by the number of workers and the batch size, and then distributing any remaining samples.
+
+    Input-Output Arguments
+    :param num_samples_yielded: Int. The total number of samples that have been yielded.
+    :param batch_size: Int. The size of each batch of samples.
+    :param num_workers: Int. The number of workers involved in processing the samples.
+    :return: Dict[Int, Int]. A dictionary where each key is a worker index (starting from 0) and its value is the number of samples that worker has processed.
+
+    """
+```
+

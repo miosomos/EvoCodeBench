@@ -1,0 +1,28 @@
+**Namespace:** `easyvolcap.utils.prop_utils.importance_sampling`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function importance_sampling
+
+Input Code:
+```Python
+def importance_sampling(t: torch.Tensor,
+                        w: torch.Tensor,
+                        num_samples: int,
+                        perturb=True,
+                        single_jitter=False,
+                        ):
+
+    """
+    Performs importance sampling on a piecewise-constant probability density function (PDF) defined by bin endpoints and weights. It generates samples according to the specified PDF, with options for perturbation and jittering of samples.
+
+    Input-Output Arguments
+    :param t: torch.Tensor. The tensor containing bin endpoint coordinates, which must be sorted. It represents the domain of the PDF.
+    :param w: torch.Tensor. The tensor containing weights for each bin, used to define the piecewise-constant PDF.
+    :param num_samples: int. The number of samples to generate from the PDF.
+    :param perturb: bool, optional. If True, applies perturbation to the sampling process to avoid sample clustering at bin boundaries. Defaults to True.
+    :param single_jitter: bool, optional. If True, applies the same jitter to every sample along each dimension. If False, applies independent jitter to each sample. Defaults to False.
+    :return: torch.Tensor. A tensor of samples drawn from the specified PDF. The shape of the tensor is determined by the input tensors and the number of samples.
+    """
+```
+

@@ -1,0 +1,19 @@
+**Namespace:** `litdata.streaming.resolver._resolve_dir`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _resolve_dir
+
+Input Code:
+```Python
+def _resolve_dir(dir_path: Optional[Union[str, Dir]]) -> Dir:
+
+    """
+    Resolves a directory path into a Dir object, handling various path formats including local paths, S3 URLs, and specific project paths. It also processes paths based on their prefixes to determine the appropriate Dir object configuration.
+
+    Input-Output Arguments
+    :param dir_path: Optional[Union[str, Dir]]. The directory path or Dir object to be resolved. It is used to determine the final Dir object based on the path's format and location.
+    :return: Dir. The resolved Dir object with appropriately set path and/or URL attributes based on the input directory path or Dir object.
+    """
+```
+

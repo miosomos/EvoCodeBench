@@ -1,0 +1,21 @@
+**Namespace:** `litdata.utilities.packing._pack_greedily`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _pack_greedily
+
+Input Code:
+```Python
+def _pack_greedily(items: List[Any], weights: List[int], num_bins: int) -> Tuple[Dict[int, List[Any]], Dict[int, int]]:
+
+    """
+    This function attempts to distribute a list of items with associated weights into a specified number of bins in a way that the total weight is as evenly distributed as possible across the bins. It does so greedily by sorting the items by weight in descending order and then placing each item into the bin with the current lowest total weight.
+
+    Input-Output Arguments
+    :param items: List[Any]. A list of items to be distributed into bins. Each item can be of any type.
+    :param weights: List[int]. A list of integers representing the weights of the corresponding items in the 'items' list. Each weight must be positive.
+    :param num_bins: int. The number of bins into which the items are to be distributed.
+    :return: Tuple[Dict[int, List[Any]], Dict[int, int]]. The function returns a tuple containing two dictionaries. The first dictionary maps each bin index to a list of items that have been placed in that bin. The second dictionary maps each bin index to the total weight of the items in that bin.
+    """
+```
+

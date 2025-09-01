@@ -1,0 +1,21 @@
+**Namespace:** `litdata.processing.functions.LambdaDataTransformRecipe.prepare_item`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function prepare_item
+
+Input Code:
+```Python
+    def prepare_item(self, item_metadata: Any, output_dir: str, is_last: bool) -> None:
+
+        """
+        The function 'prepare_item' prepares an item by applying a transformation function ('_fn') to the item's metadata, potentially including additional context like device information and a flag indicating if it's the last item. This is used within a data transformation recipe context, where items are processed and transformed according to a specified lambda function or callable.
+
+        Input-Output Arguments
+        :param item_metadata: Any, the metadata of the item to be transformed. It is used as the first argument in the transformation function.
+        :param output_dir: str, the directory where the transformed item's output should be stored. It is passed as the second argument to the transformation function.
+        :param is_last: bool, a flag indicating whether the item is the last one in the sequence to be processed. It is conditionally added to the keyword arguments passed to the transformation function if '_contains_is_last' is True.
+        :return: No return values. The function directly calls the transformation function ('_fn') with the provided arguments and keyword arguments, affecting external state or outputs rather than returning a value.
+        """
+```
+

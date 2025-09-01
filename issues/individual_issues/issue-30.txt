@@ -1,0 +1,20 @@
+**Namespace:** `stepfun.weight_to_pdf`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function weight_to_pdf
+
+Input Code:
+```Python
+def weight_to_pdf(t, w):
+
+  """
+  Converts a vector of weights that sum to 1 into a probability density function (PDF) that integrates to 1, by dividing the weights by the difference between consecutive elements in a given vector.
+
+  Input-Output Arguments
+  :param t: Array-like. A vector of thresholds or time points, used along with weights to generate the PDF.
+  :param w: Array-like. A vector of weights that sum to 1, representing the distribution to be converted into a PDF.
+  :return: Array-like. The resulting PDF that integrates to 1, obtained by dividing the weights by the difference between consecutive elements in the input vector t.
+  """
+```
+

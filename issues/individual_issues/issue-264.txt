@@ -1,0 +1,20 @@
+**Namespace:** `ref_utils.generate_dir_enc_fn`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function generate_dir_enc_fn
+
+Input Code:
+```Python
+def generate_dir_enc_fn(deg_view):
+
+  """
+  Generates a directional encoding function based on the specified number of spherical harmonics degrees. This function internally creates another function that evaluates the directional encoding for given inputs.
+
+  Input-Output Arguments
+  :param deg_view: Int. The number of spherical harmonics degrees to use for generating the directional encoding function. It determines the complexity and accuracy of the encoding.
+  :return: Function. A function that takes a 3D point (or points) as input and returns its directional encoding. This returned function internally uses a generated integrated directional encoding function with the specified degree of spherical harmonics.
+
+  """
+```
+

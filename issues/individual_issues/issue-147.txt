@@ -1,0 +1,27 @@
+**Namespace:** `litdata.utilities.shuffle._intra_node_chunk_shuffle`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _intra_node_chunk_shuffle
+
+Input Code:
+```Python
+def _intra_node_chunk_shuffle(
+    distributed_env: _DistributedEnv,
+    chunks_per_ranks: List[List[int]],
+    seed: int,
+    current_epoch: int,
+) -> List[int]:
+
+    """
+    This function shuffles the chunks of data assigned to each node in a distributed environment. It ensures that each node receives a randomized set of chunk indexes based on the provided seed and the current epoch, aiming to distribute data more evenly and randomly across nodes for each training epoch.
+
+    Input-Output Arguments
+    :param distributed_env: _DistributedEnv. The environment of the distributed system, containing information like the number of nodes and the world size.
+    :param chunks_per_ranks: List[List[int]]. A list where each sublist contains the chunk indexes assigned to a specific rank.
+    :param seed: int. The seed used for random number generation to ensure reproducibility of the shuffle.
+    :param current_epoch: int. The current epoch number, used to modify the seed for each epoch to ensure different shuffles.
+    :return: List[int]. A flattened list of shuffled chunk indexes across all nodes.
+    """
+```
+

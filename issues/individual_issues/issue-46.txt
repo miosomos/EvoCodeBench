@@ -1,0 +1,23 @@
+**Namespace:** `geometry.cartesian_to_spherical`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function cartesian_to_spherical
+
+Input Code:
+```Python
+def cartesian_to_spherical(
+    cartesian_vector,
+    eps = onp.float32(onp.finfo(onp.float32).tiny)
+):
+
+  """
+  Converts cartesian coordinates to spherical coordinates using a right-handed coordinate system. It calculates the radius, inclination (theta), and azimuth (phi) of a point given its cartesian coordinates (x, y, z).
+
+  Input-Output Arguments
+  :param cartesian_vector: Array-like, the cartesian coordinates of a point or set of points, expected to have a shape of (..., 3) where the last dimension represents the x, y, and z coordinates.
+  :param eps: Float, a small epsilon value used to prevent division by zero in the calculation of the inclination angle (theta). It defaults to the smallest positive float32 value.
+  :return: Tuple of arrays. The spherical coordinates as a tuple consisting of radius (r), inclination (theta), and azimuth (phi). Each element in the tuple is an array with the same shape as the input array's leading dimensions.
+  """
+```
+

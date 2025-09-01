@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.datasets._base.get_data_home`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_data_home
+
+Input Code:
+```Python
+def get_data_home(data_home: str | Path | None = None) -> str:
+
+    """
+    This function returns the path to the skfolio data directory, which is used by certain dataset loaders to avoid redundant data downloads. It determines the directory based on an optional input, an environment variable, or a default location, and ensures the directory exists by creating it if necessary.
+
+    Input-Output Arguments
+    :param data_home: str | Path | None. The desired path for the skfolio data directory. If not provided, the function looks for a path in the 'SKFOLIO_DATA' environment variable or defaults to '~/skfolio_data'.
+    :return: str. The path to the skfolio data directory after ensuring it exists.
+    """
+```
+

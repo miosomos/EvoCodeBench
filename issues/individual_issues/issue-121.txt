@@ -1,0 +1,20 @@
+**Namespace:** `litdata.streaming.serializers.TensorSerializer.deserialize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function deserialize
+
+Input Code:
+```Python
+    def deserialize(self, data: bytes) -> torch.Tensor:
+
+        """
+        The function deserializes a byte array into a PyTorch tensor. It extracts the data type and shape information encoded in the byte array, then reconstructs the tensor from the remaining bytes.
+
+        Input-Output Arguments
+        :param data: bytes, the serialized tensor data including information about the tensor's dtype and shape, followed by the tensor's raw data.
+        :return: torch.Tensor, the deserialized tensor reconstructed from the input byte array.
+
+        """
+```
+

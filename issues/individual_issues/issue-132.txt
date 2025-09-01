@@ -1,0 +1,21 @@
+**Namespace:** `litdata.streaming.writer.BinaryWriter.done`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function done
+
+Input Code:
+```Python
+    def done(self) -> List[str]:
+
+        """
+        The function finalizes the writing process for a BinaryWriter instance. It attempts to write any remaining chunks of data to files and generates an index file for these chunks. It returns a list of file paths to the written chunks. The function marks the writing process as complete once it is done.
+
+        Input-Output Arguments
+        :param self: BinaryWriter. An instance of the BinaryWriter class. It uses internal state to manage the writing process.
+        :return: List[str]. A list of file paths to the chunks that have been written. This list is returned once the writing process is finalized and all chunks are written.
+
+        Note: The function uses internal methods and properties of the BinaryWriter class, such as `_should_write`, `write_chunk`, and `write_chunks_index`, to manage the writing of chunks and the index file. It also checks if the writing process is already marked as complete by inspecting `self.filled` and marks it as complete by setting `self._is_done` to True at the end.
+        """
+```
+

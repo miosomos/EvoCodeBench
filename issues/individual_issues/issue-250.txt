@@ -1,0 +1,33 @@
+**Namespace:** `camera_utils.points_to_pixels`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function points_to_pixels
+
+Input Code:
+```Python
+def points_to_pixels(
+    points,
+    pixtocams,
+    camtoworlds,
+    distortion_params = None,
+    camtype = ProjectionType.PERSPECTIVE,
+    xnp = np,
+):
+
+  """
+  This function calculates the 2D pixel coordinates and depth values from 3D point coordinates using camera intrinsics, extrinsics, and optionally distortion parameters. It supports vectorized operations over the leading dimensions of the input arrays and can work with either numpy or jax.numpy for computations.
+
+  Input-Output Arguments
+  :param points: float array, 3D coordinates of points to project. These are the world coordinates that need to be projected onto the 2D image plane.
+  :param pixtocams: float array, inverse of the camera intrinsics matrices. These are used to transform points from pixel coordinates to camera coordinates.
+  :param camtoworlds: float array, camera extrinsics matrices. These describe the position and orientation of the camera in the world coordinate system.
+  :param distortion_params: dict of floats or float arrays, optional. These parameters are used to model the camera lens distortion. If provided, the function will correct for radial and tangential distortion.
+  :param camtype: camera_utils.ProjectionType, specifies the type of camera projection model to use. Currently, only perspective projection is supported.
+  :param xnp: module, either numpy or jax.numpy. This parameter allows the function to be used for computations on different devices (CPU or GPU/TPU).
+  :return: A tuple containing two elements:
+           coordinates: float array, the computed 2D pixel coordinates of the input 3D points.
+           depth: float array, the depth values of the points in the camera coordinate system, useful for depth-aware applications.
+  """
+```
+

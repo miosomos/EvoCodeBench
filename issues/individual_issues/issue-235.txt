@@ -1,0 +1,23 @@
+**Namespace:** `quaternion.from_axis_angle`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function from_axis_angle
+
+Input Code:
+```Python
+def from_axis_angle(
+    axis_angle, eps = jnp.finfo(jnp.float32).eps
+):
+
+  """
+  Constructs a quaternion from a given axis-angle representation of a rotation, ensuring numerical stability for small angles by using a small epsilon value.
+
+  Input-Output Arguments
+  :param axis_angle: A 3-vector (array-like). It represents the axis of rotation (direction) and the magnitude of rotation (angle). It is used to calculate the quaternion.
+  :param eps: Float, optional. A small number to avoid division by zero and ensure numerical stability for rotations close to zero. It defaults to the machine epsilon for float32.
+  :return: A quaternion (array-like). It encodes the rotation specified by the input axis-angle vector.
+
+  """
+```
+

@@ -1,0 +1,28 @@
+**Namespace:** `autorag.nodes.queryexpansion.run.run_query_expansion_node`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function run_query_expansion_node
+
+Input Code:
+```Python
+def run_query_expansion_node(modules: List[Callable],
+                             module_params: List[Dict],
+                             previous_result: pd.DataFrame,
+                             node_line_dir: str,
+                             strategies: Dict,
+                             ) -> pd.DataFrame:
+
+    """
+    This function evaluates and selects the best module among query expansion node results by running each module with given parameters, measuring their execution times, and evaluating their performance based on specified strategies. It saves the results and a summary, including execution times and evaluation metrics, to the specified directory. Finally, it selects and saves the best result based on the evaluation.
+
+    Input-Output Arguments
+    :param modules: List[Callable]. A list of query expansion modules to be executed.
+    :param module_params: List[Dict]. Parameters for each query expansion module in the modules list.
+    :param previous_result: pd.DataFrame. The dataframe containing the results from the previous step, used as input for query expansion.
+    :param node_line_dir: str. The directory path where the results and summaries will be saved.
+    :param strategies: Dict. A dictionary containing strategies for selecting the best query expansion module, including metrics, speed thresholds, and other evaluation criteria.
+    :return: pd.DataFrame. The dataframe containing the best result after evaluating all query expansion modules according to the specified strategies.
+    """
+```
+

@@ -1,0 +1,20 @@
+**Namespace:** `tanuki.models.function_config.FunctionConfig.load_from_dict`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_from_dict
+
+Input Code:
+```Python
+    def load_from_dict(self, json_dict):
+
+        """
+        This function loads configuration settings for a function from a given dictionary. It updates the instance of FunctionConfig with various attributes such as distilled model, current model stats, last training run, current training run, number of training runs, and teacher models based on the provided dictionary.
+
+        Input-Output Arguments
+        :param self: FunctionConfig. An instance of the FunctionConfig class. It is used to update the instance with configuration settings from the dictionary.
+        :param json_dict: dict, The dictionary from which to load the function configuration. It should contain keys like 'distilled_model', 'current_model_stats', 'last_training_run', 'current_training_run', 'nr_of_training_runs', and optionally 'teacher_models'.
+        :return: FunctionConfig. The instance of FunctionConfig class after updating it with the configuration settings from the provided dictionary. No new object is created; the method updates the existing instance.
+        """
+```
+

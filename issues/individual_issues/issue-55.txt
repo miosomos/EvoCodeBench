@@ -1,0 +1,20 @@
+**Namespace:** `skfolio.utils.stats.rand_weights`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function rand_weights
+
+Input Code:
+```Python
+def rand_weights(n: int, zeros: int = 0) -> np.array:
+
+    """
+    Generates a numpy array of n random weights that sum up to one, with an option to set a specified number of these weights to zero. This is useful for creating normalized weight distributions with optional zero-weight elements.
+
+    Input-Output Arguments
+    :param n: Int. The total number of weights to generate. It determines the size of the output array.
+    :param zeros: Int, default=0. The number of weights that should be randomly set to zero. It must not exceed n.
+    :return: np.array. A numpy array containing the generated weights that sum to one, with the specified number of elements set to zero if applicable.
+    """
+```
+

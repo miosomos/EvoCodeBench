@@ -1,0 +1,20 @@
+**Namespace:** `litdata.processing.data_processor._wait_for_file_to_exist`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _wait_for_file_to_exist
+
+Input Code:
+```Python
+def _wait_for_file_to_exist(s3: S3Client, obj: parse.ParseResult, sleep_time: int = 2) -> Any:
+
+    """
+    This function continuously checks if a specified file exists in an S3 bucket. It attempts to retrieve the file metadata using the head_object method. If the file is not found, it waits for a specified amount of time before trying again. If any other error occurs, the error is raised.
+    Input-Output Arguments
+    :param s3: S3Client. The S3 client used to interact with AWS S3.
+    :param obj: parse.ParseResult. The parsed result of the S3 object URL, containing the bucket name and object key.
+    :param sleep_time: int, optional. The amount of time in seconds to wait before retrying if the file does not exist. Defaults to 2 seconds.
+    :return: Any. The response from the head_object method if the file exists. This typically includes metadata about the S3 object.
+    """
+```
+

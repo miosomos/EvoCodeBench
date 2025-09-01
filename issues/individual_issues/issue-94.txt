@@ -1,0 +1,21 @@
+**Namespace:** `easyvolcap.utils.viewer_utils.Camera.to_batch`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function to_batch
+
+Input Code:
+```Python
+    def to_batch(self):
+
+        """
+        The function converts camera parameters and GUI related elements into a batch format using tensors, suitable for processing with PyTorch. It organizes these parameters into a structured dictionary format for easy access and manipulation.
+
+        Input-Output Arguments
+        :param self: Camera. An instance of the Camera class, containing various camera parameters and GUI related elements.
+        :return: A dotdict instance containing all the camera parameters and GUI related elements converted into tensors. This structured dictionary includes both a direct mapping of parameters and a nested 'meta' dictionary with the same content.
+
+        Note: The function assumes the existence of a 'dotdict' class or function that behaves similarly to a dictionary but allows access to its items through attributes (dot notation). It also assumes that 'torch' refers to the PyTorch library, used here for tensor operations.
+        """
+```
+

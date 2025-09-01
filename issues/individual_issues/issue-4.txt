@@ -1,0 +1,20 @@
+**Namespace:** `memoize.memoize_to_sqlite`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function memoize_to_sqlite
+
+Input Code:
+```Python
+def memoize_to_sqlite(func_name: str, filename: str = "cache.db"):
+
+    """
+    This function acts as a decorator for memoization, caching the output of a function in a SQLite database to avoid redundant computations. It checks if the result of a function call is already stored in the database; if so, it retrieves the result from the database, otherwise, it computes the result, stores it, and then returns it.
+
+    Input-Output Arguments
+    :param func_name: str, The name of the function to be memoized. It is used as a key in the SQLite database to store and retrieve the function's output.
+    :param filename: str, The name of the SQLite database file where the function outputs are cached. Defaults to "cache.db".
+    :return: A decorator function that wraps the original function, adding memoization functionality to it. No direct return value from this function itself.
+    """
+```
+

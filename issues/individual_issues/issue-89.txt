@@ -1,0 +1,22 @@
+**Namespace:** `easyvolcap.utils.prop_utils.query`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function query
+
+Input Code:
+```Python
+def query(tq, t, y, outside_value=0):
+
+    """
+    This function looks up the values of a step function defined by time-value pairs (t, y) at specified query times (tq). If a query time matches a step change, the function returns an outside value; otherwise, it interpolates the value at the query time based on the step function.
+
+    Input-Output Arguments
+    :param tq: Tensor. The query times at which to evaluate the step function.
+    :param t: Tensor. The times at which the step function changes value.
+    :param y: Tensor. The values of the step function corresponding to the times in 't'.
+    :param outside_value: Numeric, optional. The value to return for query times that exactly match a step change time. Defaults to 0.
+    :return: Tensor. The interpolated or outside values of the step function at the query times.
+    """
+```
+

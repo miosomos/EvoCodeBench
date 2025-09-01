@@ -1,0 +1,19 @@
+**Namespace:** `litdata.processing.functions._get_input_dir`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _get_input_dir
+
+Input Code:
+```Python
+def _get_input_dir(inputs: Sequence[Any]) -> Optional[str]:
+
+    """
+    Determines the input directory from a sequence of inputs by extracting and resolving indexed paths. It checks the first two elements of the input sequence for valid file paths, raises an error if inconsistent file paths are found, and formats the path to include the project root or a specified depth in the file system.
+
+    Input-Output Arguments
+    :param inputs: Sequence[Any]. A sequence of inputs from which file paths are to be extracted and analyzed.
+    :return: Optional[str]. The absolute path to the input directory determined from the inputs, or None if no valid file paths are found.
+    """
+```
+

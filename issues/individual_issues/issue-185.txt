@@ -1,0 +1,20 @@
+**Namespace:** `detectron2.utils.analysis.flop_count_operators`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function flop_count_operators
+
+Input Code:
+```Python
+def flop_count_operators(model: nn.Module, inputs: list) -> typing.DefaultDict[str, float]:
+
+    """
+    This function calculates the floating-point operations (flops) count for each operator in a given model using just-in-time (jit) compilation. It is specifically designed to support standard detection models in detectron2 by running the model with a given input and computing the flops. It emphasizes that the computed flops might vary with different inputs, suggesting averaging across multiple inputs for more accurate estimation.
+
+    Input-Output Arguments
+    :param model: nn.Module. A detectron2 model that is expected to take a list of dictionaries as input. The model is used to compute the flops by running it with the provided inputs.
+    :param inputs: list of dictionaries. These are the inputs to the model, adhering to detectron2's standard input format. Only the "image" key within these dictionaries is utilized for the flops computation.
+    :return: DefaultDict[str, float]. A dictionary where keys are operator names and values are the corresponding Gflop counts. This provides an overview of the computational cost associated with each operator in the model.
+    """
+```
+

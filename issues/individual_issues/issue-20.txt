@@ -1,0 +1,24 @@
+**Namespace:** `spin_math.safe_log`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function safe_log
+
+Input Code:
+```Python
+def safe_log(x,
+             *,
+             eps = jnp.finfo(jnp.float32).eps,
+             value_at_zero = jnp.finfo(jnp.float32).eps):
+
+  """
+  Computes a logarithm of the input array in a safe manner, avoiding NaNs by clamping values at or near zero to a specified small value before taking the logarithm.
+
+  Input-Output Arguments
+  :param x: Input array, the array for which the logarithm is to be computed.
+  :param eps: Float, a small number to prevent NaNs by acting as a threshold below which values are considered too close to zero. It defaults to the smallest positive representable float32.
+  :param value_at_zero: Float, the value to which inputs at or near zero are clamped before computing the logarithm. It defaults to the smallest positive representable float32. The return value for these inputs will be log(value_at_zero).
+  :return: An array of the same shape as x, containing the logarithm of each element in x, with adjustments near zero to avoid NaNs.
+  """
+```
+

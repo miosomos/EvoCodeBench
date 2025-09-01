@@ -1,0 +1,20 @@
+**Namespace:** `easyvolcap.utils.data_utils.to_cuda`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function to_cuda
+
+Input Code:
+```Python
+def to_cuda(batch, device="cuda", ignore_list: bool = False) -> torch.Tensor:
+
+    """
+    Converts the input batch to a CUDA tensor, recursively handling nested structures like tuples, lists, and dictionaries, except for dictionary keys named "meta". It ensures that the data is moved to the specified CUDA device for GPU processing.
+    Input-Output Arguments
+    :param batch: tuple, list, dict, torch.Tensor, or other. The input data that needs to be converted to a CUDA tensor. It supports nested structures and handles them accordingly.
+    :param device: str, default "cuda". The target CUDA device to which the data will be moved.
+    :param ignore_list: bool, default False. A flag to indicate whether to ignore certain elements, though its usage is not directly apparent in the function's implementation.
+    :return: torch.Tensor. The input batch converted to a CUDA tensor, ready for GPU processing.
+    """
+```
+

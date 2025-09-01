@@ -1,0 +1,19 @@
+**Namespace:** `nlm_ingestor.ingestor.processors.fix_spaced_characters`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function fix_spaced_characters
+
+Input Code:
+```Python
+def fix_spaced_characters(line_text):
+
+    """
+    Removes all whitespace characters from the input text and then segments the modified text into smaller parts or tokens.
+
+    Input-Output Arguments
+    :param line_text: String. The text line to be processed. It is used to remove all spaces and then segment the text.
+    :return: List of strings. The segmented parts of the modified input text.
+    """
+```
+

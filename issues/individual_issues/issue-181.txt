@@ -1,0 +1,19 @@
+**Namespace:** `detectron2.export.torchscript_patch.patch_instances`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function patch_instances
+
+Input Code:
+```Python
+def patch_instances(fields):
+
+    """
+    This function acts as a context manager to temporarily replace the 'Instances' class in detectron2 with a new, statically-typed, scriptable class defined by the input 'fields'. It generates a new module for the class, writes it to a temporary file, imports it, and sets up the environment so that torchscript can recognize and work with this new class. After exiting the context, it cleans up by removing modifications.
+
+    Input-Output Arguments
+    :param fields: List of tuples or similar structure. Defines the fields of the new 'Instances' class, where each element in the list represents a field in the class.
+    :return: Yields a new class that replaces 'Instances' for the duration of the context. No return value outside of the context manager's yield.
+    """
+```
+

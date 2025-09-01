@@ -1,0 +1,19 @@
+**Namespace:** `microagent_manager.MicroAgentManager.get_agents`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_agents
+
+Input Code:
+```Python
+    def get_agents(self) -> List[Any]:
+
+        """
+        This function cleans up the agents and then returns the current list of agents managed by the MicroAgentManager instance.
+
+        Input-Output Arguments
+        :param self: MicroAgentManager. An instance of the MicroAgentManager class, used to access the instance's methods and attributes.
+        :return: List[Any]. The current list of agents after cleanup.
+        """
+```
+

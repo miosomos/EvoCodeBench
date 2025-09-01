@@ -1,0 +1,20 @@
+**Namespace:** `autorag.schema.node.extract_values_from_nodes`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function extract_values_from_nodes
+
+Input Code:
+```Python
+def extract_values_from_nodes(nodes: List[Node], key: str) -> List[str]:
+
+    """
+    Extracts values associated with a specified key from a list of nodes, ensuring each value is unique by removing duplicates.
+
+    Input-Output Arguments
+    :param nodes: List[Node]. The nodes from which you want to extract values. These nodes are expected to have a structure that includes modules and module_params from which values are extracted.
+    :param key: String. The key corresponding to the value you want to extract from each node's module_param.
+    :return: List[String]. A list of unique values extracted from the nodes based on the specified key.
+    """
+```
+

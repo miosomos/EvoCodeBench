@@ -1,0 +1,20 @@
+**Namespace:** `litdata.streaming.serializers.JPEGSerializer.serialize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function serialize
+
+Input Code:
+```Python
+    def serialize(self, item: Image) -> Tuple[bytes, Optional[str]]:
+
+        """
+        Serializes an image item into JPEG format. If the item is a JPEG and has a defined filename that exists, it reads the file directly. Otherwise, it converts the item into JPEG format in memory. It raises an error if the item is not a supported image type.
+
+        Input-Output Arguments
+        :param item: Image. The image item to be serialized. It should be an instance of Image class or its subclasses.
+        :return: A tuple containing the serialized image data in bytes and an optional error message as None. If the item is not a supported image type, a TypeError is raised.
+
+        """
+```
+

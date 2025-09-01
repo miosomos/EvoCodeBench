@@ -1,0 +1,25 @@
+**Namespace:** `geometry.spherical_to_cartesian`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function spherical_to_cartesian
+
+Input Code:
+```Python
+def spherical_to_cartesian(
+    r,
+    theta,
+    phi,
+):
+
+  """
+  Converts spherical coordinates to cartesian coordinates. It calculates the cartesian coordinates (x, y, z) based on the given spherical coordinates (radius r, elevation theta, and azimuth phi).
+
+  Input-Output Arguments
+  :param r: Numeric type. The radius in spherical coordinates. It represents how far away the point is from the origin.
+  :param theta: Numeric type. The elevation angle in spherical coordinates. It represents the angle between the point and the positive z-axis.
+  :param phi: Numeric type. The azimuth angle in spherical coordinates. It represents the angle between the projection of the point on the xy-plane and the positive x-axis.
+  :return: Array of numeric type. The cartesian coordinates corresponding to the input spherical coordinates, organized as [x, y, z].
+  """
+```
+

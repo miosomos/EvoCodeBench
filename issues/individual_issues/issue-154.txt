@@ -1,0 +1,47 @@
+**Namespace:** `litdata.processing.functions.map`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function map
+
+Input Code:
+```Python
+def map(
+    fn: Callable[[str, Any], None],
+    inputs: Sequence[Any],
+    output_dir: Union[str, Dir],
+    weights: Optional[List[int]] = None,
+    num_workers: Optional[int] = None,
+    fast_dev_run: Union[bool, int] = False,
+    num_nodes: Optional[int] = None,
+    machine: Optional[str] = None,
+    num_downloaders: Optional[int] = None,
+    num_uploaders: Optional[int] = None,
+    reorder_files: bool = True,
+    error_when_not_empty: bool = False,
+    reader: Optional[BaseReader] = None,
+    batch_size: Optional[int] = None,
+) -> None:
+
+    """
+    This function maps a callable over a collection of inputs, potentially in a distributed manner, and processes them according to the specified parameters. It supports various configurations for parallel processing, handling of input batches, and customization of the processing environment, including remote execution options.
+
+    Input-Output Arguments
+    :param fn: Callable[[str, Any], None]. A function to be executed over each input element. It defines the processing logic for each input.
+    :param inputs: Sequence[Any]. A sequence of inputs to be processed by the `fn` function. Each input should contain at least a valid filepath, and it can be a mix of different data types.
+    :param output_dir: Union[str, Dir]. The directory where the processed data should be stored. It can be a string path or a Dir object.
+    :param weights: Optional[List[int]]. Provides an associated weight to each input, used to balance work among workers. Default is None.
+    :param num_workers: Optional[int]. Specifies the number of workers to use during processing. Default is None, which means the system decides.
+    :param fast_dev_run: Union[bool, int]. If True or a positive integer, only a subset of the inputs will be processed. This is useful for development or testing. Default is False.
+    :param num_nodes: Optional[int]. Specifies the number of nodes to use for remote execution. Only supported on https://lightning.ai/. Default is None.
+    :param machine: Optional[str]. Specifies the machine type to use for remote execution. Only supported on https://lightning.ai/. Default is None.
+    :param num_downloaders: Optional[int]. The number of downloaders per worker. Default is None.
+    :param num_uploaders: Optional[int]. The number of uploaders per worker. Default is None.
+    :param reorder_files: bool. If True, reorders the files by file size to distribute work equally among all workers. If False, preserves the order of processing. Default is True.
+    :param error_when_not_empty: bool. If True, raises an error if the output directory is not empty. Default is False.
+    :param reader: Optional[BaseReader]. Specifies a custom reader for processing the inputs. Default is None.
+    :param batch_size: Optional[int]. Groups the inputs into batches of this size for processing. Default is None.
+    :return: No return values. The function processes the inputs and stores the results in the specified output directory.
+    """
+```
+

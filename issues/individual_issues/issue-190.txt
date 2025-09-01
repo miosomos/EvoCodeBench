@@ -1,0 +1,27 @@
+**Namespace:** `detectron2.utils.visualizer.Visualizer.draw_binary_mask`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function draw_binary_mask
+
+Input Code:
+```Python
+    def draw_binary_mask(
+        self, binary_mask, color=None, *, edge_color=None, text=None, alpha=0.5, area_threshold=10
+    ):
+
+        """
+        This function draws a binary mask on an image. It supports drawing regular masks as polygons and masks with holes using a different approach. It can also draw text on the mask if specified. The function allows for customization of the mask's color, edge color, transparency, and the minimum area of components to be drawn.
+
+        Input-Output Arguments
+        :param self: Visualizer. An instance of the Visualizer class.
+        :param binary_mask: ndarray. A numpy array of shape (H, W) representing the binary mask, where H is the image height and W is the image width. Each value in the array is either 0 or 1 of uint8 type.
+        :param color: Optional. The color of the mask. If None, a random color is chosen. Accepts formats listed in `matplotlib.colors`.
+        :param edge_color: Optional. The color of the polygon edges. Accepts formats listed in `matplotlib.colors`.
+        :param text: str, Optional. The text to be drawn on the mask. If None, no text is drawn.
+        :param alpha: float, Optional. The blending efficiency for the mask, with smaller values leading to more transparent masks. Defaults to 0.5.
+        :param area_threshold: float, Optional. The minimum area of connected components to be shown. Defaults to 10.
+        :return: VisImage. The image object with the mask drawn on it.
+        """
+```
+

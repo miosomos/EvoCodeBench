@@ -1,0 +1,18 @@
+**Namespace:** `litdata.streaming.reader.BinaryReader.config`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function config
+
+Input Code:
+```Python
+    def config(self) -> ChunksConfig:
+
+        """
+        This function returns the configuration for a BinaryReader instance. If the configuration is not set (None), it raises a RuntimeError indicating that the configuration should be defined before accessing it.
+        Input-Output Arguments
+        :param self: BinaryReader. An instance of the BinaryReader class. It uses the _config attribute to determine if the configuration is set.
+        :return: ChunksConfig. The configuration of the BinaryReader instance.
+        """
+```
+

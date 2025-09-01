@@ -1,0 +1,21 @@
+**Namespace:** `agent_lifecycle.AgentLifecycle._generate_llm_prompt`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _generate_llm_prompt
+
+Input Code:
+```Python
+    def _generate_llm_prompt(self, goal: str, sample_input: str) -> str:
+
+        """
+        Generates a prompt for the Language Learning Model (LLM) based on a specified goal and sample input, then attempts to get a chat completion from an OpenAI wrapper. If an error occurs during this process, it logs the exception and returns an empty string.
+
+        Input-Output Arguments
+        :param self: AgentLifecycle. An instance of the AgentLifecycle class.
+        :param goal: str, The goal or objective that the prompt is intended to achieve.
+        :param sample_input: str, A sample input to provide context or an example for the prompt generation.
+        :return: str, The generated prompt from the LLM if successful, or an empty string if an error occurs.
+        """
+```
+

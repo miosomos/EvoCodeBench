@@ -1,0 +1,21 @@
+**Namespace:** `easyvolcap.utils.loss_utils.inner_outer`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function inner_outer
+
+Input Code:
+```Python
+def inner_outer(t0, t1, y1):
+
+    """
+    Constructs inner and outer measures based on cumulative sums for a given target time (t0) using the information from a source time (t1) and its corresponding values (y1). This is typically used in numerical methods or simulations where interpolation or approximation between time steps is required.
+
+    Input-Output Arguments
+    :param t0: Tensor. The target times for which the measures are to be constructed.
+    :param t1: Tensor. The source times that correspond to the given values (y1).
+    :param y1: Tensor. The values associated with the source times (t1) that are used to construct the measures.
+    :return: Tuple of Tensors. The first tensor is the inner measure, and the second tensor is the outer measure for the target time (t0).
+    """
+```
+

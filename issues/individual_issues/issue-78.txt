@@ -1,0 +1,24 @@
+**Namespace:** `easyvolcap.utils.gl_utils.Quad.upload_to_texture`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function upload_to_texture
+
+Input Code:
+```Python
+    def upload_to_texture(self, ptr: np.ndarray, x: int = 0, y: int = 0, w: int = 0, h: int = 0):
+
+        """
+        This function uploads a portion or the entirety of a numpy array or a PyTorch tensor to a texture in OpenGL. It is designed to update the texture content starting from a specified position (x, y) and covering a specified width (w) and height (h). If width and height are not provided, it defaults to the object's width and height. The function handles the conversion from a PyTorch tensor to a numpy array before uploading.
+
+        Input-Output Arguments
+        :param self: Quad. An instance of the Quad class, which contains the texture to be updated and the default dimensions (W, H) for the texture update.
+        :param ptr: np.ndarray or torch.Tensor, the data source for the texture update. It is used as the pixel data to be uploaded to the texture.
+        :param x: int, optional, the x-coordinate of the lower left corner where the texture update will start. Defaults to 0.
+        :param y: int, optional, the y-coordinate of the lower left corner where the texture update will start. Defaults to 0.
+        :param w: int, optional, the width of the portion of the texture to be updated. If 0, it defaults to the object's width (self.W).
+        :param h: int, optional, the height of the portion of the texture to be updated. If 0, it defaults to the object's height (self.H).
+        :return: No return values.
+        """
+```
+

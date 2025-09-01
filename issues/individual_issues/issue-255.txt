@@ -1,0 +1,41 @@
+**Namespace:** `camera_utils.pixels_to_rays`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function pixels_to_rays
+
+Input Code:
+```Python
+def pixels_to_rays(
+    pix_x_int,
+    pix_y_int,
+    pixtocams,
+    camtoworlds,
+    distortion_params = None,
+    pixtocam_ndc = None,
+    camtype = ProjectionType.PERSPECTIVE,
+    xnp = np,
+):
+
+  """
+  This function calculates 3D camera rays given 2D pixel coordinates, camera inverse intrinsics, and extrinsics. It supports optional distortion correction, different camera projection types (e.g., fisheye, panoramic), and can work with either numpy or jax.numpy for computations. The function is vectorized to handle arrays of pixel coordinates and camera parameters, and it computes ray origins, directions, normalized view directions, ray differential radii, and image plane coordinates.
+
+  Input-Output Arguments
+  :param pix_x_int: int array, shape SH, the x coordinates of image pixels, used as part of the input to compute ray directions.
+  :param pix_y_int: int array, shape SH, the y coordinates of image pixels, used alongside pix_x_int to compute ray directions.
+  :param pixtocams: float array, broadcastable to SH + [3, 3], the inverse intrinsics of the cameras, used to transform pixel coordinates to camera coordinates.
+  :param camtoworlds: float array, broadcastable to SH + [3, 4], the extrinsics of the cameras, used to transform camera coordinates to world coordinates.
+  :param distortion_params: dict of floats, optional, camera distortion parameters for correcting lens distortion in the computed rays.
+  :param pixtocam_ndc: float array, [3, 3], optional, inverse intrinsics for Normalized Device Coordinates (NDC) projection, used when converting ray origins and directions into NDC space.
+  :param camtype: camera_utils.ProjectionType, the type of camera projection (e.g., fisheye or perspective), affects how rays are computed based on the camera model.
+  :param xnp: module, either numpy or jax.numpy, the numerical library used for computations, allowing the function to be used with different backends.
+
+  :return: A tuple containing:
+           - origins: float array, shape SH + [3], the origin points of the rays in world coordinates.
+           - directions: float array, shape SH + [3], the direction vectors of the rays in world coordinates.
+           - viewdirs: float array, shape SH + [3], the normalized direction vectors of the rays.
+           - radii: float array, shape SH + [1], the differential radii of the rays, useful for mip-NeRF cones.
+           - imageplane: float array, shape SH + [2], the xy coordinates on the image plane, representing the projection of pixel coordinates in world space.
+  """
+```
+

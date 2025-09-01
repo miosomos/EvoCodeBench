@@ -1,0 +1,19 @@
+**Namespace:** `mmdet3d.core.bbox.structures.utils.get_box_type`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function get_box_type
+
+Input Code:
+```Python
+def get_box_type(box_type):
+
+    """
+    Determines the specific 3D box type and mode based on the given box structure type. It maps a string identifier to a corresponding 3D box class and mode, raising an error if the identifier is not recognized.
+
+    Input-Output Arguments
+    :param box_type: str, The identifier for the type of box structure. It should be one of "LiDAR", "Camera", or "Depth". This parameter is used to select the appropriate 3D box class and mode.
+    :return: tuple, A pair consisting of the 3D box class and its mode corresponding to the input box type. The first element of the tuple is the class representing the 3D box type, and the second element is the mode indicating the context (LiDAR, Camera, or Depth) in which the box is used.
+    """
+```
+

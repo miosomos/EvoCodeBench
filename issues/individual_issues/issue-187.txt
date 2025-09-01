@@ -1,0 +1,20 @@
+**Namespace:** `detectron2.utils.visualizer.Visualizer.draw_instance_predictions`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function draw_instance_predictions
+
+Input Code:
+```Python
+    def draw_instance_predictions(self, predictions):
+
+        """
+        This function visualizes instance-level prediction results on an image. It processes the predictions to extract and visualize bounding boxes, classes, scores, masks, and keypoints. Depending on the instance mode, it may also adjust the visualization style (e.g., segmentation colors, grayscale image).
+
+        Input-Output Arguments
+        :param self: Visualizer. An instance of the Visualizer class, which contains methods and properties for visualizing prediction results.
+        :param predictions: Instances. The output of an instance detection/segmentation model. It uses fields like "pred_boxes", "pred_classes", "scores", "pred_masks" or "pred_masks_rle" to draw the visualizations on the image.
+        :return: VisImage. An image object with the visualizations drawn on it.
+        """
+```
+

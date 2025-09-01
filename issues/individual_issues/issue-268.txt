@@ -1,0 +1,20 @@
+**Namespace:** `searcharray.solr.parse_min_should_match`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function parse_min_should_match
+
+Input Code:
+```Python
+def parse_min_should_match(num_clauses: int, spec: str) -> int:
+
+    """
+    This function parses the "min should match" specification (commonly referred to as 'mm' spec) from Solr's search engine configuration and calculates the minimum number of clauses that must match based on the given specification and the total number of clauses. It supports both absolute and percentage-based specifications, as well as conditional specifications using '<'.
+
+    Input-Output Arguments
+    :param num_clauses: int, the total number of clauses in the query.
+    :param spec: str, the 'min should match' specification as a string, which can include absolute numbers, percentages, and conditional expressions.
+    :return: int, the calculated minimum number of clauses that must match according to the 'mm' spec.
+    """
+```
+

@@ -1,0 +1,22 @@
+**Namespace:** `XAgent.ai_functions.request.openai.chatcompletion_request`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function chatcompletion_request
+
+Input Code:
+```Python
+    def chatcompletion_request(**kwargs):
+
+        """
+        This function handles the operation of OpenAI's chat completion for version 1.x.x. It dynamically selects a model based on provided arguments and configuration, makes a request to the OpenAI API, and handles potential errors related to exceeding context length by attempting to use a higher-capacity model if available. If the context length limit is still exceeded or another error occurs, it raises an error.
+
+        Input-Output Arguments
+        :param **kwargs: Variable keyword arguments. These include 'model' (str) which specifies the model to use for chat completion, among other settings that can be passed to configure the API request.
+        :return: dict. A dictionary containing the response from the Chat API, structured according to the API's response format.
+
+        Raises:
+        BadRequestError: Raised if an error occurs during the chat completion operation, specifically if the context length limit is exceeded and no fallback models are available to handle the request.
+        """
+```
+

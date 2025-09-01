@@ -1,0 +1,19 @@
+**Namespace:** `litdata.processing.utilities.optimize_dns_context`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function optimize_dns_context
+
+Input Code:
+```Python
+def optimize_dns_context(enable: bool) -> Any:
+
+    """
+    This function is designed to temporarily enable or disable DNS optimization based on the input parameter. It attempts to perform operations within a context where DNS optimization is enabled or disabled as specified, and ensures that DNS optimization is always disabled after these operations, even if an exception occurs.
+
+    Input-Output Arguments
+    :param enable: Bool, indicates whether DNS optimization should be enabled (True) or disabled (False) during the execution of the context.
+    :return: No return values. This function is a context manager that does not return any value but ensures DNS optimization is set according to the 'enable' parameter and then reset to disabled afterwards.
+    """
+```
+

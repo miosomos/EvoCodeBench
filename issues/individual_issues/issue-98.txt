@@ -1,0 +1,22 @@
+**Namespace:** `agent_persistence_manager.AgentPersistenceManager.load_agent`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function load_agent
+
+Input Code:
+```Python
+
+
+        """
+        Loads an agent with a specified purpose from the database. If an agent with the given purpose is found, it is deserialized and returned; otherwise, None is returned.
+
+        Input-Output Arguments
+        :param self: AgentPersistenceManager. An instance of the AgentPersistenceManager class.
+        :param purpose: str, The purpose of the agent to be loaded. It is used to identify the agent in the database.
+        :param agent_lifecycle: The lifecycle state of the agent. It is passed to the deserializer to properly initialize the agent.
+        :param openai_wrapper: An instance or interface used for interacting with OpenAI services. It is passed to the deserializer for initializing the agent with OpenAI functionalities.
+        :return: An instance of the deserialized agent if found, otherwise None.
+        """
+```
+

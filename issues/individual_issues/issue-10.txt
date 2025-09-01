@@ -1,0 +1,23 @@
+**Namespace:** `image_utils.srgb_to_linear`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function srgb_to_linear
+
+Input Code:
+```Python
+def srgb_to_linear(
+    srgb, eps = None, xnp = jnp
+):
+
+  """
+  Converts sRGB color values to linear color space values. It uses a piecewise function as defined in the sRGB color space specification to perform the conversion, ensuring accurate color representation in linear space.
+
+  Input-Output Arguments
+  :param srgb: Array-like. The sRGB color values expected to be in the range [0, 1]. These values are converted to linear space.
+  :param eps: Float, optional. A small epsilon value to avoid division by zero or logarithm of zero in calculations. If not provided, it defaults to the machine epsilon for float32 data type.
+  :param xnp: Module, optional. The numerical processing module used for calculations (e.g., NumPy, JAX NumPy). It defaults to JAX NumPy (jnp) if not specified.
+  :return: Array-like. The converted color values in linear space.
+  """
+```
+

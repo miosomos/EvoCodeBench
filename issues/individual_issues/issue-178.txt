@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.datasets._base.clear_data_home`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function clear_data_home
+
+Input Code:
+```Python
+def clear_data_home(data_home: str | Path | None = None) -> None:
+
+    """
+    Deletes all the content of the data home cache directory. It first determines the correct data home directory path and then removes all its contents.
+
+    Input-Output Arguments
+    :param data_home: str or path-like, optional. The path to the scikit-learn data directory. If not provided, it defaults to `~/skfolio_data`. This parameter specifies the location of the cache to be cleared.
+    :return: No return values.
+    """
+```
+

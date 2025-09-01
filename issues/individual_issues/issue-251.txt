@@ -1,0 +1,23 @@
+**Namespace:** `rigid_body.exp_se3`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function exp_se3
+
+Input Code:
+```Python
+def exp_se3(
+    screw_axis, eps=jnp.finfo(jnp.float32).eps
+):
+
+  """
+  This function computes the exponential map from the Lie algebra se3 to the Lie group SE3, which is used to represent the motion in 3D space. It calculates the homogeneous transformation matrix that represents the motion of a body given a screw axis and a small motion magnitude.
+
+  Input-Output Arguments
+  :param screw_axis: A 6-vector (numpy array). It encodes a screw axis of motion, which can be divided into [w, v] where w is an angle-axis rotation and v represents a translation. The magnitude of w corresponds to the magnitude of motion.
+  :param eps: Float. An epsilon value for numerical stability, used to avoid division by zero or other numerical issues. It defaults to the smallest positive representable number in float32.
+  :return: A (4, 4) numpy array. The homogeneous transformation matrix that represents the motion of a body for one second about the screw axis S with magnitude theta.
+
+  """
+```
+

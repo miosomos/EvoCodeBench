@@ -1,0 +1,25 @@
+**Namespace:** `common.bleu4_score`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function bleu4_score
+
+Input Code:
+```Python
+def bleu4_score(
+    continuation: str,
+    reference: str,
+    with_penalty = False
+) -> float:
+
+    """
+    Calculates the BLEU-4 score for a given continuation and reference text, optionally including the brevity penalty in the score calculation. It tokenizes the input texts using a custom tokenizer function before computing the BLEU score.
+
+    Input-Output Arguments
+    :param continuation: str, the generated text whose quality is being evaluated.
+    :param reference: str, the reference text against which the continuation is compared.
+    :param with_penalty: Bool, indicates whether to include the brevity penalty in the final score calculation. Defaults to False.
+    :return: float, the calculated BLEU-4 score, optionally adjusted for brevity penalty.
+    """
+```
+

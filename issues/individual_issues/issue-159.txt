@@ -1,0 +1,19 @@
+**Namespace:** `litdata.processing.data_processor.DataProcessor._cleanup_cache`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _cleanup_cache
+
+Input Code:
+```Python
+
+
+        """
+        The function cleans up cache directories by removing them if they exist to prevent issues from corrupted files from previous runs, and then recreates these directories to ensure they are available for use.
+
+        Input-Output Arguments
+        :param self: DataProcessor. An instance of the DataProcessor class. It uses this instance to access the method.
+        :return: No return values. This method performs operations on the filesystem but does not return any value.
+        """
+```
+

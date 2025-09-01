@@ -1,0 +1,24 @@
+**Namespace:** `litdata.streaming.dataset._associate_chunks_to_workers`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _associate_chunks_to_workers
+
+Input Code:
+```Python
+def _associate_chunks_to_workers(
+    num_workers: int, worker_env: _WorkerEnv, chunks_replica: List[int], intervals_replica: List[Any]
+) -> Any:
+
+    """
+    This function distributes chunks of data and their corresponding intervals across multiple workers based on the number of workers and a worker environment. It ensures that each worker is assigned a subset of chunks and intervals, following a distribution strategy that depends on the worker's index and the total world size defined in the worker environment.
+
+    Input-Output Arguments
+    :param num_workers: int, the total number of workers among which the chunks and intervals are to be distributed.
+    :param worker_env: _WorkerEnv, an instance or object representing the worker environment, which includes details like world size that are used in the distribution logic.
+    :param chunks_replica: List[int], a list of chunk indices that need to be distributed among the workers.
+    :param intervals_replica: List[Any], a list of intervals corresponding to each chunk in chunks_replica. Each interval represents the range or scope of the chunk it corresponds to.
+    :return: A tuple containing two dictionaries. The first dictionary maps worker indices to their assigned chunks, and the second dictionary maps worker indices to the intervals corresponding to their assigned chunks. There is no explicit data type mentioned for the return value, but it is implied to be a tuple of two dictionaries based on the function's implementation.
+    """
+```
+

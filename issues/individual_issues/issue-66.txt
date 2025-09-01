@@ -1,0 +1,22 @@
+**Namespace:** `coord.construct_ray_warps`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function construct_ray_warps
+
+Input Code:
+```Python
+def construct_ray_warps(fn, t_near, t_far, *, fn_inv=None):
+
+  """
+  Constructs a pair of functions that establish a bijection between metric distances and normalized distances, based on a given function and its inverse. This is particularly useful for mapping distances in a 3D space to a normalized range [0, 1], and vice versa, as explained around Equation 11 in the provided reference.
+
+  Input-Output Arguments
+  :param fn: Callable. The function used to transform ray distances. It is used in constructing the forward mapping from metric to normalized distances.
+  :param t_near: Tensor. Represents the near-plane distances in the metric space. It is used as the lower bound for clipping distances to ensure they fall within a valid range.
+  :param t_far: Tensor. Represents the far-plane distances in the metric space. It is used as the upper bound for clipping distances to ensure they fall within a valid range.
+  :param fn_inv: Optional[Callable]. If provided, it is used as the inverse of the `fn` function for constructing the backward mapping from normalized to metric distances. If not provided, an attempt is made to automatically determine the inverse based on a predefined mapping of functions to their inverses.
+  :return: Tuple[Callable, Callable]. A tuple containing two functions: `t_to_s` and `s_to_t`. `t_to_s` maps metric distances to normalized distances in the range [0, 1], and `s_to_t` is its inverse, mapping normalized distances back to metric distances.
+  """
+```
+

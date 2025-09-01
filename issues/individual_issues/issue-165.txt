@@ -1,0 +1,26 @@
+**Namespace:** `iris.nodes.eye_properties_estimation.bisectors_method.BisectorsMethod._calculate_perpendicular_bisectors`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _calculate_perpendicular_bisectors
+
+Input Code:
+```Python
+    def _calculate_perpendicular_bisectors(
+        self, polygon: np.ndarray, min_distance_between_sector_points_in_px: float
+    ) -> Tuple[np.ndarray, np.ndarray]:
+
+        """
+        This function calculates the perpendicular bisectors of a specified number of randomly chosen pairs of points from a polygon's vertices, ensuring that each pair of points has a distance greater than a specified minimum. It is designed to find the center of a circular shape by generating perpendicular bisectors that ideally converge towards the center.
+
+        Input-Output Arguments
+        :param self: BisectorsMethod. An instance of the BisectorsMethod class, which contains parameters like the number of bisectors to calculate and the maximum iterations for the random selection process.
+        :param polygon: np.ndarray. An array representing the vertices of the polygon from which pairs of points are chosen. It is used as the basis for calculating perpendicular bisectors.
+        :param min_distance_between_sector_points_in_px: float. The minimum distance between any two points in a pair. This parameter ensures that the chosen points are not too close to each other, allowing for a more accurate estimation of the center.
+        :return: Tuple[np.ndarray, np.ndarray]. A tuple containing two numpy arrays. The first array represents the starting points of the calculated perpendicular bisectors, and the second array represents the ending points of these bisectors. These bisectors can be used to estimate the center of a circular shape.
+
+        Raises.
+        EyeCentersEstimationError: This exception is raised if the function fails to find a sufficient number of point pairs that meet the distance criterion within the maximum number of iterations allowed. This indicates that it may not be possible to accurately estimate the center of the shape.
+        """
+```
+

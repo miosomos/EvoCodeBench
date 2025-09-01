@@ -1,0 +1,20 @@
+**Namespace:** `ref_utils.l2_normalize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function l2_normalize
+
+Input Code:
+```Python
+def l2_normalize(x, grad_eps=jnp.finfo(jnp.float32).eps):
+
+  """
+  This function normalizes an array to unit length along its last axis while addressing potential issues with tiny or zero denominators that could cause gradients to explode during the backward pass. It achieves this by clamping the denominator to a minimum value during both the forward and backward passes, but with different thresholds, to ensure unit norm output without gradient explosion.
+
+  Input-Output Arguments
+  :param x: Array. The array of values to be normalized. It is used as the input vector(s) for normalization.
+  :param grad_eps: Float, optional. The minimum value to clamp the squared norm to before division in the backward pass to prevent exploding gradients. It defaults to approximately 1e-7.
+  :return: Array. The normalized array, with each vector along the last axis of x normalized to unit length.
+  """
+```
+

@@ -1,0 +1,18 @@
+**Namespace:** `detectron2.export.torchscript_patch.freeze_training_mode`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function freeze_training_mode
+
+Input Code:
+```Python
+def freeze_training_mode(model):
+
+    """
+    This function temporarily sets the "training" attribute of every submodule in a given model to a constant value, allowing for optimization by meta-compilation. It uses a context manager to ensure that these changes are reverted back to their original state after the context manager exits.
+    Input-Output Arguments
+    :param model: The model whose submodules' "training" attributes are to be temporarily annotated as constants. It is used to iterate through all submodules and modify their class definitions.
+    :return: No return values. This function operates by side effects, modifying the class definitions of the model's submodules within the context.
+    """
+```
+

@@ -1,0 +1,19 @@
+**Namespace:** `coord.inv_contract`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function inv_contract
+
+Input Code:
+```Python
+def inv_contract(z):
+
+  """
+  Computes the inverse of the contract function for a given input. It scales the input vector in a specific way, ensuring the output vector has a magnitude that correctly inverses the operation of the contract function within a certain domain.
+
+  Input-Output Arguments
+  :param z: Array-like. The input vector for which the inverse operation of contract is to be computed. 
+  :return: Array-like. The scaled vector after applying the inverse operation of the contract function.
+  """
+```
+

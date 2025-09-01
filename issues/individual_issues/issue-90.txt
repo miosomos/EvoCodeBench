@@ -1,0 +1,28 @@
+**Namespace:** `easyvolcap.utils.prop_utils.anneal_weights`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function anneal_weights
+
+Input Code:
+```Python
+def anneal_weights(t: torch.Tensor,
+                   w: torch.Tensor,
+                   train_frac: float,
+                   anneal_slope: float = 10.0,
+                   eps=torch.finfo(torch.float32).eps ** 2):
+    # accepts t.shape[-1] = w.shape[-1] + 1
+
+    """
+    This function anneals the weights based on the training fraction and an annealing slope using Schlick's bias function. It adjusts the weights of a tensor based on the progression of training, making the weight adjustment more dynamic as training progresses. It ensures stability in the computation by handling cases where adjacent intervals have zero distance, setting their weight to zero, and preventing NaN values by using a softmax operation on the adjusted weights.
+
+    Input-Output Arguments
+    :param t: torch.Tensor. The tensor representing time or another sequential dimension, used to align with the weights tensor.
+    :param w: torch.Tensor. The weights tensor that will be adjusted based on the training fraction and anneal slope.
+    :param train_frac: float. The fraction of training completed, used to calculate the annealing effect on weights.
+    :param anneal_slope: float, optional. The slope of the annealing function, determining how sharply weights are adjusted. Defaults to 10.0.
+    :param eps: torch.float32, optional. A very small number added to prevent division by zero and log of zero in computations. Defaults to a small epsilon value squared.
+    :return: torch.Tensor. The adjusted weights tensor after applying the annealing process.
+    """
+```
+

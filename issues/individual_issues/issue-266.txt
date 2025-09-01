@@ -1,0 +1,21 @@
+**Namespace:** `nlm_ingestor.ingestor_utils.utils.sent_tokenize`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function sent_tokenize
+
+Input Code:
+```Python
+def sent_tokenize(org_texts):
+
+    """
+    The function tokenizes a given text into sentences, handling special cases such as paragraphs separated by new lines, punctuation at the beginning of the text, and ensuring that sentences within brackets are not broken. It also normalizes quotation marks within the text.
+
+    Input-Output Arguments
+    :param org_texts: String. The original text that needs to be tokenized into sentences. It is used as the input to apply various tokenization and normalization rules.
+    :return: List of Strings. The tokenized sentences from the original text. If the input text is empty or None, it returns the input as is.
+
+    Note: The function uses several predefined rules and patterns (such as `space_rule`, `bracket_rule`, `rules`, and `quotation_pattern`) and an instance of a tokenizer (`nltk_tokenzier`) to perform the tokenization and normalization. These components are assumed to be defined outside the function.
+    """
+```
+

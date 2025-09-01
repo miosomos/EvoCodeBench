@@ -1,0 +1,20 @@
+**Namespace:** `autorag.deploy.extract_best_config`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function extract_best_config
+
+Input Code:
+```Python
+def extract_best_config(trial_path: str, output_path: Optional[str] = None) -> Dict:
+
+    """
+    Extracts the optimal pipeline configuration from a given trial directory and optionally saves it to a YAML file. It reads the summary and configuration files from the trial directory to construct a dictionary of the best pipeline configuration.
+
+    Input-Output Arguments
+    :param trial_path: str, The path to the trial directory from which the optimal pipeline configuration is to be extracted. The directory must contain a summary.csv file with the evaluation results.
+    :param output_path: Optional[str], The file path where the extracted pipeline configuration should be saved in YAML format. If not specified or None, the function will not save the configuration to a file but will still return the configuration dictionary. The file extension must be .yaml or .yml if provided.
+    :return: Dict, The dictionary containing the extracted optimal pipeline configuration.
+    """
+```
+

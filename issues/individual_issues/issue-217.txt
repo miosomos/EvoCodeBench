@@ -1,0 +1,33 @@
+**Namespace:** `ollama._client.AsyncClient.chat`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function chat
+
+Input Code:
+```Python
+  async def chat(
+    self,
+    model: str = '',
+    messages: Optional[Sequence[Message]] = None,
+    stream: bool = False,
+    format: Literal['', 'json'] = '',
+    options: Optional[Options] = None,
+    keep_alive: Optional[Union[float, str]] = None,
+  ) -> Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]:
+
+    """
+    This function asynchronously creates a chat response using the specified model. It validates the input parameters, raises errors for invalid inputs, and then makes an asynchronous request to generate a chat response. If the 'stream' parameter is False, it returns a single ChatResponse; otherwise, it returns an asynchronous generator of ChatResponse.
+
+    Input-Output Arguments
+    :param self: AsyncClient. An instance of the AsyncClient class.
+    :param model: str, default to an empty string. The model identifier used for generating chat responses. It is required for making the request.
+    :param messages: Optional[Sequence[Message]], default to None. A sequence of messages to be included in the chat. Each message should be a dictionary containing at least 'role' and 'content', and optionally 'images'. Validates each message for the correct structure and content.
+    :param stream: bool, default to False. Determines the type of response. If False, a single ChatResponse is returned. If True, an asynchronous generator of ChatResponse is returned.
+    :param format: Literal['', 'json'], default to an empty string. Specifies the format of the response. Currently supports '' (default) and 'json'.
+    :param options: Optional[Options], default to None. Additional options for the chat request.
+    :param keep_alive: Optional[Union[float, str]], default to None. Specifies the keep-alive parameter for the chat session. Can be a float representing seconds or a string.
+    :return: Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]. If 'stream' is False, returns a single ChatResponse as a mapping. If 'stream' is True, returns an asynchronous generator of ChatResponse mappings.
+    """
+```
+

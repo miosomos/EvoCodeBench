@@ -1,0 +1,27 @@
+**Namespace:** `ollama._client.Client.pull`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function pull
+
+Input Code:
+```Python
+  def pull(
+    self,
+    model: str,
+    insecure: bool = False,
+    stream: bool = False,
+  ) -> Union[Mapping[str, Any], Iterator[Mapping[str, Any]]]:
+
+    """
+    The function sends a POST request to pull a model from a server. It can operate in either a streaming or non-streaming mode based on the `stream` parameter. If the request fails, it raises a `ResponseError`. Depending on the `stream` parameter, it returns either a single `ProgressResponse` or an iterator of `ProgressResponse` objects.
+
+    Input-Output Arguments
+    :param self: Client. An instance of the Client class.
+    :param model: str, The name of the model to be pulled from the server.
+    :param insecure: bool, Optional. Specifies whether the request should be made over an insecure connection. Defaults to False.
+    :param stream: bool, Optional. Determines the mode of the response. If True, the response is streamed and an iterator of `ProgressResponse` objects is returned. If False, a single `ProgressResponse` object is returned. Defaults to False.
+    :return: Union[Mapping[str, Any], Iterator[Mapping[str, Any]]], The function returns a `ProgressResponse` if `stream` is False. If `stream` is True, it returns an iterator of `ProgressResponse` objects.
+    """
+```
+

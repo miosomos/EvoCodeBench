@@ -1,0 +1,20 @@
+**Namespace:** `skfolio.utils.tools.format_measure`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function format_measure
+
+Input Code:
+```Python
+def format_measure(x: float, percent: bool = False) -> str:
+
+    """
+    Formats a given number into a user-friendly string, optionally converting it into a percentage format. It dynamically adjusts the number of decimal places based on the value of the number.
+
+    Input-Output Arguments
+    :param x: float, The number to be formatted.
+    :param percent: bool, default=False, Determines if the number should be formatted as a percentage. If True, the number is multiplied by 100 and a percentage sign is added.
+    :return: str, The formatted string representation of the number. If the input number is NaN, it returns the string representation of NaN. Otherwise, it returns the number formatted with a dynamic number of decimal places, optionally as a percentage.
+    """
+```
+

@@ -1,0 +1,24 @@
+**Namespace:** `skfolio.utils.stats.cov_nearest`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function cov_nearest
+
+Input Code:
+```Python
+def cov_nearest(cov: np.ndarray, higham: bool = False, higham_max_iteration: int = 100):
+
+    """
+    This function computes the nearest covariance matrix that is positive definite and allows for a Cholesky decomposition, keeping the variance unchanged. It either uses the Higham & Nick (2002) algorithm or clips eigenvalues based on the specified parameters to ensure the resulting matrix is positive definite.
+
+    Input-Output Arguments
+    :param cov: np.ndarray. The input covariance matrix to be adjusted. It is used as the base for computing the nearest positive definite covariance matrix.
+    :param higham: bool, default=False. Determines the method used to find the nearest positive definite matrix. If True, the Higham & Nick (2002) algorithm is used; otherwise, eigenvalues are clipped.
+    :param higham_max_iteration: int, default=100. Specifies the maximum number of iterations for the Higham & Nick (2002) algorithm when it is used.
+    :return: np.ndarray. The nearest covariance matrix that is positive definite and allows for a Cholesky decomposition.
+
+    References:
+    - "Computing the nearest correlation matrix - a problem from finance" IMA Journal of Numerical Analysis Higham & Nick (2002)
+    """
+```
+

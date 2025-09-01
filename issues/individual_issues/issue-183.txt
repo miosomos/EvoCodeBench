@@ -1,0 +1,24 @@
+**Namespace:** `detectron2.data.detection_utils.transform_instance_annotations`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function transform_instance_annotations
+
+Input Code:
+```Python
+def transform_instance_annotations(
+    annotation, transforms, image_size, *, keypoint_hflip_indices=None
+):
+
+    """
+    This function applies specified transformations to the bounding box, segmentation, and keypoints annotations of a single instance in an image. It modifies the input annotation dictionary in-place to include the transformed annotations. The function supports transforming bounding boxes to a specific format, applying transformations to segmentation polygons or run-length encodings (RLE), and transforming keypoints based on the provided transformations and image size.
+
+    Input-Output Arguments
+    :param annotation: dict, the annotations of a single instance which include bounding box, segmentation, and keypoints. This dictionary is modified in-place with transformed annotations.
+    :param transforms: TransformList or list[Transform], the transformations to be applied to the annotations. These can include transformations for boxes, coordinates for segmentation polygons, and keypoints.
+    :param image_size: tuple, the height and width of the image after transformation. This is used to clip the transformed bounding box and ensure segmentation masks match the transformed image size.
+    :param keypoint_hflip_indices: ndarray[int], optional, indices to handle flipping of keypoints horizontally. This is used when applying horizontal flip transformations to keypoints.
+    :return: dict, the same input dictionary with transformed "bbox", "segmentation", "keypoints" annotations, and the "bbox_mode" field set to XYXY_ABS.
+    """
+```
+

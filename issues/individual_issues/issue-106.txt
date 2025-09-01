@@ -1,0 +1,19 @@
+**Namespace:** `memoize.SQLiteMemoization._fetch_from_cache`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _fetch_from_cache
+
+Input Code:
+```Python
+    def _fetch_from_cache(self, arg_hash):
+
+        """
+        Fetches the cached result from an SQLite database using the hash of the argument. If the result is found, it is loaded from JSON format and returned; otherwise, None is returned.
+        Input-Output Arguments
+        :param self: SQLiteMemoization. An instance of the SQLiteMemoization class, which manages caching of function results in an SQLite database.
+        :param arg_hash: str, The hash of the argument for which the cached result is being fetched. It is used to query the database for the corresponding cached result.
+        :return: The result corresponding to the provided hash, loaded from JSON format if found; otherwise, None.
+        """
+```
+

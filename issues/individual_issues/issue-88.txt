@@ -1,0 +1,22 @@
+**Namespace:** `easyvolcap.utils.prop_utils.max_dilate`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function max_dilate
+
+Input Code:
+```Python
+def max_dilate(t, w, dilation, domain=(-torch.inf, torch.inf)):
+
+    """
+    Performs dilation (via max-pooling) on a non-negative step function. It dilates the time steps based on the specified dilation parameter and clips the dilated time steps within a given domain. The weights are also adjusted accordingly to match the dilated time steps.
+
+    Input-Output Arguments
+    :param t: Tensor, the time steps of the step function, used as the basis for dilation.
+    :param w: Tensor, the weights associated with each time step of the step function.
+    :param dilation: Float, the amount by which to dilate the time steps.
+    :param domain: Tuple of two floats, the minimum and maximum values to clip the dilated time steps to. Defaults to negative and positive infinity, allowing all dilated time steps.
+    :return: A tuple of two Tensors. The first tensor is the dilated and clipped time steps, and the second tensor is the adjusted weights corresponding to the dilated time steps.
+    """
+```
+

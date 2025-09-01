@@ -1,0 +1,20 @@
+**Namespace:** `detectron2.data.transforms.transform.RotationTransform.apply_coords`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function apply_coords
+
+Input Code:
+```Python
+    def apply_coords(self, coords):
+
+        """
+        Applies a rotation transformation to a set of coordinates. This function transforms each coordinate in the input array according to a predefined rotation matrix associated with the instance. If the rotation angle is a multiple of 360 degrees or the input is empty, the original coordinates are returned without modification.
+
+        Input-Output Arguments
+        :param self: RotationTransform. An instance of the RotationTransform class, which should have a predefined rotation matrix (self.rm_coords) and an angle attribute.
+        :param coords: array-like, a N * 2 array containing N pairs of (x, y) points that represent the coordinates to be transformed. These coordinates are expected to undergo a rotation transformation based on the instance's rotation matrix.
+        :return: array-like, a N * 2 array of transformed coordinates. If the input coordinates are empty or the rotation angle is a multiple of 360 degrees, the original coordinates are returned.
+        """
+```
+

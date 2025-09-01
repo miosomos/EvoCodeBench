@@ -1,0 +1,21 @@
+**Namespace:** `linspline.query`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function query
+
+Input Code:
+```Python
+def query(tq, t, v):
+
+  """
+  This function queries a linear spline defined by time points (t) and corresponding values (v) at given query points (tq). It ensures the spline is valid, then uses interpolation to find the values at the query points, with extrapolated values set to 0 outside the original range.
+
+  Input-Output Arguments
+  :param tq: Array-like. The query points where the spline should be evaluated.
+  :param t: Array-like. The time points that define the knots of the linear spline.
+  :param v: Array-like. The values corresponding to each time point in 't', defining the spline.
+  :return: Array-like. The interpolated values at each query point in 'tq'.
+  """
+```
+

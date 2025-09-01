@@ -1,0 +1,19 @@
+**Namespace:** `skfolio.utils.stats.assert_is_symmetric`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function assert_is_symmetric
+
+Input Code:
+```Python
+def assert_is_symmetric(x: np.ndarray) -> None:
+
+    """
+    This function checks if a given matrix is symmetric. It first verifies if the matrix is square and then checks if the matrix is equal to its transpose. If the matrix is not symmetric, it raises a ValueError.
+
+    Input-Output Arguments
+    :param x: np.ndarray. The matrix to be checked for symmetry. It should be a 2-dimensional numpy array.
+    :return: No return values. Raises a ValueError if the matrix is not symmetric.
+    """
+```
+

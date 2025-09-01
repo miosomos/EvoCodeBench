@@ -1,0 +1,20 @@
+**Namespace:** `detectron2.modeling.proposal_generator.build.build_proposal_generator`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function build_proposal_generator
+
+Input Code:
+```Python
+def build_proposal_generator(cfg, input_shape):
+
+    """
+    Builds a proposal generator based on the configuration provided. If the configuration specifies "PrecomputedProposals" as the proposal generator name, it returns None, indicating no proposal generator is used. Otherwise, it retrieves and initializes a proposal generator from a registry using the specified name and configuration.
+
+    Input-Output Arguments
+    :param cfg: Configuration object. The configuration that contains the proposal generator's name and other relevant settings.
+    :param input_shape: The input shape for the proposal generator. It is used to initialize the proposal generator if one is created.
+    :return: A proposal generator instance or None. If the proposal generator's name is "PrecomputedProposals", it returns None, indicating no proposal generator is used. Otherwise, it returns an instance of the specified proposal generator initialized with the given configuration and input shape.
+    """
+```
+

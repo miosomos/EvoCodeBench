@@ -1,0 +1,43 @@
+**Namespace:** `ollama._client.AsyncClient.generate`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function generate
+
+Input Code:
+```Python
+  async def generate(
+    self,
+    model: str = '',
+    prompt: str = '',
+    system: str = '',
+    template: str = '',
+    context: Optional[Sequence[int]] = None,
+    stream: bool = False,
+    raw: bool = False,
+    format: Literal['', 'json'] = '',
+    images: Optional[Sequence[AnyStr]] = None,
+    options: Optional[Options] = None,
+    keep_alive: Optional[Union[float, str]] = None,
+  ) -> Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]:
+
+    """
+    This function asynchronously generates a response using the specified model and parameters. It handles the request to the server, sending all necessary data, and processes the response. If the 'stream' parameter is set to True, it returns an asynchronous generator that yields the response; otherwise, it returns a single response object. It raises specific errors if the model is not provided or if the request cannot be fulfilled.
+
+    Input-Output Arguments
+    :param self: AsyncClient. An instance of the AsyncClient class.
+    :param model: str, default ''. The model identifier used for generating the response. It is required and an error is raised if not provided.
+    :param prompt: str, default ''. The prompt or input text for the model to process.
+    :param system: str, default ''. An identifier for the system or environment where the model is run.
+    :param template: str, default ''. A template identifier to format the model's response.
+    :param context: Optional[Sequence[int]], default None. A sequence of integers representing the context or additional data for the model.
+    :param stream: bool, default False. Determines if the response should be streamed asynchronously. If True, the function returns an asynchronous generator.
+    :param raw: bool, default False. Indicates if the response should be returned in raw format.
+    :param format: Literal['', 'json'], default ''. Specifies the format of the response; can be empty or 'json'.
+    :param images: Optional[Sequence[AnyStr]], default None. A sequence of images to be included in the request, encoded as strings.
+    :param options: Optional[Options], default None. Additional options for the request.
+    :param keep_alive: Optional[Union[float, str]], default None. Specifies the keep-alive parameter for the connection.
+    :return: Union[Mapping[str, Any], AsyncIterator[Mapping[str, Any]]]. If 'stream' is False, returns a single response object as a dictionary. If 'stream' is True, returns an asynchronous generator yielding response objects.
+    """
+```
+

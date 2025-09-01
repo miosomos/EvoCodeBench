@@ -1,0 +1,19 @@
+**Namespace:** `geopoly.compute_tesselation_weights`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function compute_tesselation_weights
+
+Input Code:
+```Python
+def compute_tesselation_weights(v):
+
+  """
+  Computes the barycentric weights for tessellating the vertices of a triangle by a given factor. This involves generating integer weights for each vertex of the triangle and then normalizing these weights to get the barycentric coordinates.
+
+  Input-Output Arguments
+  :param v: Int, the tessellation factor, which determines how finely the triangle is subdivided. It must be greater than or equal to 1.
+  :return: Numpy array, the barycentric weights for each point in the tessellated triangle. These weights are used to interpolate values across the triangle.
+  """
+```
+

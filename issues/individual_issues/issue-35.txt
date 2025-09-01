@@ -1,0 +1,22 @@
+**Namespace:** `memoize.SQLiteMemoization._compute_hash`
+
+**Source Code Location:** The project source code is located in the `Source_Code/` directory.
+
+Please analyze and provide context for completing the function _compute_hash
+
+Input Code:
+```Python
+    def _compute_hash(self, func_name, *args, **kwargs):
+
+        """
+        Computes a SHA-256 hash of the function name, its arguments, and keyword arguments. This is typically used for creating a unique identifier for caching or memoization purposes in the context of SQLite database operations.
+
+        Input-Output Arguments
+        :param self: SQLiteMemoization. An instance of the SQLiteMemoization class.
+        :param func_name: str, The name of the function for which the hash is being computed. It is used as part of the data to generate the hash.
+        :param args: tuple, The positional arguments of the function. These are used as part of the data to generate the hash.
+        :param kwargs: dict, The keyword arguments of the function. These are used as part of the data to generate the hash.
+        :return: str, The hexadecimal digest of the SHA-256 hash of the input data.
+        """
+```
+
