@@ -7,7 +7,7 @@ import subprocess
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--prompt_element_file", type=str, default='prompt/prompt_elements.jsonl')
-    parser.add_argument("--setting", type=str, choices=['baseline', 'local_completion', 'local_infilling', 'kg'])
+    parser.add_argument("--setting", type=str, choices=['baseline', 'local_completion', 'local_infilling', 'kg', 'acr'])
     parser.add_argument("--tools", nargs='+', default=['cypher', 'semantic'], choices=['cypher', 'semantic'])
     parser.add_argument("--output_file", type=str)
     parser.add_argument("--context_window", type=int, default=16384)
@@ -66,6 +66,13 @@ def produce_prompt(args, d, tokenizer):
                 contexts_below=context_below,
                 input_code=d['input_code']
             )
+    elif args.setting == 'acr':
+            
+        prompt = template.format(
+            function_name=d['function_name'],
+            input_code=d['input_code'],
+            namespace=d['namespace'],
+        )
     elif args.setting == 'kg':
         command = [
             'miosomos', 'build-context',
