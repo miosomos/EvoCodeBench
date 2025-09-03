@@ -3,6 +3,7 @@ import os
 import pdb
 import textwrap
 from argparse import ArgumentParser
+import tree_sitter_python as tspython
 from tree_sitter import Language, Parser
 
 def get_parser():
@@ -17,10 +18,8 @@ args = get_parser().parse_args()
 assert os.path.exists(args.completion_file), f"Path {args.completion_file} does not exist."
 wrong_code = "    pass\n"
 
-parser = Parser()
-PY_LANGUAGE = Language('../build/my-languages.so', 'python')
-parser = Parser()
-parser.set_language(PY_LANGUAGE)
+PY_LANGUAGE = Language(tspython.language())
+parser = Parser(PY_LANGUAGE)
 
 def count_indent(code):
     if type(code) == str: # a single statement
