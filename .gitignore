@@ -8,3 +8,7 @@ data.jsonl
 
 Dependency_Data/
 Source_Code/
+
+.idea/
+.vscode/
+.DS_Store
