@@ -157,7 +157,7 @@ if __name__ == "__main__":
         args.model = 'claude-sonnet-4-20250514'
     elif args.model == 'gpt-4.1-mini':
         args.model = 'gpt-4.1-mini'
-    elif args.model == 'gpt-4.1':
+    elif args.model == 'deepseek-v3':
         args.model = 'DeepSeek-V3-0324'
     else:
         raise ValueError('Invalid model name')
