@@ -168,11 +168,7 @@ The arguments are explained as follows.
   
 First, we produce prompts for different settings. Before running the following command, researchers need to install the `tiktoken` library.
 ```Bash
-python make_prompt.py \
-    --setting baseline \ # or local_completion or local_infilling
-    --output_file /path/to/store/prompt.jsonl \
-    --context_window 16384 \ # the maximum length of the context
-    --max_tokens 500 \ # the maximum length of the generated code
+uv run python make_prompt_gc.py --output_file prompt/prompt_graph_coder.jsonl --gc_file api_level.gc.coarse2fine.10.0.search_res.jsonl --context_window 16384 --max_tokens 500
 ```
 
 Then, we invoke OpenAI's API to generate code based on the prompts. Researchers need to install the `openai` library.
